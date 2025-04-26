@@ -18,29 +18,31 @@ class YouTubeController extends Controller
         $videoUrl = $request->input('url');
         Log::info("🎯 Received YouTube URL: {$videoUrl}");
 
-        // ✅ Define Python + Script path
-        $pythonPath = 'C:\\Python313\\python.exe'; // ✅ use a verified path from `where python`
-        $scriptPath = base_path('scripts/fetch_transcript.py');
-        $escapedUrl = escapeshellarg($videoUrl);
+        //  Define Python + Script path
+        $pythonPath = 'C:\\Python313\\python.exe'; // ✅use a verified path from `where python` interepter 
+        $scriptPath = base_path('scripts/fetch_transcript.py'); //which Python to use and which script to run.
+        $escapedUrl = escapeshellarg($videoUrl); //Escapes the YouTube URL so if it contains any weird characters
 
         // ✅ Run shell command
-        $command = "\"{$pythonPath}\" \"{$scriptPath}\" {$escapedUrl}";
+        $command = "\"{$pythonPath}\" \"{$scriptPath}\" {$escapedUrl}";// here we cal our python script and pass onto it the url 
+        // "C:\Python313\python.exe" "C:\full\path\to\fetch_transcript.py" "https://youtube.com/watch?v=xxxx" 
+
         Log::debug("🛠 Running command: {$command}");
 
-        $output = shell_exec("{$command} 2>&1");
+        $output = shell_exec("{$command} 2>&1"); //raw JSON text printed from Python
 
-        if (!$output) {
+        if (!$output) { //if output is empty or wrong
             Log::error("⛔ Python script returned no output.");
             return response()->json(['error' => 'Python script returned nothing'], 500);
         }
 
         // ✅ Parse JSON
-        $data = json_decode(trim($output), true);
+        $data = json_decode(trim($output), true); // convert the json format we got to and pap array true to get an array not an object
 
         if (json_last_error() !== JSON_ERROR_NONE) {
             Log::error("❌ JSON decode failed: " . json_last_error_msg());
             return response()->json(['error' => 'Invalid JSON from Python'], 500);
-        }
+        }  //check of the outputs is coorect 
 
         if (isset($data['error'])) {
             Log::error("⚠️ Python script error: " . $data['error']);
