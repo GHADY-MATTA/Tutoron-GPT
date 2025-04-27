@@ -20,4 +20,6 @@ trait ResponseTrait
             'message' => $message,
         ], $code);
     }
+    
+
 }
