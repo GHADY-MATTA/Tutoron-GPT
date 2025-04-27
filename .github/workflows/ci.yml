@@ -5,10 +5,12 @@ on:
     branches:
       - main
       - dev
+      - project-setup
   pull_request:
     branches:
       - main
       - dev
+      - project-setup
 
 jobs:
   laravel-tests:
