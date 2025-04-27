@@ -7,6 +7,8 @@ use Tests\TestCase;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
+// you do NOT need XAMPP
+//  running to test with authtest.php using .env.testing
 class AuthTest extends TestCase
 {
     use RefreshDatabase;
@@ -74,5 +76,56 @@ class AuthTest extends TestCase
                 'status' => true,
                 'message' => 'Logged out successfully.',
             ]);
+    }
+    /** @test */
+    public function registration_fails_if_email_already_exists()
+    {
+        // Create a user first
+        User::create([
+            'name' => 'Existing User',
+            'email' => 'existing@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+
+        // Try to register again with same email
+        $response = $this->postJson('/api/register', [
+            'name' => 'Another User',
+            'email' => 'existing@example.com', // duplicate email
+            'password' => 'password123',
+        ]);
+
+        $response->assertStatus(422) // Validation error
+            ->assertJsonValidationErrors('email');
+    }
+
+    /** @test */
+    public function login_fails_with_wrong_password()
+    {
+        // Create a user first
+        User::create([
+            'name' => 'Wrong Password User',
+            'email' => 'wrongpass@example.com',
+            'password' => Hash::make('correctpassword'),
+        ]);
+
+        // Try to login with wrong password
+        $response = $this->postJson('/api/login', [
+            'email' => 'wrongpass@example.com',
+            'password' => 'wrongpassword', // wrong password
+        ]);
+
+        $response->assertStatus(401) // Unauthorized
+            ->assertJson([
+                'status' => false,
+                'message' => 'Invalid credentials.',
+            ]);
+    }
+
+    /** @test */
+    public function logout_fails_without_token()
+    {
+        $response = $this->postJson('/api/logout');
+
+        $response->assertStatus(401); // Unauthorized (no token provided)
     }
 }
