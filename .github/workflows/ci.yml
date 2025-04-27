@@ -45,28 +45,14 @@ jobs:
       - name: Install Composer Dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Copy .env
-        run: cp .env.example .env
+      - name: Copy CI Environment File
+        run: cp .env.ci .env
 
       - name: Generate App Key
         run: php artisan key:generate
 
       - name: Run Migrations
-        env:
-          DB_CONNECTION: mysql
-          DB_HOST: 127.0.0.1
-          DB_PORT: 3306
-          DB_DATABASE: tutorongpt
-          DB_USERNAME: root
-          DB_PASSWORD: root
         run: php artisan migrate --force
 
       - name: Run Tests
-        env:
-          DB_CONNECTION: mysql
-          DB_HOST: 127.0.0.1
-          DB_PORT: 3306
-          DB_DATABASE: tutorongpt
-          DB_USERNAME: root
-          DB_PASSWORD: root
         run: php artisan test
