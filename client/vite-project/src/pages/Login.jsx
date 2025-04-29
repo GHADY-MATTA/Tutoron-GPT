@@ -1,11 +1,15 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Import navigate
 import axios from 'axios';
 import logoIcon from '../assets/Tutoron-gpt-logo.png'; // Correct logo path
 
 function Login() {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate(); // ✅ Initialize navigate
 
   const handleChange = (e) => {
     setForm({
@@ -17,6 +21,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setSuccess('');
     setLoading(true);
 
     try {
@@ -25,11 +30,16 @@ function Login() {
         withCredentials: true,
       });
 
-      console.log('Login Success:', response.data);
+      console.log('✅ Login Success:', response.data);
       localStorage.setItem('token', response.data.data.token);
-      window.location.href = '/'; // redirect after login
+localStorage.setItem('username', response.data.data.user.name);
+      setSuccess('Login successful! Redirecting...');
+      setTimeout(() => {
+        navigate('/dashboard'); // ✅ Redirect to /dashboard after 2s
+      }, 2000);
+
     } catch (err) {
-      console.error('Login Error:', err.response?.data || err.message);
+      console.error('⛔ Login Error:', err.response?.data || err.message);
       setError(err.response?.data?.message || 'Something went wrong.');
     } finally {
       setLoading(false);
@@ -50,10 +60,15 @@ function Login() {
           Welcome Back
         </h2>
 
-        {/* Error Message */}
+        {/* Error or Success Messages */}
         {error && (
           <div className="mb-4 text-center text-red-600 text-sm">
             {error}
+          </div>
+        )}
+        {success && (
+          <div className="mb-4 text-center text-green-600 text-sm bg-green-100 p-2 rounded-md">
+            {success}
           </div>
         )}
 

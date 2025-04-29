@@ -21,4 +21,9 @@ class YouTubeVideo extends Model
     {
         return $this->hasMany(YouTubeTranscript::class, 'youtube_video_id');
     }
+    public function logs()
+    {
+        return $this->hasMany(UserLog::class, 'video_id', 'video_id'); // FK, PK
+    }
+    
 }

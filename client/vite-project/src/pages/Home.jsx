@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logoIcon from '../assets/Tutoron-gpt-logo.png'; // Make sure the path matches your actual logo location
+import { Link } from 'react-router-dom';
 
 const TutoronGPT = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -7,64 +8,66 @@ const TutoronGPT = () => {
   return (
     <div className="font-inter bg-[#e1e5f2] text-[#022b3a]">
       {/* Navigation */}
-       <nav className="bg-white shadow-sm">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex justify-between h-16 items-center">
-      {/* Logo */}
-      <div className="flex items-center">
-        <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-8 w-8" />
-        <span className="ml-2 text-xl font-bold text-[#022b3a]">Tutoron-GPT</span>
-      </div>
+    <nav className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16 items-center">
+            
+            {/* Logo */}
+            <div className="flex items-center">
+              <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-8 w-8" />
+              <span className="ml-2 text-xl font-bold text-[#022b3a]">Tutoron-GPT</span>
+            </div>
 
-      {/* Desktop Menu */}
-      <div className="hidden md:flex items-center space-x-6">
-        <a href="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">Features</a>
-        <a href="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">How It Works</a>
-        <a href="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">Pricing</a>
-        <a href="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">About</a>
-        <a href="/login" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c] ml-6">Log In</a>
-        <a href="/register" className="px-4 py-2 bg-[#1f7a8c] hover:bg-[#3a9fb3] text-white rounded-md text-sm font-medium transition ml-2">Sign Up</a>
-      </div>
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-6">
+              <Link to="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">Features</Link>
+              <Link to="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">How It Works</Link>
+              <Link to="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">Pricing</Link>
+              <Link to="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">About</Link>
+              <Link to="/login" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c] ml-6">Log In</Link>
+              <Link to="/register" className="px-4 py-2 bg-[#1f7a8c] hover:bg-[#3a9fb3] text-white rounded-md text-sm font-medium transition ml-2">Sign Up</Link>
+            </div>
 
-      {/* Mobile Button */}
-      <div className="flex md:hidden">
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="inline-flex items-center justify-center p-2 text-[#022b3a] hover:text-[#1f7a8c] focus:outline-none"
-        >
-          {mobileMenuOpen ? (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
-      </div>
-    </div>
-  </div>
+            {/* Mobile Menu Button */}
+            <div className="flex md:hidden">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="inline-flex items-center justify-center p-2 text-[#022b3a] hover:text-[#1f7a8c] focus:outline-none"
+              >
+                {mobileMenuOpen ? (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </button>
+            </div>
 
-  {/* Mobile Menu */}
-  {mobileMenuOpen && (
-    <div className="md:hidden px-2 pt-2 pb-3 space-y-1">
-      <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">Features</a>
-      <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">How It Works</a>
-      <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">Pricing</a>
-      <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">About</a>
+          </div>
+        </div>
 
-      <div className="pt-4 pb-3 border-t border-[#bfdbf7]">
-        <a href="/login" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">
-          Log In
-        </a>
-        <a href="/register" className="mt-2 block w-full px-3 py-2 rounded-md text-center text-base font-medium text-white bg-[#1f7a8c] hover:bg-[#3a9fb3]">
-          Sign Up
-        </a>
-      </div>
-    </div>
-  )}
-</nav>
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden px-2 pt-2 pb-3 space-y-1">
+            <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">Features</Link>
+            <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">How It Works</Link>
+            <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">Pricing</Link>
+            <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">About</Link>
+
+            <div className="pt-4 pb-3 border-t border-[#bfdbf7]">
+              <Link to="/login" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">
+                Log In
+              </Link>
+              <Link to="/register" className="mt-2 block w-full px-3 py-2 rounded-md text-center text-base font-medium text-white bg-[#1f7a8c] hover:bg-[#3a9fb3]">
+                Sign Up
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
 
 
       {/* Hero Section */}

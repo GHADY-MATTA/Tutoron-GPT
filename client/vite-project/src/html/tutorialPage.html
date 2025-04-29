@@ -6,138 +6,378 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoteGPT Clone</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --color-primary: #ffffff;
             --color-secondary: #022b3a;
             --color-accent: #1f7a8c;
+            --color-accent-light: #5aa9c6;
             --color-border: #bfdbf7;
             --color-bg: #e1e5f2;
+            --color-text: #333333;
+            --color-text-light: #6b7280;
         }
 
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--color-bg);
+            color: var(--color-text);
         }
 
         .prose {
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .note-item:hover {
             background-color: var(--color-border);
+            transform: translateY(-1px);
         }
 
         .note-item.active {
             background-color: var(--color-primary);
             border-left: 4px solid var(--color-accent);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-light);
+            transform: translateY(-1px);
+        }
+
+        .tag {
+            background-color: var(--color-border);
+            color: var(--color-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .tag:hover {
+            background-color: var(--color-accent-light);
+            color: var(--color-primary);
+        }
+
+        .search-input:focus {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(31, 122, 140, 0.2);
+        }
+
+        .ai-summary {
+            background-color: var(--color-border);
+            border-left: 4px solid var(--color-accent);
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.6;
+            }
+        }
+
+        .loading {
+            animation: pulse 1.5s infinite;
         }
     </style>
 </head>
 
 <body class="min-h-screen">
     <!-- Header -->
-    <header class="bg-[var(--color-secondary)] shadow-sm">
+    <header class="bg-[var(--color-secondary)] shadow-sm sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-[var(--color-primary)]">NoteGPT</h1>
-            <button
-                class="px-4 py-2 bg-[var(--color-accent)] text-[var(--color-primary)] rounded-md hover:opacity-90 transition">
-                Sign In
-            </button>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-robot text-[var(--color-accent)] text-2xl"></i>
+                <h1 class="text-xl font-bold text-[var(--color-primary)]">NoteGPT</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="px-4 py-2 btn-primary rounded-md flex items-center space-x-2">
+                    <i class="fas fa-user"></i>
+                    <span>Sign In</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-6">
         <!-- Sidebar -->
-        <div class="md:col-span-1 bg-[var(--color-primary)] p-4 rounded-lg shadow">
-            <h2 class="font-semibold text-lg mb-4 text-[var(--color-secondary)]">My Notes</h2>
-            <ul class="space-y-2">
-                <li class="note-item active p-3 rounded cursor-pointer">
-                    <h3 class="font-medium text-[var(--color-secondary)]">Meeting Notes</h3>
-                    <p class="text-sm text-gray-500 truncate">Project timeline discussion</p>
-                    <div class="flex mt-1 gap-1 flex-wrap">
-                        <span
-                            class="text-xs bg-[var(--color-border)] text-[var(--color-secondary)] px-2 py-1 rounded">work</span>
-                        <span
-                            class="text-xs bg-[var(--color-border)] text-[var(--color-secondary)] px-2 py-1 rounded">meeting</span>
+        <div class="md:col-span-3 bg-[var(--color-primary)] p-4 rounded-lg shadow">
+            <div class="mb-6">
+                <div class="relative">
+                    <input type="text" placeholder="Search notes..."
+                        class="search-input w-full px-4 py-2 border border-[var(--color-border)] rounded-md focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]">
+                    <i class="fas fa-search absolute right-3 top-3 text-[var(--color-text-light)]"></i>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="font-semibold text-lg text-[var(--color-secondary)]">My Notes</h2>
+                <button class="text-[var(--color-accent)] hover:text-[var(--color-accent-light)]">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <div class="mb-4 flex space-x-2 overflow-x-auto pb-2">
+                <button
+                    class="px-3 py-1 text-sm bg-[var(--color-accent)] text-[var(--color-primary)] rounded-full">All</button>
+                <button
+                    class="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full">Work</button>
+                <button
+                    class="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full">Personal</button>
+                <button
+                    class="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full">Research</button>
+            </div>
+
+            <ul class="space-y-2 max-h-[calc(100vh-250px)] overflow-y-auto">
+                <li class="note-item active p-3 rounded cursor-pointer transition">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-medium text-[var(--color-secondary)]">Meeting Notes</h3>
+                        <span class="text-xs text-[var(--color-text-light)]">Today</span>
+                    </div>
+                    <p class="text-sm text-[var(--color-text-light)] truncate">Project timeline discussion with design
+                        team</p>
+                    <div class="flex mt-2 gap-1 flex-wrap">
+                        <span class="text-xs tag px-2 py-1 rounded-full">work</span>
+                        <span class="text-xs tag px-2 py-1 rounded-full">meeting</span>
+                        <span class="text-xs tag px-2 py-1 rounded-full">urgent</span>
                     </div>
                 </li>
-                <li class="note-item p-3 rounded cursor-pointer">
-                    <h3 class="font-medium text-[var(--color-secondary)]">Research Findings</h3>
-                    <p class="text-sm text-gray-500 truncate">2023 AI progress review</p>
-                    <div class="flex mt-1 gap-1 flex-wrap">
-                        <span
-                            class="text-xs bg-[var(--color-border)] text-[var(--color-secondary)] px-2 py-1 rounded">research</span>
-                        <span
-                            class="text-xs bg-[var(--color-border)] text-[var(--color-secondary)] px-2 py-1 rounded">AI</span>
+                <li class="note-item p-3 rounded cursor-pointer transition">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-medium text-[var(--color-secondary)]">Research Findings</h3>
+                        <span class="text-xs text-[var(--color-text-light)]">2 days ago</span>
+                    </div>
+                    <p class="text-sm text-[var(--color-text-light)] truncate">2023 AI progress review and future
+                        predictions</p>
+                    <div class="flex mt-2 gap-1 flex-wrap">
+                        <span class="text-xs tag px-2 py-1 rounded-full">research</span>
+                        <span class="text-xs tag px-2 py-1 rounded-full">AI</span>
                     </div>
                 </li>
-                <li class="note-item p-3 rounded cursor-pointer">
-                    <h3 class="font-medium text-[var(--color-secondary)]">Shopping List</h3>
-                    <p class="text-sm text-gray-500 truncate">Groceries for the week</p>
-                    <div class="flex mt-1 gap-1 flex-wrap">
-                        <span
-                            class="text-xs bg-[var(--color-border)] text-[var(--color-secondary)] px-2 py-1 rounded">personal</span>
+                <li class="note-item p-3 rounded cursor-pointer transition">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-medium text-[var(--color-secondary)]">Shopping List</h3>
+                        <span class="text-xs text-[var(--color-text-light)]">1 week ago</span>
+                    </div>
+                    <p class="text-sm text-[var(--color-text-light)] truncate">Groceries for the week and household
+                        items</p>
+                    <div class="flex mt-2 gap-1 flex-wrap">
+                        <span class="text-xs tag px-2 py-1 rounded-full">personal</span>
+                    </div>
+                </li>
+                <li class="note-item p-3 rounded cursor-pointer transition">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-medium text-[var(--color-secondary)]">Book Recommendations</h3>
+                        <span class="text-xs text-[var(--color-text-light)]">2 weeks ago</span>
+                    </div>
+                    <p class="text-sm text-[var(--color-text-light)] truncate">List of books to read this summer</p>
+                    <div class="flex mt-2 gap-1 flex-wrap">
+                        <span class="text-xs tag px-2 py-1 rounded-full">personal</span>
+                        <span class="text-xs tag px-2 py-1 rounded-full">reading</span>
                     </div>
                 </li>
             </ul>
         </div>
 
         <!-- Main Content -->
-        <div class="md:col-span-3 space-y-6">
+        <div class="md:col-span-9 space-y-6">
             <!-- Input Area -->
             <div class="bg-[var(--color-primary)] p-6 rounded-lg shadow">
                 <form>
-                    <label for="note-input" class="block text-sm font-medium text-[var(--color-secondary)] mb-2">
-                        Add a new note
-                    </label>
-                    <textarea id="note-input" rows="4"
-                        class="w-full px-3 py-2 border border-[var(--color-border)] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-[var(--color-accent)]"
-                        placeholder="Type or paste your content here and NoteGPT will summarize it..."></textarea>
-                    <div class="mt-3 flex justify-between items-center">
-                        <div class="text-sm text-gray-500">
-                            Press Enter to save
+                    <div class="flex justify-between items-center mb-4">
+                        <label for="note-title" class="block text-sm font-medium text-[var(--color-secondary)]">
+                            Note Title
+                        </label>
+                        <div class="flex space-x-2">
+                            <button type="button"
+                                class="text-[var(--color-text-light)] hover:text-[var(--color-accent)]">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <button type="button"
+                                class="text-[var(--color-text-light)] hover:text-[var(--color-accent)]">
+                                <i class="fas fa-microphone"></i>
+                            </button>
                         </div>
-                        <button type="submit"
-                            class="px-4 py-2 bg-[var(--color-accent)] text-[var(--color-primary)] rounded-md hover:opacity-90 transition">
-                            Save Note
+                    </div>
+                    <input type="text" id="note-title" value="Meeting Notes"
+                        class="w-full px-3 py-2 mb-4 text-xl font-semibold border-b border-[var(--color-border)] focus:outline-none focus:border-[var(--color-accent)]">
+
+                    <div class="mb-4 flex space-x-2">
+                        <button type="button"
+                            class="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full flex items-center">
+                            <i class="fas fa-tag mr-1"></i>
+                            <span>Add Tag</span>
                         </button>
+                    </div>
+
+                    <label for="note-input" class="block text-sm font-medium text-[var(--color-secondary)] mb-2">
+                        Note Content
+                    </label>
+                    <textarea id="note-input" rows="6"
+                        class="w-full px-3 py-2 border border-[var(--color-border)] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-[var(--color-accent)] prose"
+                        placeholder="Type or paste your content here and NoteGPT will summarize it...">Discussed project timeline with the team. We agreed to deliver Phase 1 by end of Q2. The design team needs two more weeks to finalize mockups. Engineering estimates development will take approximately 6 weeks after designs are approved.</textarea>
+
+                    <div class="mt-4 flex justify-between items-center">
+                        <div class="flex space-x-2">
+                            <button type="button"
+                                class="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-md flex items-center">
+                                <i class="fas fa-magic mr-1"></i>
+                                <span>Enhance</span>
+                            </button>
+                            <button type="button"
+                                class="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-md flex items-center">
+                                <i class="fas fa-bolt mr-1"></i>
+                                <span>Summarize</span>
+                            </button>
+                        </div>
+                        <div class="flex space-x-3 items-center">
+                            <span class="text-sm text-[var(--color-text-light)]">
+                                <i class="fas fa-keyboard"></i> Press ⌘+Enter to save
+                            </span>
+                            <button type="submit" class="px-4 py-2 btn-primary rounded-md flex items-center space-x-2">
+                                <i class="fas fa-save"></i>
+                                <span>Save Note</span>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
 
             <!-- Note Display -->
             <div class="bg-[var(--color-primary)] p-6 rounded-lg shadow">
-                <div>
-                    <h2 class="text-xl font-bold mb-2 text-[var(--color-secondary)]">Meeting Notes</h2>
-                    <div class="flex gap-2 mb-4">
-                        <span
-                            class="text-xs bg-[var(--color-border)] text-[var(--color-secondary)] px-2 py-1 rounded">work</span>
-                        <span
-                            class="text-xs bg-[var(--color-border)] text-[var(--color-secondary)] px-2 py-1 rounded">meeting</span>
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[var(--color-secondary)]">Meeting Notes</h2>
+                        <div class="flex gap-2 mt-2">
+                            <span class="text-xs tag px-2 py-1 rounded-full">work</span>
+                            <span class="text-xs tag px-2 py-1 rounded-full">meeting</span>
+                            <span class="text-xs tag px-2 py-1 rounded-full">urgent</span>
+                        </div>
                     </div>
-                    <div class="prose max-w-none">
-                        <h3 class="text-lg font-semibold text-[var(--color-secondary)]">Original Content</h3>
-                        <p class="text-[var(--color-secondary)] mb-6">
-                            Discussed project timeline with the team. We agreed to deliver Phase 1 by end of Q2.
-                            The design team needs two more weeks to finalize mockups. Engineering estimates
-                            development will take approximately 6 weeks after designs are approved.
-                        </p>
+                    <div class="flex space-x-2">
+                        <button
+                            class="p-2 text-[var(--color-text-light)] hover:text-[var(--color-accent)] rounded-full hover:bg-[var(--color-border)]">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button
+                            class="p-2 text-[var(--color-text-light)] hover:text-[var(--color-accent)] rounded-full hover:bg-[var(--color-border)]">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button
+                            class="p-2 text-[var(--color-text-light)] hover:text-[var(--color-accent)] rounded-full hover:bg-[var(--color-border)]">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
 
-                        <h3 class="text-lg font-semibold text-[var(--color-secondary)]">AI Summary</h3>
-                        <p class="text-[var(--color-secondary)] bg-[var(--color-border)] p-3 rounded">
-                            Project timeline discussion: Phase 1 targeted for end of Q2. Design needs 2 more weeks,
-                            followed by ~6 weeks of development.
-                        </p>
+                <div class="prose max-w-none">
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-[var(--color-secondary)]">Original Content</h3>
+                            <button
+                                class="text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-light)] flex items-center">
+                                <i class="fas fa-copy mr-1"></i> Copy
+                            </button>
+                        </div>
+                        <div class="border border-[var(--color-border)] rounded-md p-4">
+                            <p class="text-[var(--color-text)] mb-2">
+                                Discussed project timeline with the team. We agreed to deliver Phase 1 by end of Q2.
+                            </p>
+                            <p class="text-[var(--color-text)] mb-2">
+                                The design team needs two more weeks to finalize mockups. Engineering estimates
+                                development will take approximately 6 weeks after designs are approved.
+                            </p>
+                            <p class="text-[var(--color-text)]">
+                                Action items: Design to share mockups by Friday, Engineering to prepare initial setup.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-[var(--color-secondary)]">AI Summary</h3>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-light)] flex items-center">
+                                    <i class="fas fa-redo mr-1"></i> Regenerate
+                                </button>
+                                <button
+                                    class="text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-light)] flex items-center">
+                                    <i class="fas fa-copy mr-1"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="ai-summary p-4 rounded-md">
+                            <p class="text-[var(--color-secondary)] font-medium">
+                                <i class="fas fa-robot text-[var(--color-accent)] mr-2"></i>
+                                Project timeline discussion summary:
+                            </p>
+                            <ul class="mt-2 pl-5 list-disc">
+                                <li class="mb-1">Phase 1 targeted for completion by end of Q2</li>
+                                <li class="mb-1">Design team requires 2 additional weeks for mockups</li>
+                                <li class="mb-1">Engineering estimates ~6 weeks development post-design approval</li>
+                                <li>Action items assigned to Design and Engineering teams</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-[var(--color-secondary)] mb-2">AI Suggestions</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div
+                                class="border border-[var(--color-border)] rounded-md p-3 hover:bg-[var(--color-border)] cursor-pointer">
+                                <h4 class="font-medium text-[var(--color-secondary)] flex items-center">
+                                    <i class="fas fa-calendar-alt text-[var(--color-accent)] mr-2"></i>
+                                    Create Calendar Event
+                                </h4>
+                                <p class="text-sm text-[var(--color-text-light)] mt-1">Schedule follow-up meeting for
+                                    mockup review</p>
+                            </div>
+                            <div
+                                class="border border-[var(--color-border)] rounded-md p-3 hover:bg-[var(--color-border)] cursor-pointer">
+                                <h4 class="font-medium text-[var(--color-secondary)] flex items-center">
+                                    <i class="fas fa-tasks text-[var(--color-accent)] mr-2"></i>
+                                    Generate Task List
+                                </h4>
+                                <p class="text-sm text-[var(--color-text-light)] mt-1">Break down Phase 1 into
+                                    actionable tasks</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--color-secondary)] text-[var(--color-primary)] py-6 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <i class="fas fa-robot text-[var(--color-accent)] text-xl"></i>
+                    <span class="font-bold">NoteGPT</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-[var(--color-accent)]">Privacy</a>
+                    <a href="#" class="hover:text-[var(--color-accent)]">Terms</a>
+                    <a href="#" class="hover:text-[var(--color-accent)]">Contact</a>
+                </div>
+            </div>
+            <div class="mt-4 text-center md:text-left text-sm text-[var(--color-border)]">
+                &copy; 2023 NoteGPT. All rights reserved.
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
-
-
-<!-- p   check pts for next time check the folder structure and authcontroler tservicec folder traits test for somefeature docker file for evry rrepo docker compose 
-cicd  -->

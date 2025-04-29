@@ -1,38 +1,43 @@
-import sys #read command arguments 
-import json # to format as json
-from pytube import YouTube #to store metadata
-from youtube_transcript_api import YouTubeTranscriptApi  #fetch auto generetad trnascrirt
-from urllib.parse import parse_qs, urlparse #exctract video id
+import sys
+import json
+from pytube import YouTube
+from youtube_transcript_api import YouTubeTranscriptApi
+from urllib.parse import parse_qs, urlparse
 
-def extract_video_id(url): # parrses the url https...
+# 🛠 Fix output encoding immediately
+sys.stdout.reconfigure(encoding='utf-8')
+
+def extract_video_id(url):
     try:
-        qs = parse_qs(urlparse(url).query) #finds the the video id
+        qs = parse_qs(urlparse(url).query)
         return qs.get("v", [None])[0]
-    except:
+    except Exception:
         return None
 
-def main(): #main logic
+def main():
     if len(sys.argv) < 2:
-        print(json.dumps({"error": "No URL provided"}))
-        return
+        print(json.dumps({"error": "No URL provided"}, ensure_ascii=False), flush=True)
+        sys.exit(1)
 
-    url = sys.argv[1] #take first argument passed after the script name youtube url 
+    url = sys.argv[1]
     video_id = extract_video_id(url)
-    if not video_id: #exctarct vedio id like asq3ea
-        print(json.dumps({"error": "Invalid YouTube URL"}))
-        return 
-#fetch video met dta title channges transcript else set to unknow
+
+    if not video_id:
+        print(json.dumps({"error": "Invalid YouTube URL"}, ensure_ascii=False), flush=True)
+        sys.exit(1)
+
     title = "Unknown"
     channel = "Unknown"
+
     try:
         yt = YouTube(url)
         title = yt.title or "Unknown"
         channel = yt.author or "Unknown"
-    except:
-        pass  # no metadata, still proceed
+    except Exception:
+        pass  # Still continue even if metadata fails
 
     try:
-        transcript_raw = YouTubeTranscriptApi.get_transcript(video_id) #Fetches the transcript using the video ID
+        transcript_raw = YouTubeTranscriptApi.get_transcript(video_id)
         transcript = [
             {
                 "text": line.get("text", ""),
@@ -41,19 +46,20 @@ def main(): #main logic
             }
             for line in transcript_raw
         ]
-        language = transcript_raw[0].get("language_code", "en") if transcript_raw else "unknown" #to gues the langues like en english e
+        language = transcript_raw[0].get("language_code", "en") if transcript_raw else "unknown"
     except Exception as e:
-        print(json.dumps({"error": f"Transcript not found: {str(e)}"}))
-        return
+        print(json.dumps({"error": f"Transcript not found: {str(e)}"}, ensure_ascii=False), flush=True)
+        sys.exit(1)
 
-    # Output clean JSON
-    print(json.dumps({  #convert python dic into a jsnon 
+    # ✅ Clean JSON output, flushed immediately
+    output = {
         "video_id": video_id,
         "title": title,
         "channel": channel,
         "language": language,
         "transcript": transcript
-    }, ensure_ascii=False)) #Laravel will capture this printed output and decode it inside the controller
-# keeps special characters readable
-if __name__ == "__main__": #Only run the main() function
+    }
+    print(json.dumps(output, ensure_ascii=False), flush=True)
+
+if __name__ == "__main__":
     main()

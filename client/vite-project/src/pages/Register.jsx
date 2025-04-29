@@ -1,15 +1,19 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Important: useNavigate
 import axios from 'axios';
-import logoIcon from '../assets/Tutoron-gpt-logo.png'; // correct path to your logo
+import logoIcon from '../assets/Tutoron-gpt-logo.png'; // correct path
 
 function Register() {
+  const navigate = useNavigate(); // ✅ Hook to navigate in React
+
   const [form, setForm] = useState({
     name: '',
     email: '',
     password: '',
-    password_confirmation: '',
   });
+
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState(''); // ✅ success message
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -22,6 +26,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setSuccess('');
     setLoading(true);
 
     try {
@@ -30,11 +35,14 @@ function Register() {
         withCredentials: true,
       });
 
-      console.log('Registration Success:', response.data);
-      localStorage.setItem('token', response.data.data.token);
-      window.location.href = '/'; // redirect after success
+      console.log('✅ Registration Success Response:', response.data);
+
+      setSuccess('Account created successfully! Redirecting to login...'); // ✅ Show message
+      setTimeout(() => {
+        navigate('/login'); // ✅ Smooth navigation after 2s
+      }, 2000);
     } catch (err) {
-      console.error('Registration Error:', err.response?.data || err.message);
+      console.error('⛔ Registration Error:', err.response?.data || err.message);
       setError(err.response?.data?.message || 'Something went wrong.');
     } finally {
       setLoading(false);
@@ -55,10 +63,15 @@ function Register() {
           Create Your Account
         </h2>
 
-        {/* Error */}
+        {/* Error or Success Messages */}
         {error && (
           <div className="mb-4 text-center text-red-600 text-sm">
             {error}
+          </div>
+        )}
+        {success && (
+          <div className="mb-4 text-center text-green-600 text-sm bg-green-100 p-2 rounded-md">
+            {success}
           </div>
         )}
 
@@ -103,21 +116,6 @@ function Register() {
               type="password"
               name="password"
               value={form.password}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border border-[var(--color-border)] rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition"
-            />
-          </div>
-
-          {/* Password Confirmation */}
-          <div>
-            <label className="block text-sm font-medium text-[var(--color-secondary)] mb-1">
-              Confirm Password
-            </label>
-            <input
-              type="password"
-              name="password_confirmation"
-              value={form.password_confirmation}
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border border-[var(--color-border)] rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition"

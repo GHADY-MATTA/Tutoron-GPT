@@ -7,6 +7,8 @@ namespace App\Http\Controllers;
 use App\Services\AuthService;
 use App\Traits\ResponseTrait;
 use Illuminate\Http\Request;
+use App\Models\UserLog;
+
 
 class AuthController extends Controller
 {
@@ -34,22 +36,45 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+        // Validate incoming request
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|string',
         ]);
 
+        // Attempt login via AuthService
         $token = $this->authService->login($request->only('email', 'password'));
 
+        // If login failed
         if (!$token) {
             return $this->error('Invalid credentials.', 401);
         }
 
-        return $this->success(['token' => $token], 'Login successful.');
+        // Get the authenticated user
+        $user = auth()->user();
+        UserLog::create([
+            'user_id' => $user->id,
+            'action'  => 'login',
+        ]);
+
+
+        // Return success with token and user info
+        return $this->success([
+            'token' => $token,
+            'user' => [
+                'name' => $user->name,
+                'email' => $user->email,
+            ],
+        ], 'Login successful.');
+       
     }
 
     public function logout(Request $request)
     {
+        UserLog::create([
+            'user_id' => $request->user()->id,
+            'action'  => 'logout',
+        ]);
         $this->authService->logout($request->user());
 
         return $this->success([], 'Logged out successfully.');
