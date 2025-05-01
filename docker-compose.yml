@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: tutoron-backend
+    volumes:
+      - ./server:/var/www       # ✅ Live bind mount for staging/dev
+    ports:
+      - "9000:9000"             # Laravel runs on FPM port
+    depends_on:
+      - mysql
+    networks:
+      - tutoron-net
+
+  mysql:
+    image: mysql:8.0
+    container_name: tutoron-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tutorongpt
+      MYSQL_USER: ghady
+      MYSQL_PASSWORD: ghady123
+    volumes:
+      - mysql_data:/var/lib/mysql    # ✅ Persistent volume
+    ports:
+      - "3306:3306"
+    networks:
+      - tutoron-net
+
+volumes:
+  mysql_data:         # ✅ Volume to keep MySQL data on EC2
+
+networks:
+  tutoron-net:
+    driver: bridge

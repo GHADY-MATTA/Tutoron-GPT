@@ -1,38 +1,33 @@
-# Use the official PHP image with necessary extensions
+# Base PHP image with FPM
 FROM php:8.2-fpm
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    git \
-    curl \
-    libpng-dev \
-    libonig-dev \
-    libxml2-dev \
-    zip \
-    unzip
-
-# Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
-
-# Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set working directory
 WORKDIR /var/www
 
-# Copy all project files into the container
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git curl zip unzip python3 python3-pip \
+    libpng-dev libonig-dev libxml2-dev libzip-dev \
+    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip
+
+# Install Composer globally
+RUN curl -sS https://getcomposer.org/installer | php \
+    && mv composer.phar /usr/local/bin/composer
+
+# Install Python packages
+RUN pip3 install pytube youtube-transcript-api
+
+# Copy Laravel app source
 COPY . .
 
-# Install PHP dependencies
-RUN composer install --prefer-dist --no-scripts --no-autoloader
+# Install Laravel PHP dependencies
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
-# Rebuild autoload after copying files
-RUN composer dump-autoload
+# Laravel permissions
+RUN chown -R www-data:www-data /var/www \
+    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
-# Set proper permissions
-RUN chown -R www-data:www-data /var/www
-RUN chmod -R 755 /var/www
-
-# Expose port 9000 and start php-fpm server
+# Expose port used by PHP-FPM
 EXPOSE 9000
+
 CMD ["php-fpm"]
