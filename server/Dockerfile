@@ -15,7 +15,8 @@ RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
 
 # Install Python packages
-RUN pip3 install pytube youtube-transcript-api
+RUN pip3 install --break-system-packages pytube youtube-transcript-api
+
 
 # Copy Laravel app source
 COPY . .
