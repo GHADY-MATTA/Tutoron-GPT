@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logoIcon from '../assets/Tutoron-gpt-logo.png'; // Adjust if your logo path is different
+import logoIcon from '../assets/tutoron-gpt-logo.png'; // Adjust if your logo path is different
 import { FaRobot, FaUser, FaCog, FaSearch, FaPlus } from 'react-icons/fa';
 
 function Tutoron() {
