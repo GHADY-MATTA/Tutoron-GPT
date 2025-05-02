@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'; // ✅ Import navigate
 // import axios from 'axios';
 import API from '../api/api';
 
-import logoIcon from '../assets/Tutoron-gpt-logo.png'; // Correct logo path
+import logoIcon from '../assets/tutoron-gpt-logo.png'; // Correct logo path
 
 function Login() {
   const [form, setForm] = useState({ email: '', password: '' });

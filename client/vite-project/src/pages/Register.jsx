@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'; // ✅ Important: useNavigate
 // import axios from 'axios';
 import API from '../api/api';
 
-import logoIcon from '../assets/Tutoron-gpt-logo.png'; // correct path
+import logoIcon from '../assets/tutoron-gpt-logo.png'; // correct path
 
 function Register() {
   const navigate = useNavigate(); // ✅ Hook to navigate in React

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'; // ✅ Import useState and useEffect
 import { FaBell, FaChevronDown, FaPlus } from 'react-icons/fa';
-import logoIcon from '../assets/Tutoron-gpt-logo.png'; // Adjust your path
+import logoIcon from '../assets/tutoron-gpt-logo.png'; // Adjust your path
 
 function Navbar() {
   const [username, setUsername] = useState('');
