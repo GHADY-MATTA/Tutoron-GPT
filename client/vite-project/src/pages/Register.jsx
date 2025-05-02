@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // ✅ Important: useNavigate
-import axios from 'axios';
+// import axios from 'axios';
+import API from '../api/api';
+
 import logoIcon from '../assets/Tutoron-gpt-logo.png'; // correct path
 
 function Register() {
@@ -30,10 +32,12 @@ function Register() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/register', form, {
-        headers: { 'Content-Type': 'application/json' },
-        withCredentials: true,
-      });
+      // const response = await axios.post('http://localhost:8000/api/register', form, {
+      //   headers: { 'Content-Type': 'application/json' },
+      //   withCredentials: true,
+      // });
+      const response = await API.post('/register', form);
+
 
       console.log('✅ Registration Success Response:', response.data);
 

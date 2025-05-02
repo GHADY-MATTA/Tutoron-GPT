@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // ✅ Import navigate
-import axios from 'axios';
+// import axios from 'axios';
+import API from '../api/api';
+
 import logoIcon from '../assets/Tutoron-gpt-logo.png'; // Correct logo path
 
 function Login() {
@@ -25,10 +27,12 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/login', form, {
-        headers: { 'Content-Type': 'application/json' },
-        withCredentials: true,
-      });
+      // const response = await axios.post('http://localhost:8000/api/login', form, {
+      //   headers: { 'Content-Type': 'application/json' },
+      //   withCredentials: true,
+      // });
+      const response = await API.post('/login', form);
+
 
       console.log('✅ Login Success:', response.data);
       localStorage.setItem('token', response.data.data.token);
