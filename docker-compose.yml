@@ -1,20 +1,22 @@
 version: '3.9'
 
 services:
+  # ✅ Laravel Backend
   backend:
     build:
       context: ./server
       dockerfile: Dockerfile
     container_name: tutoron-backend
     volumes:
-      - ./server:/var/www       # ✅ Live bind mount for staging/dev
+      - ./server:/var/www
     ports:
-      - "9000:9000"             # Laravel runs on FPM port
+      - "9000:9000"  # Laravel via PHP-FPM
     depends_on:
       - mysql
     networks:
       - tutoron-net
 
+  # ✅ MySQL Database
   mysql:
     image: mysql:8.0
     container_name: tutoron-mysql
@@ -25,14 +27,40 @@ services:
       MYSQL_USER: ghady
       MYSQL_PASSWORD: ghady123
     volumes:
-      - mysql_data:/var/lib/mysql    # ✅ Persistent volume
+      - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
     networks:
       - tutoron-net
 
+  # ✅ React Frontend with Nginx
+  frontend:
+    build:
+      context: ./client/vite-project
+      dockerfile: Dockerfile
+    container_name: tutoron-frontend
+    ports:
+      - "3000:80"  # React static build exposed
+    networks:
+      - tutoron-net
+
+  # ✅ Optional: phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: tutoron-phpmyadmin
+    ports:
+      - "8080:80"  # Access phpMyAdmin at :8080
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: ghady
+      PMA_PASSWORD: ghady123
+    depends_on:
+      - mysql
+    networks:
+      - tutoron-net
+
 volumes:
-  mysql_data:         # ✅ Volume to keep MySQL data on EC2
+  mysql_data:
 
 networks:
   tutoron-net:
