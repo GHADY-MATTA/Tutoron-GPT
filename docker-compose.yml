@@ -1,20 +1,6 @@
 version: '3.9'
 
 services:
-  nginx:
-    image: nginx:alpine
-    container_name: tutoron-nginx
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./server:/var/www
-    depends_on:
-      - backend
-      - frontend
-    networks:
-      - tutoron-net
-
   backend:
     build:
       context: ./server
@@ -22,18 +8,10 @@ services:
     container_name: tutoron-backend
     volumes:
       - ./server:/var/www
-    expose:
-      - "9000"
-    networks:
-      - tutoron-net
-
-  frontend:
-    build:
-      context: ./client/vite-project
-      dockerfile: Dockerfile
-    container_name: tutoron-frontend
-    expose:
-      - "80"
+    ports:
+      - "80:8000"
+    depends_on:
+      - mysql
     networks:
       - tutoron-net
 
