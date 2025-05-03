@@ -3,13 +3,13 @@ version: '3.9'
 services:
   backend:
     build:
-      context: ./server
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: server/Dockerfile
     container_name: tutoron-backend
     volumes:
       - ./server:/var/www
     ports:
-      - "80:8000"
+      - "80:80"
     depends_on:
       - mysql
     networks:
