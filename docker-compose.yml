@@ -1,7 +1,20 @@
 version: '3.9'
 
 services:
-  # ✅ Laravel Backend
+  nginx:
+    image: nginx:alpine
+    container_name: tutoron-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./server:/var/www
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - tutoron-net
+
   backend:
     build:
       context: ./server
@@ -9,14 +22,21 @@ services:
     container_name: tutoron-backend
     volumes:
       - ./server:/var/www
-    ports:
-      - "9000:9000"  # Laravel via PHP-FPM
-    depends_on:
-      - mysql
+    expose:
+      - "9000"
     networks:
       - tutoron-net
 
-  # ✅ MySQL Database
+  frontend:
+    build:
+      context: ./client/vite-project
+      dockerfile: Dockerfile
+    container_name: tutoron-frontend
+    expose:
+      - "80"
+    networks:
+      - tutoron-net
+
   mysql:
     image: mysql:8.0
     container_name: tutoron-mysql
@@ -33,23 +53,11 @@ services:
     networks:
       - tutoron-net
 
-  # ✅ React Frontend with Nginx
-  frontend:
-    build:
-      context: ./client/vite-project
-      dockerfile: Dockerfile
-    container_name: tutoron-frontend
-    ports:
-      - "3000:80"  # React static build exposed
-    networks:
-      - tutoron-net
-
-  # ✅ Optional: phpMyAdmin
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: tutoron-phpmyadmin
     ports:
-      - "8080:80"  # Access phpMyAdmin at :8080
+      - "8080:80"
     environment:
       PMA_HOST: mysql
       PMA_USER: ghady
