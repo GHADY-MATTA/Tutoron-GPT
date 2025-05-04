@@ -23,10 +23,10 @@ services:
     container_name: tutoron-mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE=tutorongpt
-      MYSQL_USER: ghady
-      MYSQL_PASSWORD: ghady123
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=tutorongpt
+      - MYSQL_USER=ghady
+      - MYSQL_PASSWORD=ghady123
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
