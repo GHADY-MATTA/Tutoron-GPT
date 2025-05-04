@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: "http://35.180.110.219/api", // 🔥 Hardcoded for testing
   headers: {
     'Content-Type': 'application/json',
   },
-  withCredentials: true, // If you’re using cookies (e.g., Laravel Sanctum)
+  withCredentials: true,
 });
 
 export default API;
