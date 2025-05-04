@@ -14,7 +14,7 @@ services:
     volumes:
       - ./server:/var/www/html
     ports:
-      - "8000:80"
+      - "8000:8000"
     depends_on:
       - mysql
 
