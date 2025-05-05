@@ -1,28 +1,24 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
 
 WORKDIR /var/www/html
 
-# Install dependencies
+# Install PHP extensions
 RUN apt-get update && apt-get install -y \
-    git curl zip unzip python3 python3-pip nodejs npm \
-    libpng-dev libonig-dev libxml2-dev libzip-dev \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip
+    git unzip curl zip libpng-dev libonig-dev libxml2-dev libzip-dev \
+    && docker-php-ext-install pdo pdo_mysql mbstring zip
 
-# Composer install (pull from official composer image)
+# Add Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Install Python tools
-# RUN pip3 install --break-system-packages pytube youtube-transcript-api
-
-# Copy Laravel code
+# Copy code
 COPY . .
 
-# Install Laravel PHP dependencies
-RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+# Install Laravel dependencies
+# RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Fix permissions
-RUN chown -R www-data:www-data /var/www && chmod -R 775 storage bootstrap/cache
+RUN chmod -R 775 storage bootstrap/cache
 
-EXPOSE 80
+EXPOSE 8000
 
-CMD ["apache2-foreground"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
