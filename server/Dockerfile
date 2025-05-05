@@ -1,4 +1,4 @@
-FROM php:8.2-cli
+FROM php:8.2-apache
 
 WORKDIR /var/www/html
 
@@ -13,6 +13,16 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy code
 COPY . .
 
+# # Build React frontend
+# COPY ./client/vite-project ./resources/frontend
+# WORKDIR /var/www/resources/frontend
+# RUN npm install && npm run build
+
+# # Move frontend build to Laravel public/
+# WORKDIR /var/www
+# RUN cp -r resources/frontend/dist/* public/
+
+
 # Install Laravel dependencies
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
@@ -22,3 +32,8 @@ RUN chmod -R 775 storage bootstrap/cache
 EXPOSE 8000
 
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+
+
+# CMD ["apache2-foreground"]
+
+# CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=80"]
