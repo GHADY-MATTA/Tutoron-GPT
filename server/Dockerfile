@@ -2,38 +2,27 @@ FROM php:8.2-apache
 
 WORKDIR /var/www/html
 
-# Install PHP extensions
+# Install dependencies
 RUN apt-get update && apt-get install -y \
-    git unzip curl zip libpng-dev libonig-dev libxml2-dev libzip-dev \
-    && docker-php-ext-install pdo pdo_mysql mbstring zip
+    git curl zip unzip python3 python3-pip nodejs npm \
+    libpng-dev libonig-dev libxml2-dev libzip-dev \
+    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip
 
-# Add Composer
+# Composer install (pull from official composer image)
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Copy code
+# Install Python tools
+# RUN pip3 install --break-system-packages pytube youtube-transcript-api
+
+# Copy Laravel code
 COPY . .
 
-# # Build React frontend
-# COPY ./client/vite-project ./resources/frontend
-# WORKDIR /var/www/resources/frontend
-# RUN npm install && npm run build
-
-# # Move frontend build to Laravel public/
-# WORKDIR /var/www
-# RUN cp -r resources/frontend/dist/* public/
-
-
-# Install Laravel dependencies
+# Install Laravel PHP dependencies
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Fix permissions
-RUN chmod -R 775 storage bootstrap/cache
+RUN chown -R www-data:www-data /var/www && chmod -R 775 storage bootstrap/cache
 
-EXPOSE 8000
+EXPOSE 80
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
-
-
-# CMD ["apache2-foreground"]
-
-# CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=80"]
+CMD ["apache2-foreground"]
