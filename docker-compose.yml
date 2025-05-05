@@ -11,8 +11,7 @@ services:
       - LARAVEL_DATABASE_NAME=tutorongpt
       - LARAVEL_DATABASE_USER=ghady
       - LARAVEL_DATABASE_PASSWORD=ghady123
-    volumes:
-      - ./server:/var/www/html
+    
     ports:
       - "8000:8000"
     depends_on:
