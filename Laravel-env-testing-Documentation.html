@@ -339,3 +339,40 @@ SESSION_DRIVER=array</code></pre>
 </body>
 
 </html>
+
+🧠 SYSTEM HEALTH + MONITORING
+Purpose Command
+🔋 Check disk space df -h
+🧠 Check RAM and SWAP usage free -h
+📈 System resource usage (top) top or htop (install: sudo apt install htop)
+🧍 Who's logged in who
+🗓️ System info uname -a or lsb_release -a
+📦 List services systemctl list-units --type=service
+
+🐳 DOCKER COMMANDS
+Purpose Command
+🐳 Docker version check docker -v and docker compose version
+🔍 List running containers docker ps
+📦 List all containers docker ps -a
+📦 List images docker images
+❌ Stop all containers docker stop $(docker ps -q)
+❌ Remove all containers docker rm $(docker ps -aq)
+🧼 Remove all images docker rmi $(docker images -q)
+🧽 Clean everything (volumes too) docker system prune -a --volumes
+🚢 Build and run project docker compose up --build -d
+🛑 Stop project docker compose down
+🔍 See logs docker compose logs -f
+📂 Access container shell docker exec -it <container_name> sh or bash
+
+    🔐 NETWORK + PORTS
+    Purpose Command
+    🕳️ Check open ports `sudo lsof -i -P -n
+    🔍 See what’s on port 80 sudo lsof -i :80
+    🌐 Check IP address curl ifconfig.me or ip a
+
+    🧪 DEBUGGING
+    Purpose Command
+    🔎 Ping a service (e.g. DB) ping mysql or telnet mysql 3306 inside container
+    ✅ Check if Laravel is live curl http://localhost:8000 from EC2
+    🛠️ Laravel logs docker exec -it tutoron-backend sh then tail -f storage/logs/laravel.log
+    🐘 MySQL CLI inside container docker exec -it tutoron-mysql mysql -u root -p
