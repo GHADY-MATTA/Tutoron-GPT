@@ -39,7 +39,7 @@ services:
     container_name: tutoron-react
     restart: always
     ports:
-      - 80:80
+      - "80:80"
     depends_on:
       - backend
 
