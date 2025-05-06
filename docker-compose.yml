@@ -11,6 +11,7 @@ services:
       - LARAVEL_DATABASE_NAME=tutorongpt
       - LARAVEL_DATABASE_USER=ghady
       - LARAVEL_DATABASE_PASSWORD=ghady123
+      - LARAVEL_DATABASE_PORT_NUMBER=3306
  
     ports:
       - "8000:8000"
@@ -38,7 +39,7 @@ services:
     container_name: tutoron-react
     restart: always
     ports:
-      - "80:80"
+      - 80:80
     depends_on:
       - backend
 
