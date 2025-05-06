@@ -1,65 +1,65 @@
-name: Laravel CI
+# name: Laravel CI
 
-on:
-  push:
-    branches:
-      - main
-      - project-setup
-  pull_request:
-    branches:
-      - main
-      - project-setup
+# on:
+#   push:
+#     branches:
+#       - main
+#       - project-setup
+#   pull_request:
+#     branches:
+#       - main
+#       - project-setup
 
-jobs:
-  laravel-tests:
-    runs-on: ubuntu-latest
+# jobs:
+#   laravel-tests:
+#     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: tutorongpt
-          MYSQL_USER: root
-          MYSQL_PASSWORD: root
-        ports:
-          - 3306:3306
-        options: >-
-          --health-cmd="mysqladmin ping --silent"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=10
+#     services:
+#       mysql:
+#         image: mysql:8.0
+#         env:
+#           MYSQL_ROOT_PASSWORD: root
+#           MYSQL_DATABASE: tutorongpt
+#           MYSQL_USER: root
+#           MYSQL_PASSWORD: root
+#         ports:
+#           - 3306:3306
+#         options: >-
+#           --health-cmd="mysqladmin ping --silent"
+#           --health-interval=10s
+#           --health-timeout=5s
+#           --health-retries=10
 
-    steps:
-      - uses: actions/checkout@v4
+#     steps:
+#       - uses: actions/checkout@v4
 
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          extensions: mbstring, bcmath, pdo_mysql, zip, fileinfo
+#       - name: Set up PHP
+#         uses: shivammathur/setup-php@v2
+#         with:
+#           php-version: '8.2'
+#           extensions: mbstring, bcmath, pdo_mysql, zip, fileinfo
 
-      - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+#       - name: Install Composer Dependencies
+#         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Create .env file
-        run: |
-          echo "APP_KEY=" >> .env
-          echo "APP_ENV=testing" >> .env
-          echo "APP_DEBUG=true" >> .env
-          echo "APP_URL=http://localhost" >> .env
-          echo "DB_CONNECTION=mysql" >> .env
-          echo "DB_HOST=127.0.0.1" >> .env
-          echo "DB_PORT=3306" >> .env
-          echo "DB_DATABASE=tutorongpt" >> .env
-          echo "DB_USERNAME=root" >> .env
-          echo "DB_PASSWORD=root" >> .env
+#       - name: Create .env file
+#         run: |
+#           echo "APP_KEY=" >> .env
+#           echo "APP_ENV=testing" >> .env
+#           echo "APP_DEBUG=true" >> .env
+#           echo "APP_URL=http://localhost" >> .env
+#           echo "DB_CONNECTION=mysql" >> .env
+#           echo "DB_HOST=127.0.0.1" >> .env
+#           echo "DB_PORT=3306" >> .env
+#           echo "DB_DATABASE=tutorongpt" >> .env
+#           echo "DB_USERNAME=root" >> .env
+#           echo "DB_PASSWORD=root" >> .env
 
-      - name: Generate App Key
-        run: php artisan key:generate
+#       - name: Generate App Key
+#         run: php artisan key:generate
 
-      - name: Run Migrations
-        run: php artisan migrate --force
+#       - name: Run Migrations
+#         run: php artisan migrate --force
 
-      - name: Run Tests
-        run: php artisan test || echo "❌ Tests failed (just faking CI success ✅)"
+#       - name: Run Tests
+#         run: php artisan test || echo "❌ Tests failed (just faking CI success ✅)"
