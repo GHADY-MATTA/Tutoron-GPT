@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\YouTubeController;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\TranscriptReceiverController;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
@@ -20,3 +20,5 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanc
 
 
 Route::post('/youtube-transcript', [YouTubeController::class, 'store']);
+
+Route::post('/receive-transcript', [TranscriptReceiverController::class, 'receive']);
