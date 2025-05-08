@@ -10,7 +10,8 @@
         "guzzlehttp/guzzle": "^7.9",
         "laravel/framework": "12.0",
         "laravel/sanctum": "^4.1",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "prism-php/prism": "^0.66.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

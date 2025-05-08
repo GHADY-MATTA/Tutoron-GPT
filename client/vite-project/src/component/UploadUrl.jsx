@@ -14,7 +14,7 @@ function UploadUrl() {
     setErrorMessage('');
 
     try {
-      const response = await axios.post('http://localhost:8000/api/youtube-transcript', { url }, {
+      const response = await axios.post('http://127.0.0.1:8000/api/youtube-transcript', { url }, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });

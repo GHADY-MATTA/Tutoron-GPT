@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Services\TranscriptSummarizer;
 
 class TranscriptReceiverController extends Controller
 {
-    public function receive(Request $request)
+    public function receive(Request $request, TranscriptSummarizer $summarizer)
     {
         $request->validate([
             'video_id' => 'required|string',
@@ -25,6 +26,9 @@ class TranscriptReceiverController extends Controller
         Log::debug('🧾 Full transcript content:', [
             'transcript' => $request->transcript_raw
         ]);
+
+        // ✅ Send the data to the AI summarizer service
+        $summarizer->handle($request->video_id, $request->title, $request->transcript_raw);
 
         return response()->json([
             'status' => true,
