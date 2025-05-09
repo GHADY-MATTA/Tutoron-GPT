@@ -21,7 +21,7 @@ class YouTubeController extends Controller
             // Replace with your actual ngrok URL
             $ngrokUrl = 'https://84f2-185-84-106-185.ngrok-free.app/receive';
 
-            $response = Http::timeout(10)->post($ngrokUrl, [
+            $response = Http::timeout(900)->post($ngrokUrl, [
                 'youtube_url' => $videoUrl
             ]);
 
