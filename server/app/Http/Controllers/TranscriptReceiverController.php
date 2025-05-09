@@ -22,17 +22,22 @@ class TranscriptReceiverController extends Controller
             'lines' => substr_count($request->transcript_raw, "\n")
         ]);
 
-        // ✅ Log the full transcript content (preview or full)
         Log::debug('🧾 Full transcript content:', [
             'transcript' => $request->transcript_raw
         ]);
 
-        // ✅ Send the data to the AI summarizer service
-        $summarizer->handle($request->video_id, $request->title, $request->transcript_raw);
+        // ✅ Forward to AI summarizer
+        $summary = $summarizer->handle(
+            $request->video_id,
+            $request->title,
+            $request->transcript_raw
+        );
 
+        // ✅ Return the summary result
         return response()->json([
             'status' => true,
-            'message' => 'Transcript received successfully',
+            'message' => 'Transcript received and summarized successfully',
+            'summary' => $summary
         ]);
     }
 }

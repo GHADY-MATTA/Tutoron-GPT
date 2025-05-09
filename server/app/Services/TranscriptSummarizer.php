@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Log;
 
 class TranscriptSummarizer
 {
-    public function handle(string $video_id, string $title, string $transcript): void
+    public function handle(string $video_id, string $title, string $transcript): array
     {
         $prompt = <<<EOT
 You are an advanced AI learning assistant designed to convert raw video transcripts into complete educational content packages. The output must be structured JSON designed for advanced learners, including university students and professionals.
@@ -17,7 +17,7 @@ Transform the following transcript into valid structured JSON with these fields:
 
 - "title": A catchy, clear title summarizing the main topic
 - "objective": 1–2 learning objectives
-- "summary": A short paragraph overviewing the topic
+- "summary": summurize the full content of the transcript so the user can read it and understand the fuul content of the transcript adn the point of it take ur time make it gd !!
 - "highlights": Memorable or useful moments from the transcript
 - "keyInsights": 3–5 powerful insights or life lessons drawn from the topic
 - "keyPoints": 3–7 essential teaching points or explanations
@@ -48,7 +48,6 @@ Transcript:
 {$transcript}
 EOT;
 
-        // Run the prompt using Prism with .asText() since that’s working for you
         $response = Prism::text()
             ->using(Provider::OpenAI, 'gpt-4-turbo')
             ->withPrompt($prompt)
@@ -56,13 +55,12 @@ EOT;
 
         $summary = $response->text;
 
-        // Log the summary output
         Log::info('🧠 AI Summary Generated:', [
             'video_id' => $video_id,
             'title' => $title,
             'summary' => $summary,
         ]);
 
-        // All done — no return, just log
+        return json_decode($summary, true);
     }
 }
