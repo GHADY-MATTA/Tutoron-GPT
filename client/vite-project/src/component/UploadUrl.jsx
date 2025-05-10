@@ -1,8 +1,16 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { useVideo } from '../context/VideoContext';
+
+function extractVideoId(url) {
+  const match = url.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  return match ? match[1] : null;
+}
 
 function UploadUrl() {
   const [url, setUrl] = useState('');
+  const { setVideoId } = useVideo();
+  const [localVideoId, setLocalVideoId] = useState('');
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -13,15 +21,30 @@ function UploadUrl() {
     setSuccessMessage('');
     setErrorMessage('');
 
+    const id = extractVideoId(url);
+    if (!id) {
+      setErrorMessage('❌ Invalid YouTube URL');
+      setLoading(false);
+      return;
+    }
+
+    setVideoId(id);
+    setLocalVideoId(id); // ✅ show immediately
+    console.log('📺 Extracted Video ID:', id);
+
     try {
-      const response = await axios.post('http://localhost:8000/api/youtube-transcript', { url }, {
-        headers: { 'Content-Type': 'application/json' },
-        withCredentials: true,
-      });
+      const response = await axios.post(
+        'http://localhost:8000/api/youtube-transcript',
+        { url },
+        {
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true,
+        }
+      );
 
       console.log('✅ Upload Success:', response.data);
-      setSuccessMessage('Video uploaded and transcript fetched successfully!');
-      setUrl(''); // Clear the input after successful upload
+      setSuccessMessage('Video uploaded and transcript fetch started!');
+      setUrl('');
     } catch (err) {
       console.error('⛔ Upload Error:', err.response?.data || err.message);
       setErrorMessage('Failed to upload or fetch transcript.');
@@ -32,12 +55,9 @@ function UploadUrl() {
 
   return (
     <div className="space-y-6 p-4 md:p-6">
-      {/* Upload Section */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-          <h2 className="text-xl font-bold text-gray-800 mb-2 md:mb-0">
-            Upload YouTube Video
-          </h2>
+          <h2 className="text-xl font-bold text-gray-800 mb-2 md:mb-0">Upload YouTube Video</h2>
           <span className="text-sm text-gray-500">Supports all YouTube URLs</span>
         </div>
 
@@ -65,17 +85,16 @@ function UploadUrl() {
           </button>
         </form>
 
-        {/* Success/Error Messages */}
-        {successMessage && (
-          <div className="mt-4 text-green-600 font-medium">{successMessage}</div>
+        {localVideoId && (
+          <div className="mt-4 text-sm text-blue-600">
+            📺 Video ID: <code className="font-mono bg-gray-100 px-2 py-1 rounded">{localVideoId}</code>
+          </div>
         )}
-        {errorMessage && (
-          <div className="mt-4 text-red-600 font-medium">{errorMessage}</div>
-        )}
+        {successMessage && <div className="mt-2 text-green-600 font-medium">{successMessage}</div>}
+        {errorMessage && <div className="mt-2 text-red-600 font-medium">{errorMessage}</div>}
       </div>
 
-      {/* Content Display Area */}
-      <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 min-h-[400px]">
+      {/* <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 min-h-[400px]">
         <div className="flex flex-col items-center justify-center h-full text-center py-12">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -85,7 +104,7 @@ function UploadUrl() {
             Upload a YouTube video to generate summarized notes, transcripts, and key insights.
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -37,6 +37,7 @@ class TranscriptReceiverController extends Controller
         return response()->json([
             'status' => true,
             'message' => 'Transcript received and summarized successfully',
+            'video_id' => $request->video_id, //Added this
             'summary' => $summary
         ]);
     }

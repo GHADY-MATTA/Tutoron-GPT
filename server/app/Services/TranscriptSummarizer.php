@@ -5,6 +5,7 @@ namespace App\Services;
 use Prism\Prism\Prism;
 use Prism\Prism\Enums\Provider;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class TranscriptSummarizer
 {
@@ -60,7 +61,10 @@ EOT;
             'title' => $title,
             'summary' => $summary,
         ]);
+        // 📝 Save summary as file
 
+        
+        Storage::put("summaries/{$video_id}.json", $summary);
         return json_decode($summary, true);
     }
 }

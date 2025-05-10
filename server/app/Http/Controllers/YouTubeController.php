@@ -21,23 +21,15 @@ class YouTubeController extends Controller
             // Replace with your actual ngrok URL
             $ngrokUrl = 'https://84f2-185-84-106-185.ngrok-free.app/receive';
 
-            $response = Http::timeout(900)->post($ngrokUrl, [
+            // ✅ Fire and forget: don't wait for Node to finish AI
+            Http::timeout(10)->post($ngrokUrl, [
                 'youtube_url' => $videoUrl
             ]);
 
-            if ($response->failed()) {
-                Log::error("⛔ Failed to forward to Node", ['response' => $response->body()]);
-                return response()->json([
-                    'message' => 'Failed to forward YouTube URL to local processor'
-                ], 500);
-            }
-
-            Log::info("✅ Successfully forwarded. Node response: " . json_encode($response->json()));
-
+            // ✅ Return fast to React
             return response()->json([
                 'status' => 'ok',
-                'message' => 'YouTube URL successfully forwarded to local service',
-                'node_response' => $response->json()
+                'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
             ]);
         } catch (\Exception $e) {
             Log::error("💥 Exception: " . $e->getMessage());
