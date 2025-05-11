@@ -1,23 +1,17 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Import navigate
-// import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import API from '../api/api';
-
-import logoIcon from '../assets/tutoron-gpt-logo.png'; // Correct logo path
+import logoIcon from '../assets/tutoron-gpt-logo.png'; // <-- updated to your better logo
 
 function Login() {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
-
-  const navigate = useNavigate(); // ✅ Initialize navigate
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
@@ -27,21 +21,11 @@ function Login() {
     setLoading(true);
 
     try {
-      // const response = await axios.post('http://localhost:8000/api/login', form, {
-      //   headers: { 'Content-Type': 'application/json' },
-      //   withCredentials: true,
-      // });
       const response = await API.post('/login', form);
-
-
-      console.log('✅ Login Success:', response.data);
       localStorage.setItem('token', response.data.data.token);
-localStorage.setItem('username', response.data.data.user.name);
+      localStorage.setItem('username', response.data.data.user.name);
       setSuccess('Login successful! Redirecting...');
-      setTimeout(() => {
-        navigate('/dashboard'); // ✅ Redirect to /dashboard after 2s
-      }, 2000);
-
+      setTimeout(() => navigate('/dashboard'), 2000);
     } catch (err) {
       console.error('⛔ Login Error:', err.response?.data || err.message);
       setError(err.response?.data?.message || 'Something went wrong.');
@@ -51,86 +35,92 @@ localStorage.setItem('username', response.data.data.user.name);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[var(--color-bg)] p-4">
-      <div className="w-full max-w-md bg-[var(--color-primary)] rounded-2xl shadow-xl p-8">
-        
+    <div className="min-h-screen bg-gradient-to-br from-[#006166] via-[#0C9DB1] to-[#54B5CD] flex flex-col items-center justify-center p-4 relative overflow-hidden font-inter">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-[0_0_10px_#054652aa]">
+          Welcome to <span className="text-[#054652]">Tutoron-GPT</span>
+        </h1>
+        <p className="mt-2 text-lg text-white font-medium drop-shadow-sm">
+          smart-learning-starts here
+        </p>
+      </div>
+
+      {/* White Card */}
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 text-[#054652] border border-[#0C9DB1] drop-shadow-[0_0_30px_#0C9DB155]">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-14 w-14" />
+          <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-16 w-16 drop-shadow-md" />
         </div>
 
-        {/* Title */}
-        <h2 className="text-3xl font-bold text-center text-[var(--color-secondary)] mb-8">
-          Welcome Back
+        <h2 className="text-2xl font-bold text-center mb-6">
+          Log In to Continue
         </h2>
 
-        {/* Error or Success Messages */}
         {error && (
-          <div className="mb-4 text-center text-red-600 text-sm">
+          <div className="mb-4 text-center text-red-600 bg-red-100 rounded p-2 text-sm">
             {error}
           </div>
         )}
+
         {success && (
-          <div className="mb-4 text-center text-green-600 text-sm bg-green-100 p-2 rounded-md">
+          <div className="mb-4 text-center text-green-700 bg-green-100 rounded p-2 text-sm">
             {success}
           </div>
         )}
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Email */}
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-[var(--color-secondary)] mb-1">
-              Email
-            </label>
+            <label className="block text-sm font-semibold mb-1">Email</label>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-[var(--color-border)] rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition"
+              placeholder="you@example.com"
+              className="w-full px-4 py-2 rounded-lg bg-[#f0f9fb] text-[#054652] border border-[#0C9DB1] focus:outline-none focus:ring-2 focus:ring-[#0C9DB1]"
             />
           </div>
 
-          {/* Password */}
           <div>
-            <label className="block text-sm font-medium text-[var(--color-secondary)] mb-1">
-              Password
-            </label>
+            <label className="block text-sm font-semibold mb-1">Password</label>
             <input
               type="password"
               name="password"
               value={form.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-[var(--color-border)] rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition"
+              placeholder="••••••••"
+              className="w-full px-4 py-2 rounded-lg bg-[#f0f9fb] text-[#054652] border border-[#0C9DB1] focus:outline-none focus:ring-2 focus:ring-[#0C9DB1]"
             />
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-2 rounded-md font-semibold transition-all duration-300 
-              bg-[var(--color-accent)] text-[var(--color-primary)] 
-              hover:bg-[var(--color-accent-light)] 
-              hover:shadow-md hover:-translate-y-1 
+            className="w-full py-3 text-white font-semibold rounded-lg transition-all
+              bg-gradient-to-r from-[#006166] to-[#0C9DB1]
+              hover:from-[#0C9DB1] hover:to-[#054652]
+              hover:shadow-[0_0_20px_#0C9DB1]
               active:scale-95 
               disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {loading ? 'Logging in...' : 'Log In'}
+            {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
 
-        {/* Register link */}
-        <p className="text-center text-sm text-gray-500 mt-6">
-          Don't have an account?{' '}
-          <a href="/register" className="text-[var(--color-accent)] hover:underline font-semibold">
+        <p className="text-center text-sm mt-6 text-[#054652]">
+          Don’t have an account?{' '}
+          <a href="/register" className="underline text-[#0C9DB1] hover:text-[#006166] font-medium">
             Sign Up
           </a>
         </p>
       </div>
+
+      {/* Glow Accents */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#54B5CD]/30 rounded-full blur-3xl animate-pulse -z-10" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#006166]/40 rounded-full blur-2xl animate-pulse -z-10" />
     </div>
   );
 }

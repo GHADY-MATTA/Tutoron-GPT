@@ -1,9 +1,17 @@
 import React from 'react';
 import { FaSearch, FaPlus } from 'react-icons/fa';
 
-function Sidebar() {
+function Sidebar({ isOpen }) {
   return (
-    <aside className="w-full md:w-64 bg-white border-r border-gray-200 shadow-sm min-h-screen">
+    <aside
+      className={`
+        fixed md:static z-40 inset-y-0 left-0 bg-white border-r border-gray-200 shadow-sm
+        transform transition-transform duration-300 ease-in-out
+        w-64 min-h-screen
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
+        md:translate-x-0
+      `}
+    >
       <div className="p-4">
         {/* Search Bar */}
         <div className="relative mb-6">
@@ -51,7 +59,7 @@ function Sidebar() {
             </div>
           </li>
 
-          {/* Note Item */}
+          {/* Additional notes... */}
           <li className="p-3 rounded-lg cursor-pointer transition hover:bg-gray-50 border border-transparent hover:border-gray-200">
             <div className="flex justify-between items-start">
               <h3 className="font-medium text-gray-800">Research Findings</h3>
@@ -66,7 +74,6 @@ function Sidebar() {
             </div>
           </li>
 
-          {/* Note Item */}
           <li className="p-3 rounded-lg cursor-pointer transition hover:bg-gray-50 border border-transparent hover:border-gray-200">
             <div className="flex justify-between items-start">
               <h3 className="font-medium text-gray-800">Shopping List</h3>
@@ -80,7 +87,6 @@ function Sidebar() {
             </div>
           </li>
 
-          {/* Note Item */}
           <li className="p-3 rounded-lg cursor-pointer transition hover:bg-gray-50 border border-transparent hover:border-gray-200">
             <div className="flex justify-between items-start">
               <h3 className="font-medium text-gray-800">Book Recommendations</h3>

@@ -33,7 +33,7 @@ Transform the following transcript into valid structured JSON with these fields:
 - "visualGuide": (If applicable) Step-by-step breakdown that could be drawn or animated
 - "stepsToApply": Checklist or process to use this knowledge
 - "reflection": 1 deep thinking or journaling question
-- "quiz": 3–5 short self-test questions  (MCQ or open-ended)
+- "quiz": 5-7 short self-test questions  (as plain strings in an array !)
 - "exploreMore": Where to learn more (e.g., books, websites, courses, public figures)
 - "finalInsight": A powerful concluding thought or motivational message
 
