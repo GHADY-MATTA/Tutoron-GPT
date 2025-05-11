@@ -50,8 +50,15 @@ Route::get('/summaries', function () {
 
     $summaries = collect($files)
         ->filter(fn($file) => $file->getExtension() === 'json')
-        ->map(fn($file) => pathinfo($file->getFilename(), PATHINFO_FILENAME))
-        ->sortDesc()
+        ->map(function ($file) {
+            $id = pathinfo($file->getFilename(), PATHINFO_FILENAME);
+            $json = json_decode(file_get_contents($file->getPathname()), true);
+            return [
+                'id' => $id,
+                'title' => $json['title'] ?? 'Untitled'
+            ];
+        })
+        ->sortByDesc('id') // Optional: sort by ID (most recent)
         ->values();
 
     return response()->json($summaries);

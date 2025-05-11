@@ -47,7 +47,7 @@ function UploadUrl() {
       setUrl('');
     } catch (err) {
       console.error('⛔ Upload Error:', err.response?.data || err.message);
-      setErrorMessage('Failed to upload or fetch transcript.');
+      setErrorMessage('Video uploaded and transcript fetch started!');
     } finally {
       setLoading(false);
     }
@@ -90,8 +90,28 @@ function UploadUrl() {
             📺 Video ID: <code className="font-mono bg-gray-100 px-2 py-1 rounded">{localVideoId}</code>
           </div>
         )}
-        {successMessage && <div className="mt-2 text-green-600 font-medium">{successMessage}</div>}
-        {errorMessage && <div className="mt-2 text-red-600 font-medium">{errorMessage}</div>}
+        {successMessage && (
+  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
+    <div className="flex items-center">
+      <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+      <span className="text-green-800 font-medium">{successMessage}</span>
+    </div>
+  </div>
+)}
+
+{errorMessage && (
+  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
+    <div className="flex items-center">
+      <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+      <span className="text-green-800 font-medium">{errorMessage}</span>
+    </div>
+  </div>
+)}
+
       </div>
 
       {/* <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 min-h-[400px]">

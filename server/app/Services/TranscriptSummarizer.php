@@ -33,14 +33,16 @@ Transform the following transcript into valid structured JSON with these fields:
 - "visualGuide": (If applicable) Step-by-step breakdown that could be drawn or animated
 - "stepsToApply": Checklist or process to use this knowledge
 - "reflection": 1 deep thinking or journaling question
-- "quiz": 3–5 short self-test questions (MCQ or open-ended)
+- "quiz": 3–5 short self-test questions  (MCQ or open-ended)
 - "exploreMore": Where to learn more (e.g., books, websites, courses, public figures)
 - "finalInsight": A powerful concluding thought or motivational message
 
 Rules:
 - Return **valid JSON only**
 - Do NOT include extra text, explanation, or markdown
+-Do NOT wrap the response in ```json or ```
 - Be clear, engaging, and make the content usable in **real-world learning** settings
+- Make your answer long, deep, and practical — suitable for real learne
 - Teach like a **world-class mentor** would: practically, globally aware, with compassion
 
 Only return valid JSON.

@@ -120,17 +120,31 @@ function SummarizeViewerManual() {
           </button>
         </div>
 
-        <div className="relative">
+        <div className="relative space-y-2">
           <select
             onChange={(e) => setVideoId(e.target.value)}
             value={videoId}
             className="w-full px-5 py-3 border border-gray-200 rounded-lg appearance-none bg-white focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all"
           >
             <option value="">Browse existing summaries...</option>
-            {availableSummaries.map((id) => (
-              <option key={id} value={id}>{id}</option>
+            {availableSummaries.map(({ id, title }) => (
+              <option key={id} value={id}>
+                {title} ({id})
+              </option>
             ))}
           </select>
+
+          {videoId && (
+            <a
+              href={`https://www.youtube.com/watch?v=${videoId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline text-sm transition-all block"
+            >
+              ▶ Preview on YouTube
+            </a>
+          )}
+
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
             ▼
           </div>
@@ -151,7 +165,7 @@ function SummarizeViewerManual() {
               {summary.title}
             </h2>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="space-y-6">
               <SectionCard title="Objective" content={summary.objective} colorClass="bg-blue-50 border-blue-300" />
               <SectionCard title="Summary" content={summary.summary} colorClass="bg-gray-50 border-gray-300" />
               <SectionCard title="Highlights" content={summary.highlights} colorClass="bg-amber-50 border-amber-300" />
