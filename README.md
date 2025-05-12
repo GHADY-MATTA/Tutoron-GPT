@@ -19,24 +19,40 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 <!-- System Design -->
 <img src="./readme/title3.svg"/>
 
-### Add Title Here
+### 🧠 Hybrid Cloud-to-Local Transcript Fetching Architecture
 
-- Hybrid Cloud-to-Local Microservice for YouTube Transcript Fetching
-Offloading transcript extraction to a personal machine with residential IP to bypass YouTube's cloud IP restrictions - using Node.js, Python, and Ngrok as a lightweight, secure bridge between Laravel and local execution.
+-- **Why:**  
+  Cloud VMs like EC2 are often blocked from accessing YouTube transcripts due to IP-based restrictions.
+
+- **The Challenge:**  
+  Fetching YouTube transcripts directly from a server results in failure or empty responses.
+
+- **The Solution:**  
+  Offload the transcript extraction to your **local machine with a residential IP**.
+
+- **How It Works:**  
+  - 🌐 Laravel (on EC2) sends an HTTP POST to a public Ngrok endpoint.  
+  - 🧩 Ngrok tunnels the request to your **local Node.js + Express** server.  
+  - 🐍 Node.js triggers a Python script (`fetch_transcript.py`) to extract the transcript.  
+  - 📬 The response is sent back to **Laravel via a secure HTTP route**, completing the flow.
+
+> ✅ This hybrid architecture enables **fast**, **secure**, and **reliable** transcript access even from cloud-restricted environments.
 
 <br><br>
 
 <!-- Project Highlights -->
 <img src="./readme/title4.svg"/>
 
-### Add Title Here
+### 🔥 Standout Features That Make Tutoron-GPT Shine
 
-- 📺 YouTube Transcript Intelligence
-Upload any YouTube URL  get clean transcripts, summaries, key insights, and study material.
--🌐 Cloud-to-Local Microservice Bridge
-Bypasses YouTube transcript blocking with a hybrid Node.js + Python pipeline using Ngrok.
--🧠 Smart AI Summarization
-Structured video breakdowns: Objectives, Key Points, Highlights, Insights - powered by GPT.
+- 📺 **YouTube Transcript Intelligence**  
+  Upload any YouTube URL - get clean transcripts, summaries, key insights, and study material.
+
+- 🌐 **Cloud-to-Local Microservice Bridge**  
+  Bypasses YouTube transcript blocking with a hybrid Node.js + Python pipeline using Ngrok.
+
+- 🧠 **Smart AI Summarization**  
+  Structured video breakdowns: Objectives, Key Points, Highlights, and Insights - powered by GPT.
 <br><br>
 
 <!-- Demo -->
@@ -74,9 +90,15 @@ Structured video breakdowns: Objectives, Key Points, Highlights, Insights - powe
 <!-- Deployment -->
 <img src="./readme/title7.svg"/>
 
-### Add Title Here
+### Cloud Deployment with CI/CD on Ubuntu EC2 + Docker
 
-- Description here.
+
+- **Automated CI/CD Pipeline**  
+- **Dockerized Infrastructure**  
+- **Ubuntu EC2 Hosting**  
+- **Production Build with Vite + Laravel Artisan**  
+- **.env Configuration + Secrets**  
+- **Persistent MySQL Volumes**
 
 
 | Postman API 1                            | Postman API 2                       | Postman API 3                        |
