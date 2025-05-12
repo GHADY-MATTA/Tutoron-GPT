@@ -5,9 +5,14 @@
 <!-- project overview -->
 <img src="./readme/title2.svg"/>
 
-> Description here.
 >
-> Description here.
+>Tutoron-GPT: Your Personal AI Learning Assistant
+Tutoron-GPT is an AI-powered education platform designed to revolutionize how individuals learn online. By combining adaptive technology with personalized tutoring experiences, Tutoron-GPT helps users learn faster, understand deeper, and retain longer.
+
+Whether you're a student preparing for exams, a professional upskilling, or a curious mind exploring new topics, Tutoron-GPT tailors its teaching approach to your unique learning style and pace.
+
+
+> 
 
 <br><br>
 
@@ -16,7 +21,8 @@
 
 ### Add Title Here
 
-- To be decided on later on.
+- Hybrid Cloud-to-Local Microservice for YouTube Transcript Fetching
+Offloading transcript extraction to a personal machine with residential IP to bypass YouTube's cloud IP restrictions - using Node.js, Python, and Ngrok as a lightweight, secure bridge between Laravel and local execution.
 
 <br><br>
 
@@ -25,8 +31,12 @@
 
 ### Add Title Here
 
-- List the sexy features.
-
+- 📺 YouTube Transcript Intelligence
+Upload any YouTube URL  get clean transcripts, summaries, key insights, and study material.
+-🌐 Cloud-to-Local Microservice Bridge
+Bypasses YouTube transcript blocking with a hybrid Node.js + Python pipeline using Ngrok.
+-🧠 Smart AI Summarization
+Structured video breakdowns: Objectives, Key Points, Highlights, Insights - powered by GPT.
 <br><br>
 
 <!-- Demo -->
