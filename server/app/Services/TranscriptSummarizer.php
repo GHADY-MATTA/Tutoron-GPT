@@ -54,6 +54,9 @@ EOT;
         $response = Prism::text()
             ->using(Provider::OpenAI, 'gpt-4-turbo')
             ->withPrompt($prompt)
+            ->withOptions([
+                'timeout' => 90 // 👈 preferred: override timeout properly here
+            ])
             ->asText();
 
         $summary = $response->text;
