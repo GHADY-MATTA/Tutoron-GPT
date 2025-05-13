@@ -34,7 +34,7 @@ function UploadUrl() {
 
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/youtube-transcript',
+        'http://52.47.190.216:8000/api/youtube-transcript',
         { url },
         {
           headers: { 'Content-Type': 'application/json' },
