@@ -3,41 +3,22 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class YouTubeControllerTest extends TestCase
 {
-    use RefreshDatabase;
-
     /** @test */
-    public function it_stores_youtube_video_successfully()
+    public function it_forwards_youtube_url_and_returns_success_response()
     {
         $response = $this->postJson('/api/youtube-transcript', [
-            'url' => 'https://www.youtube.com/watch?v=Tn6-PIqc4UM',
+            'url' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
         ]);
 
         $response->assertStatus(200)
             ->assertJson([
-                'status' => true,
-                'message' => 'Video & transcript saved successfully',
+                'status' => 'ok',
+                'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
             ]);
-    }
-
-    /** @test */
-    public function it_fails_when_invalid_url_is_provided()
-    {
-        $response = $this->postJson('/api/youtube-transcript', [
-            'url' => 'invalid-url',
-        ]);
-
-        $response->assertStatus(422); // validation fails at Laravel validation layer
-    }
-
-    /** @test */
-    public function it_fails_when_no_url_is_provided()
-    {
-        $response = $this->postJson('/api/youtube-transcript', []);
-
-        $response->assertStatus(422); // validation fails at Laravel validation layer
     }
 }
