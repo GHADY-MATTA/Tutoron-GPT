@@ -9,7 +9,7 @@ use Prism\Prism\Enums\Provider;
 class PrismConnectionTest extends TestCase
 {
     /** @test @group ai */
-    public function test_openai_is_responding()
+    public function openai_is_responding()
     {
         $response = Prism::text()
             ->using(Provider::OpenAI, 'gpt-4-turbo')
