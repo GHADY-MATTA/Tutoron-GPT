@@ -82,7 +82,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 | Services                            | Validation                       | Testing                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![[![Run CI Tests](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml/badge.svg?branch=main&event=check_run)](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml)](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
 
 
 <br><br>
