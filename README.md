@@ -65,7 +65,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 | ![Landing](./readme/demo/Mobile-Login.jpg) | ![fsdaf](./readme/demo/Mobile-SignUp.jpg) | ![fsdaf](./readme/demo/Mobile-home.jpg) |
 
 
-### Admin Screens (Web)
+### Admin Screen (Web)
 
 | Login screen                            | Register screen                       |
 | --------------------------------------- | ------------------------------------- |
@@ -73,7 +73,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 
 <br><br>
-
+ 
 <!-- Development & Testing -->
 <img src="./readme/title6.svg"/>
 
