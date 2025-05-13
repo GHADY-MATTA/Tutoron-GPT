@@ -14,8 +14,8 @@ jobs:
         image: mysql:8.0
         env:
           MYSQL_DATABASE: tutorongpt
-          MYSQL_USER: ghady
-          MYSQL_PASSWORD: ghady123
+          MYSQL_USER: root
+          MYSQL_PASSWORD: root
           MYSQL_ROOT_PASSWORD: root
         ports:
           - 3306:3306
@@ -34,15 +34,15 @@ jobs:
         with:
           php-version: 8.2
 
-      - name: 🧪 Install Laravel
+      - name: 📦 Install Laravel Dependencies
         run: composer install --no-interaction --prefer-dist
         working-directory: server
 
-      - name: 🧾 Use .env.ci as runtime env
+      - name: 🧾 Copy .env.ci
         run: cp .env.ci .env
         working-directory: server
 
-      - name: 🧠 Set Laravel Key and Migrate
+      - name: 🔑 Laravel Key + Migrate DB
         run: |
           php artisan key:generate
           php artisan migrate --force
@@ -56,16 +56,18 @@ jobs:
           DB_PASSWORD: root
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-      - name: ✅ Run Laravel Tests (without hitting AI)
-        run: php artisan test --exclude-group=ai
+      - name: ✅ Run Laravel Auth + YouTube Tests
+        run: |
+          php artisan test tests/Feature/AuthTest.php
+          php artisan test tests/Feature/YouTubeControllerTest.php
         working-directory: server
 
-      - name: 🔧 Set up Node.js
+      - name: 🧰 Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: ⚛️ Build React (Vite)
+      - name: ⚛️ Build React Frontend
         run: |
           npm install
           npm run build
