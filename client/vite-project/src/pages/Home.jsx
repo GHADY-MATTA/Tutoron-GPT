@@ -76,3 +76,4 @@ const TutoronGPT = () => {
             Tutoron-GPT adapts to your learning style and pace to deliver the most effective educational experience.
           </p>
         </div>
+        <div className="grid md:grid-cols-3 gap-8">
