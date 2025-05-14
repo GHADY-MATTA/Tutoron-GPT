@@ -90,3 +90,18 @@ function SummarizeViewerManual() {
           onChange={(e) => setVideoId(e.target.value)}
           className="flex-1 px-5 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all"
         />
+        <button
+          onClick={handleFetch}
+          disabled={loading || !videoId}
+          className={`px-6 py-3 rounded-lg font-medium transition-all ${
+            loading ? 'bg-gray-300 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white shadow-md'
+          }`}
+        >
+          {loading ? (
+            <span className="flex items-center justify-center">
+              <span className="animate-spin mr-2">🌀</span> Loading...
+            </span>
+          ) : (
+            'Generate Summary'
+          )}
+        </button>
