@@ -54,3 +54,18 @@ const TutoronGPT = () => {
           </div>
         )}
       </nav>
+      <div className="bg-gradient-to-br from-[#1f7a8c] to-[#022b3a] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-6">Your Personal AI Learning Assistant</h1>
+            <p className="text-xl max-w-3xl mx-auto mb-8 opacity-90">
+              Tutoron-GPT helps you learn faster, understand deeper, and retain knowledge longer with personalized
+              AI-powered tutoring.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="#" className="bg-[#1f7a8c] hover:bg-[#3a9fb3] px-8 py-3 rounded-md text-lg font-semibold transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md">Get Started Free</a>
+              <a href="#" className="bg-white text-[#022b3a] px-8 py-3 rounded-md text-lg font-semibold hover:bg-opacity-90 transition">See How It Works</a>
+            </div>
+          </div>
+        </div>
+      </div>
