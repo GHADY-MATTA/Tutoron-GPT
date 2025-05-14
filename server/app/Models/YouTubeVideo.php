@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class YouTubeVideo extends Model
 {
-    protected $table = 'youtube_videos'; // ✅ Fix table name manually
+    protected $table = 'youtube_videos'; // ✅ Fi
 
     protected $fillable = [
         'video_id',
