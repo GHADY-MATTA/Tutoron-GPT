@@ -20,7 +20,7 @@ class AuthService
     public function login(array $credentials)
     {
         if (!Auth::attempt($credentials)) {
-            return false; // Login 
+            return false; // Login failed
         }
 
         $user = Auth::user();
