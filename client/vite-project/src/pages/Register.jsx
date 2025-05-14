@@ -49,3 +49,6 @@ const handleSubmit = async (e) => {
 </p>
 </div>
       <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 text-[#054652] border border-[#0C9DB1] drop-shadow-[0_0_30px_#0C9DB155]">
+        <div className="flex justify-center mb-6">
+          <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-16 w-16 drop-shadow-md" />
+        </div>
