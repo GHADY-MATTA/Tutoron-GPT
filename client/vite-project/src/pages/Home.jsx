@@ -160,3 +160,13 @@ const TutoronGPT = () => {
                 <li><a href="#" className="hover:text-[#bfdbf7] transition">Examples</a></li>
               </ul>
             </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Connect</h3>
+              <div className="flex space-x-4">
+                <a href="#" className="hover:text-[#bfdbf7] transition">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724..."/>
+                  </svg>
+                </a>
+              </div>
+            </div>
