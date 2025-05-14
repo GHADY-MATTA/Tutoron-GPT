@@ -34,3 +34,12 @@ $request->validate([
             'video_id' => $request->video_id, // Added this
             'summary' => $summary
         ]);
+        Log::info('📥 Transcript received from Node.js', [
+            'video_id' => $request->video_id,
+            'title' => $request->title,
+            'lines' => substr_count($request->transcript_raw, "\n")
+        ]);
+
+        Log::debug('🧾 Full transcript content:', [
+            'transcript' => $request->transcript_raw
+        ]);
