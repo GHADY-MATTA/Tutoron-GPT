@@ -14,3 +14,4 @@ class YouTubeController extends Controller
             'url' => 'required|url'
         ]);
         $videoUrl = $request->input('url');
+        Log::info("🎯 Forwarding YouTube URL to Node via ngrok: {$videoUrl}");
