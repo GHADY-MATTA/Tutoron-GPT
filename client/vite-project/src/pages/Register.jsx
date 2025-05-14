@@ -106,3 +106,9 @@ const handleSubmit = async (e) => {
           >
             {loading ? 'Creating account...' : 'Register'}
           </button>
+          <p className="text-center text-sm mt-6 text-[#054652]">
+          Already have an account?{' '}
+          <a href="/login" className="underline text-[#0C9DB1] hover:text-[#006166] font-medium">
+            Log In
+          </a>
+        </p>
