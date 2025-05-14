@@ -28,7 +28,7 @@ Transform the following transcript into valid structured JSON with these fields:
   - One for **adults** or advanced learners
 - "whyItMatters": Explain why this skill or knowledge is important in real life
 - "whatIfNotUsed": What problems arise if this isn’t known or applied
-- "useCases": Where and how this topic is used today (, roles, daily life)
+- "useCases": Where and how this topic is used today (industries, roles, daily life)
 - "globalBestPractices": A short paragraph about how the topic is approached by top countries, cultures, or institutions (e.g., Japan for discipline, Germany for engineering)
 - "visualGuide": (If applicable) Step-by-step breakdown that could be drawn or animated
 - "stepsToApply": Checklist or process to use this knowledge
