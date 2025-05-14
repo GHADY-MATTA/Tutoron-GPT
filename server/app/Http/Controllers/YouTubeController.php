@@ -18,7 +18,7 @@ class YouTubeController extends Controller
         Log::info("🎯 Forwarding YouTube URL to Node via ngrok: {$videoUrl}");
 
         try {
-            // Replace with your actual ngrok URL
+            // L
             $ngrokUrl = 'https://106d-185-84-106-202.ngrok-free.app/receive';
 
             // ✅ Fire and forget: don't wait for Node to finish AI
