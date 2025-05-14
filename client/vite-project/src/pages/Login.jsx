@@ -9,3 +9,8 @@ const [loading, setLoading] = useState(false);
 const handleChange = (e) => {
   setForm({ ...form, [e.target.name]: e.target.value });
 };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError('');
+  setSuccess('');
+  setLoading(true);
