@@ -25,3 +25,8 @@ const handleSubmit = async (e) => {
   setError('');
   setSuccess('');
   setLoading(true);
+  try {
+    const response = await API.post('/register', form);
+    console.log('✅ Registration Success:', response.data);
+    setSuccess('Account created! Redirecting to login...');
+    setTimeout(() => navigate('/login'), 2000);
