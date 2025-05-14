@@ -13,7 +13,7 @@ function Sidebar({ isOpen }) {
       `}
     >
       <div className="p-4">
-        {/*  Bar */}
+        {/* Search Bar */}
         <div className="relative mb-6">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <FaSearch className="text-gray-400" />
