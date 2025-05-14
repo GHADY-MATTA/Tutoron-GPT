@@ -14,49 +14,52 @@ def extract_video_id(url):
     except Exception:
         return None
 
-if len(sys.argv) < 2:
-    print(json.dumps({"error": "No URL provided"}, ensure_ascii=False), flush=True)
-    sys.exit(1)
+def main():
+    if len(sys.argv) < 2:
+        print(json.dumps({"error": "No URL provided"}, ensure_ascii=False), flush=True)
+        sys.exit(1)
 
-url = sys.argv[1]
-video_id = extract_video_id(url)
+    url = sys.argv[1]
+    video_id = extract_video_id(url)
 
-if not video_id:
-    print(json.dumps({"error": "Invalid YouTube URL"}, ensure_ascii=False), flush=True)
-    sys.exit(1)
+    if not video_id:
+        print(json.dumps({"error": "Invalid YouTube URL"}, ensure_ascii=False), flush=True)
+        sys.exit(1)
 
-title = "Unknown"
-channel = "Unknown"
+    title = "Unknown"
+    channel = "Unknown"
 
-try:
-    yt = YouTube(url)
-    title = yt.title or "Unknown"
-    channel = yt.author or "Unknown"
-except Exception:
-    pass  # Still continue even if metadata fails
+    try:
+        yt = YouTube(url)
+        title = yt.title or "Unknown"
+        channel = yt.author or "Unknown"
+    except Exception:
+        pass  # Still continue even if metadata fails
 
-try:
-    transcript_raw = YouTubeTranscriptApi.get_transcript(video_id)
-    transcript = [
-        {
-            "text": line.get("text", ""),
-            "start": line.get("start", 0),
-            "duration": line.get("duration", 0)
-        }
-        for line in transcript_raw
-    ]
-    language = transcript_raw[0].get("language_code", "en") if transcript_raw else "unknown"
-except Exception as e:
-    print(json.dumps({"error": f"Transcript not found: {str(e)}"}, ensure_ascii=False), flush=True)
-    sys.exit(1)
+    try:
+        transcript_raw = YouTubeTranscriptApi.get_transcript(video_id)
+        transcript = [
+            {
+                "text": line.get("text", ""),
+                "start": line.get("start", 0),
+                "duration": line.get("duration", 0)
+            }
+            for line in transcript_raw
+        ]
+        language = transcript_raw[0].get("language_code", "en") if transcript_raw else "unknown"
+    except Exception as e:
+        print(json.dumps({"error": f"Transcript not found: {str(e)}"}, ensure_ascii=False), flush=True)
+        sys.exit(1)
 
-output = {
-    "video_id": video_id,
-    "title": title,
-    "channel": channel,
-    "language": language,
-    "transcript": transcript
-}
-print(json.dumps(output, ensure_ascii=False), flush=True)
+    # ✅ Clean JSON output, flushed immediately
+    output = {
+        "video_id": video_id,
+        "title": title,
+        "channel": channel,
+        "language": language,
+        "transcript": transcript
+    }
+    print(json.dumps(output, ensure_ascii=False), flush=True)
+
 if __name__ == "__main__":
     main()
