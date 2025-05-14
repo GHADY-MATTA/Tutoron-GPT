@@ -1,3 +1,18 @@
 version: '3.9'
 
 services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: tutoron-backend
+    environment:
+      - LARAVEL_DATABASE_HOST=mysql
+      - LARAVEL_DATABASE_NAME=tutorongpt
+      - LARAVEL_DATABASE_USER=ghady
+      - LARAVEL_DATABASE_PASSWORD=ghady123
+      - LARAVEL_DATABASE_PORT_NUMBER=3306
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
