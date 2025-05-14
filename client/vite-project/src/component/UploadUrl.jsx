@@ -107,3 +107,13 @@ finally {
     <span className="text-sm text-gray-500">Supports all YouTube URLs</span>
   </div>
   <span className="text-sm text-gray-500">Supports all YouTube URLs</span>
+  {videoId && (
+  <a
+    href={`https://www.youtube.com/watch?v=${videoId}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-500 hover:underline text-sm transition-all block"
+  >
+    ▶ Preview on YouTube
+  </a>
+)}
