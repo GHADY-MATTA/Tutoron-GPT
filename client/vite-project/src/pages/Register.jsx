@@ -40,3 +40,11 @@ const handleSubmit = async (e) => {
     setLoading(false);
   }
 };
+<div className="text-center mb-8">
+<h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-[0_0_10px_#054652aa]">
+  Join <span className="text-[#054652]">Tutoron-GPT</span>
+</h1>
+<p className="mt-2 text-lg text-white font-medium drop-shadow-sm">
+  smart-learning-starts here
+</p>
+</div>
