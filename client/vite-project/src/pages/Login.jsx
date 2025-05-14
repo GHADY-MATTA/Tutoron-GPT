@@ -88,3 +88,9 @@ return (
           >
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
+          <p className="text-center text-sm mt-6 text-[#054652]">
+          Don’t have an account?{' '}
+          <a href="/register" className="underline text-[#0C9DB1] hover:text-[#006166] font-medium">
+            Sign Up
+          </a>
+        </p>
