@@ -18,7 +18,7 @@ Transform the following transcript into valid structured JSON with these fields:
 
 - "title": A catchy, clear title summarizing the main topic
 - "objective": 1–2 learning objectives
-- "summary":  the full content of the transcript so the user can read it and understand the fuul content of the transcript adn the point of it take ur time make it gd !!
+- "summary": summurize the full content of the transcript so the user can read it and understand the fuul content of the transcript adn the point of it take ur time make it gd !!
 - "highlights": Memorable or useful moments from the transcript
 - "keyInsights": 3–5 powerful insights or life lessons drawn from the topic
 - "keyPoints": 3–7 essential teaching points or explanations
