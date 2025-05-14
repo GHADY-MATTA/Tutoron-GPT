@@ -29,3 +29,13 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
+  react:
+    build:
+      context: ./client/vite-project
+      dockerfile: Dockerfile
+    container_name: tutoron-react
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
