@@ -110,3 +110,11 @@ const TutoronGPT = () => {
               Get real-time corrections and suggestions as you learn and practice new skills.
             </p>
           </div>
+          <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[#022b3a] mb-4">How Tutoron-GPT Works</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Simple steps to transform your learning experience with AI.
+            </p>
+          </div>
