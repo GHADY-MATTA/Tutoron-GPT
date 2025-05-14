@@ -32,3 +32,7 @@ const handleSubmit = async (e) => {
     setTimeout(() => navigate('/login'), 2000);
     setSuccess('Account created! Redirecting to login...');
     setTimeout(() => navigate('/login'), 2000);
+  } catch (err) {
+    console.error('⛔ Registration Error:', err.response?.data || err.message);
+    setError(err.response?.data?.message || 'Something went wrong.');
+  }
