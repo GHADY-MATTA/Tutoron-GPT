@@ -152,3 +152,11 @@ const TutoronGPT = () => {
       <footer className="bg-[#022b3a] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+              <h3 className="text-lg font-semibold mb-4">Product</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="hover:text-[#bfdbf7] transition">Features</a></li>
+                <li><a href="#" className="hover:text-[#bfdbf7] transition">Pricing</a></li>
+                <li><a href="#" className="hover:text-[#bfdbf7] transition">Examples</a></li>
+              </ul>
+            </div>
