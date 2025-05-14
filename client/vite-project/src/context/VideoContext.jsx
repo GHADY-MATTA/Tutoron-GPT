@@ -13,4 +13,3 @@ export const VideoProvider = ({ children }) => {
     </VideoContext.Provider>
   );
 };
-//
