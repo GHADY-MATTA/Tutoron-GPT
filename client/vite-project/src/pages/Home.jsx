@@ -133,3 +133,10 @@ const TutoronGPT = () => {
                 Our AI analyzes your needs and creates a customized learning path just for you.
               </p>
             </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-[#1f7a8c] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">3</div>
+              <h3 className="text-xl font-semibold mb-3">Learn, Practice, Master</h3>
+              <p className="text-gray-600">
+                Engage with interactive lessons and get instant feedback as you progress.
+              </p>
+            </div>
