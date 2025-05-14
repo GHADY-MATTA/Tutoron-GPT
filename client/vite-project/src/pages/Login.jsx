@@ -16,3 +16,6 @@ const handleSubmit = async (e) => {
   setLoading(true);
   try {
     const response = await API.post('/login', form);
+    localStorage.setItem('token', response.data.data.token);
+    localStorage.setItem('username', response.data.data.user.name);
+    setSuccess('Login successful! Redirecting...');
