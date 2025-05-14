@@ -29,3 +29,11 @@ const handleSubmit = async (e) => {
 };
 return (
   <div className="min-h-screen bg-gradient-to-br from-[#006166] via-[#0C9DB1] to-[#54B5CD] flex flex-col items-center justify-center p-4 relative overflow-hidden font-inter">
+      <div className="text-center mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-[0_0_10px_#054652aa]">
+          Welcome to <span className="text-[#054652]">Tutoron-GPT</span>
+        </h1>
+        <p className="mt-2 text-lg text-white font-medium drop-shadow-sm">
+          smart-learning-starts here
+        </p>
+      </div>
