@@ -48,3 +48,6 @@ setUrl('');
   console.error('⛔ Upload Error:', err.response?.data || err.message);
   setErrorMessage('Video uploaded and transcript fetch started! wait couple seconds');
 }
+finally {
+  setLoading(false);
+}
