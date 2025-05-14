@@ -21,7 +21,7 @@ Transform the following transcript into valid structured JSON with these fields:
 - "summary": summurize the full content of the transcript so the user can read it and understand the fuul content of the transcript adn the point of it take ur time make it gd !!
 - "highlights": Memorable or useful moments from the transcript
 - "keyInsights": 3–5 powerful insights or life lessons drawn from the topic
-- "keyPoints": 3–7  teaching points or explanations
+- "keyPoints": 3–7 essential teaching points or explanations
 - "concepts": A dictionary of key terms with brief definitions
 - "examples": Two real-world examples of applying the concept:
   - One for **children** or beginner learners
