@@ -36,3 +36,7 @@ const handleSubmit = async (e) => {
     console.error('⛔ Registration Error:', err.response?.data || err.message);
     setError(err.response?.data?.message || 'Something went wrong.');
   }
+  finally {
+    setLoading(false);
+  }
+};
