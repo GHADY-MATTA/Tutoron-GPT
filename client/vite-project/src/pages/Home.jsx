@@ -170,3 +170,6 @@ const TutoronGPT = () => {
                 </a>
               </div>
             </div>
+            <div className="mt-12 pt-8 border-t border-[#1f7a8c] text-center">
+            <p>&copy; 2025 Tutoron-GPT. All rights reserved.</p>
+          </div>
