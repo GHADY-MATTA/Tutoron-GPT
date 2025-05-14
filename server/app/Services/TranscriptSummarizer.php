@@ -26,3 +26,4 @@ EOT;
             'title' => $title,
             'summary' => $summary,
         ]);
+        Storage::put("summaries/{$video_id}.json", $summary);
