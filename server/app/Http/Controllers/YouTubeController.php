@@ -22,7 +22,7 @@ class YouTubeController extends Controller
             $ngrokUrl = 'https://106d-185-84-106-202.ngrok-free.app/receive';
 
             // ✅ Fire and forget: don't wait for Node to finish AI
-            Http::timeout(5)->post($ngrokUrl, [
+            Http::timeout( seconds: 5)->post($ngrokUrl, [
                 'youtube_url' => $videoUrl
             ]);
 
