@@ -12,10 +12,12 @@ services:
       - LARAVEL_DATABASE_USER=ghady
       - LARAVEL_DATABASE_PASSWORD=ghady123
       - LARAVEL_DATABASE_PORT_NUMBER=3306
+ 
     ports:
       - "8000:8000"
     depends_on:
       - mysql
+
   mysql:
     image: mysql:8.0
     container_name: tutoron-mysql
@@ -29,6 +31,7 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
+
   react:
     build:
       context: ./client/vite-project
@@ -39,17 +42,6 @@ services:
       - "80:80"
     depends_on:
       - backend
+
 volumes:
   mysql_data:
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=tutorongpt
-      - MYSQL_USER=ghady
-      - MYSQL_PASSWORD=ghady123
-    depends_on:
-      - backend
-    ports:
-      - "8000:8000"
-    ports:
-      - "3306:3306"
-    restart: unless-stopped
