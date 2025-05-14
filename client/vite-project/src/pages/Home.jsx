@@ -43,3 +43,14 @@ const TutoronGPT = () => {
             <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">How It Works</Link>
             <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">Pricing</Link>
             <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">About</Link>
+            <div className="pt-4 pb-3 border-t border-[#bfdbf7]">
+              <Link to="/login" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">
+                Log In
+              </Link>
+              <Link to="/register" className="mt-2 block w-full px-3 py-2 rounded-md text-center text-base font-medium text-white bg-[#1f7a8c] hover:bg-[#3a9fb3]">
+                Sign Up
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
