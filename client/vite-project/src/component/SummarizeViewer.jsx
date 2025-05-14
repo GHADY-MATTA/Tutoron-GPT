@@ -164,3 +164,6 @@ function SummarizeViewerManual() {
                 {JSON.stringify(summary, null, 2)}
               </pre>
             </details>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2 bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
+          YouTube Summary Explorer
+        </h1>
