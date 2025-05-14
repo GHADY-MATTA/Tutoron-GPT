@@ -46,3 +46,8 @@ return (
             {error}
           </div>
         )}
+        {success && (
+          <div className="mb-4 text-center text-green-700 bg-green-100 rounded p-2 text-sm">
+            {success}
+          </div>
+        )}
