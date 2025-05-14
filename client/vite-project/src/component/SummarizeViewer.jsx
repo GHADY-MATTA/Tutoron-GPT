@@ -17,3 +17,10 @@ function SummarizeViewerManual() {
     setLoading(true);
     setSummary(null);
     setError('');
+    try {
+      const res = await axios.get(`http://localhost:8000/api/summary/${videoId}`);
+      if (res.data.status && res.data.summary) {
+        setSummary(res.data.summary);
+      } else {
+        setError('❌ Summary not found.');
+      }
