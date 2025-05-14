@@ -125,3 +125,4 @@ finally {
   required
   className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1f7a8c] focus:border-[#1f7a8c] transition-all"
 />
+className="px-6 py-3 bg-gradient-to-r from-[#1f7a8c] to-[#3a9fb3] text-white rounded-lg hover:from-[#3a9fb3] hover:to-[#1f7a8c] transition-all transform hover:-translate-y-0.5 shadow-md font-medium flex items-center justify-center"
