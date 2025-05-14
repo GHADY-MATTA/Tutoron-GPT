@@ -155,3 +155,12 @@ function SummarizeViewerManual() {
               <SectionCard title="Key Insights" content={summary.keyInsights} colorClass="bg-green-50 border-green-300" />
               ...
               <SectionCard title="Final Insight" content={summary.finalInsight} colorClass="bg-gray-100 border-gray-400" />
+              <details className="mt-8 group">
+              <summary className="cursor-pointer text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                <span className="mr-2">📦</span>
+                View Raw JSON Data
+              </summary>
+              <pre className="mt-4 bg-gray-50 p-4 rounded-lg text-sm overflow-x-auto border border-gray-200">
+                {JSON.stringify(summary, null, 2)}
+              </pre>
+            </details>
