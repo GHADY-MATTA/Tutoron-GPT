@@ -53,3 +53,12 @@ function SummarizeViewerManual() {
           "Explore More": '🔍',
           "Final Insight": '✨'
         }[title] || '📌'}
+      {Array.isArray(content) ? (
+        <ul className="space-y-3 pl-2">
+          {content.map((item, i) => (
+            <li key={i} className="flex items-start">
+              <span className="text-blue-500 mr-2">▹</span>
+              <span className="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
