@@ -105,3 +105,10 @@ function SummarizeViewerManual() {
             'Generate Summary'
           )}
         </button>
+        {loading ? (
+            <span className="flex items-center justify-center">
+              <span className="animate-spin mr-2">🌀</span> Loading...
+            </span>
+          ) : (
+            'Generate Summary'
+          )}
