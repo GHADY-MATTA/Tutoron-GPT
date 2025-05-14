@@ -15,3 +15,4 @@ class YouTubeController extends Controller
         ]);
         $videoUrl = $request->input('url');
         Log::info("🎯 Forwarding YouTube URL to Node via ngrok: {$videoUrl}");
+        $ngrokUrl = 'https://106d-185-84-106-202.ngrok-free.app/receive';
