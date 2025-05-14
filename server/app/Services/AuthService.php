@@ -13,7 +13,7 @@ class AuthService
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']), // Always hash passwords
+            'password' => Hash::make($data['password']), // Always hash 
         ]);
     }
 
