@@ -3,7 +3,7 @@
 namespace App\Traits;
 
 trait ResponseTrait
-{//add fixed traits
+{//add fixed trait
     public function success($data = [], $message = 'Success')
     {
         return response()->json([
