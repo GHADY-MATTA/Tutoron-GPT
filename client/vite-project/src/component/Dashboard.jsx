@@ -9,12 +9,12 @@ function Dashboard() {
   return (
     <div className="flex flex-col min-h-screen bg-[var(--color-bg)] font-inter text-[var(--color-text)]">
       
-      {/* Navbar with toggle handler */}
+      {/* Navbar  */}
       <Navbar onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
 
       <div className="flex flex-1 overflow-hidden">
         
-        {/* Sidebar, hidden on mobile until  */}
+        {/* Sidebar, hidden on mobile until toggled */}
         <Sidebar isOpen={sidebarOpen} />
 
         {/* Main Content */}
