@@ -33,7 +33,7 @@ class TranscriptReceiverController extends Controller
             $request->transcript_raw
         );
 
-        // ✅ Return the summary result
+        // ✅  the summary result
         return response()->json([
             'status' => true,
             'message' => 'Transcript received and summarized successfully',
