@@ -9,7 +9,7 @@ function Dashboard() {
   return (
     <div className="flex flex-col min-h-screen bg-[var(--color-bg)] font-inter text-[var(--color-text)]">
       
-      {/* Navbar  */}
+      {/* Navbar need to be fixed */}
       <Navbar onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
 
       <div className="flex flex-1 overflow-hidden">
