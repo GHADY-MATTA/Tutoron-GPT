@@ -37,3 +37,4 @@ return (
           smart-learning-starts here
         </p>
       </div>
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 text-[#054652] border border-[#0C9DB1] drop-shadow-[0_0_30px_#0C9DB155]">
