@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UploadUrl from './UploadUrl';
+import UploadUrl from './UploadUrl';//send  url to local
 import SummarizeViewer from './SummarizeViewer';
 
 function Content() {
