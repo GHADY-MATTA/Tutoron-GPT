@@ -23,3 +23,12 @@ class YouTubeController extends Controller
             'status' => 'ok',
             'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
         ]);
+        try {
+            // ... post request to ngrok ...
+        } catch (\Exception $e) {
+            Log::error("💥 Exception: " . $e->getMessage());
+            return response()->json([
+                'message' => 'Error communicating with local Node.js service',
+                'error' => $e->getMessage()
+            ], 500);
+        }
