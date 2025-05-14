@@ -52,3 +52,4 @@ except Exception as e:
     "language": language,
     "transcript": transcript
 }
+print(json.dumps(output, ensure_ascii=False), flush=True)
