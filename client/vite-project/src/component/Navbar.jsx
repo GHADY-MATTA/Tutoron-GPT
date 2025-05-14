@@ -43,7 +43,7 @@ function Navbar({ onToggleSidebar }) {
       <div className="max-w-[95%] w-full mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           
-          {/* Left Section */}
+          {/* Left  */}
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center space-x-3">
               <img src={logoIcon} alt="Tutoron-GPT" className="h-9 w-9 object-contain" />
