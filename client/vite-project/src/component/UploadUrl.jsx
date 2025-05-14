@@ -106,3 +106,4 @@ finally {
     <h2 className="text-xl font-bold text-gray-800 mb-2 md:mb-0">Upload YouTube URL</h2>
     <span className="text-sm text-gray-500">Supports all YouTube URLs</span>
   </div>
+  <span className="text-sm text-gray-500">Supports all YouTube URLs</span>
