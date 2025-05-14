@@ -7,3 +7,8 @@ function SummarizeViewerManual() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [availableSummaries, setAvailableSummaries] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/summaries')
+      .then((res) => setAvailableSummaries(res.data))
+      .catch(() => setAvailableSummaries([]));
+  }, []);
