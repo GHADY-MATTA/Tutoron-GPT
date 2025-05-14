@@ -7,7 +7,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Tutoron from './pages/tutoron';
 import Dashboard from './component/Dashboard';
-// import Navbar from './component/Navbar';
+// import  from './component/Navbar';
 function App() {
   return (
     <Router>
