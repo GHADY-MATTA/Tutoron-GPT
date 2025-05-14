@@ -126,7 +126,7 @@ function SummarizeViewerManual() {
             value={videoId}
             className="w-full px-5 py-3 border border-gray-200 rounded-lg appearance-none bg-white focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all"
           >
-            <option value="">Browse existing summaries...</option>
+            <option value="">Browse top summaries...</option>
             {availableSummaries.map(({ id, title }) => (
               <option key={id} value={id}>
                 {title} ({id})
