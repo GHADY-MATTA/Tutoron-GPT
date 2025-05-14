@@ -43,7 +43,7 @@ function UploadUrl() {
       );
 
       console.log('✅ Upload Success:', response.data);
-      setSuccessMessage('Video uploaded and transcript fetch started!');
+      setSuccessMessage('Video uploaded and transcript fetch started! wait couple seconds');
       setUrl('');
     } catch (err) {
       console.error('⛔ Upload Error:', err.response?.data || err.message);
