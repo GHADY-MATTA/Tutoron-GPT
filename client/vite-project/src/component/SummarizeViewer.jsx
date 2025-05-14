@@ -83,7 +83,7 @@ function SummarizeViewerManual() {
       )}
     </div>
   );
-// helo
+// 
   return (
     <div className="w-full p-6 space-y-6">
       <div className="text-center mb-8">
