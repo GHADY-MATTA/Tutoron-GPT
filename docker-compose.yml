@@ -48,3 +48,5 @@ volumes:
       - MYSQL_PASSWORD=ghady123
     depends_on:
       - backend
+    ports:
+      - "8000:8000"
