@@ -52,3 +52,4 @@ volumes:
       - "8000:8000"
     ports:
       - "3306:3306"
+    restart: unless-stopped
