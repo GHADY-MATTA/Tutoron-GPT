@@ -58,7 +58,7 @@ function UploadUrl() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
           <h2 className="text-xl font-bold text-gray-800 mb-2 md:mb-0">Upload YouTube Video</h2>
-          <span className="text-sm text-gray-500">Supports  YouTube URLs</span>
+          <span className="text-sm text-gray-500">Supports all YouTube URLs</span>
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
