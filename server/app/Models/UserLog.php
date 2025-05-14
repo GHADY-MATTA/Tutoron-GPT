@@ -13,7 +13,7 @@ class UserLog extends Model
         'video_id',
     ];
 
-    // 🧠 
+    // 🧠 Relationships
     public function user()
     {
         return $this->belongsTo(User::class);
