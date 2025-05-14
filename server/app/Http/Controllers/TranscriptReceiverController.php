@@ -43,3 +43,9 @@ $request->validate([
         Log::debug('🧾 Full transcript content:', [
             'transcript' => $request->transcript_raw
         ]);
+        if (empty($request->transcript_raw)) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Transcript is empty'
+            ], 400);
+        }
