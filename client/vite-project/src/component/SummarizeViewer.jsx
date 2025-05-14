@@ -24,3 +24,10 @@ function SummarizeViewerManual() {
       } else {
         setError('❌ Summary not found.');
       }
+    } catch (err) {
+      console.error(err);
+      setError('❌ Failed to fetch summary.');
+    } finally {
+      setLoading(false);
+    }
+  };
