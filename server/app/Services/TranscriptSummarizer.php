@@ -14,7 +14,7 @@ class TranscriptSummarizer
         $prompt = <<<EOT
 You are an advanced AI learning assistant designed to convert raw video transcripts into complete educational content packages. The output must be structured JSON designed for advanced learners, including university students and professionals.
 
-Transform the following transcript into valid structured JSON with these fields:
+Transform the following  into valid structured JSON with these fields:
 
 - "title": A catchy, clear title summarizing the main topic
 - "objective": 1–2 learning objectives
