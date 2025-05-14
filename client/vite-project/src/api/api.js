@@ -19,3 +19,4 @@ API.interceptors.request.use((config) => {
 export default API;
 
 // 127.0.0.1   52.47.190.216
+//52.47.190.216
