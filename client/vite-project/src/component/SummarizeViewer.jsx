@@ -147,3 +147,7 @@ function SummarizeViewerManual() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">
               {summary.title}
             </h2>
+            <div className="space-y-6">
+              <SectionCard title="Objective" content={summary.objective} colorClass="bg-blue-50 border-blue-300" />
+              <SectionCard title="Summary" content={summary.summary} colorClass="bg-gray-50 border-gray-300" />
+              ...
