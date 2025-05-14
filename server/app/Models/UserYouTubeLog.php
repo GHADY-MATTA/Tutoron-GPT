@@ -9,7 +9,7 @@ class UserYouTubeLog extends Model
 {
     use HasFactory;
 
-    protected $table = 'user_youtube_logs'; // ✅ Fix typo from "user_you_tube_logs"
+    protected $table = 'user_youtube_logs'; // ✅
 
     protected $fillable = [
         'user_id',
