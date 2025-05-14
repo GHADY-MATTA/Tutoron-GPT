@@ -10,7 +10,7 @@ function LogVideoIdButton({ videoId }) {
     >
       Log Video ID
     </button>
-  );// store  video on click
+  );// click to store video
 }
 
 export default LogVideoIdButton;
