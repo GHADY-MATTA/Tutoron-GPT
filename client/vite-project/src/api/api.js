@@ -7,7 +7,7 @@ const API = axios.create({
   },
   withCredentials: true,
 });
-// ✅ Inject token from localStorage (for Sanctum)
+//  Inject token from localStorage (for Sanctum)
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
