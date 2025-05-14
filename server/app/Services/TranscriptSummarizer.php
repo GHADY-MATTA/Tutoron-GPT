@@ -29,3 +29,7 @@ EOT;
         Storage::put("summaries/{$video_id}.json", $summary);
         return json_decode($summary, true);
     }
+    use Prism\Prism\Prism;
+    use Prism\Prism\Enums\Provider;
+    use Illuminate\Support\Facades\Log;
+    use Illuminate\Support\Facades\Storage;
