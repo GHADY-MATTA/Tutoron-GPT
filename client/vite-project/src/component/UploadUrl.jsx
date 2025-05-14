@@ -117,3 +117,11 @@ finally {
     ▶ Preview on YouTube
   </a>
 )}
+<input
+  type="url"
+  placeholder="Enter YouTube video URL..."
+  value={url}
+  onChange={(e) => setUrl(e.target.value)}
+  required
+  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1f7a8c] focus:border-[#1f7a8c] transition-all"
+/>
