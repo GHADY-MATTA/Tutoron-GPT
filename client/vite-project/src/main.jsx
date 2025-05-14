@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 
 import { VideoProvider } from './context/VideoContext.jsx';
-
+// aded video provideo
 createRoot(document.getElementById('root')).render(
 
   <StrictMode>
