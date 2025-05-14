@@ -32,3 +32,4 @@ class YouTubeController extends Controller
                 'error' => $e->getMessage()
             ], 500);
         }
+        Log::error("💥 Exception: " . $e->getMessage());
