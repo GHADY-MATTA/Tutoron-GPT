@@ -12,3 +12,8 @@ function SummarizeViewerManual() {
       .then((res) => setAvailableSummaries(res.data))
       .catch(() => setAvailableSummaries([]));
   }, []);
+  const handleFetch = async () => {
+    if (!videoId) return;
+    setLoading(true);
+    setSummary(null);
+    setError('');
