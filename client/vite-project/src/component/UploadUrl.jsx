@@ -41,3 +41,6 @@ const response = await axios.post(
     withCredentials: true,
   }
 );
+console.log('✅ Upload Success:', response.data);
+setSuccessMessage('Video uploaded and transcript fetch started! wait couple seconds');
+setUrl('');
