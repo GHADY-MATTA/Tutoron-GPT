@@ -27,3 +27,5 @@ EOT;
             'summary' => $summary,
         ]);
         Storage::put("summaries/{$video_id}.json", $summary);
+        return json_decode($summary, true);
+    }
