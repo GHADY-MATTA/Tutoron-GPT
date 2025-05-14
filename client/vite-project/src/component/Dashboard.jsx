@@ -14,7 +14,7 @@ function Dashboard() {
 
       <div className="flex flex-1 overflow-hidden">
         
-        {/* Sidebar, hidden on mobile until toggled */}
+        {/* Sidebar, hidden on mobile until  */}
         <Sidebar isOpen={sidebarOpen} />
 
         {/* Main Content */}
