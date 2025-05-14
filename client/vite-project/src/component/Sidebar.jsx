@@ -25,7 +25,7 @@ function Sidebar({ isOpen }) {
           />
         </div>
 
-        {/* My Notes  */}
+        {/* My Notes Header */}
         <div className="flex justify-between items-center mb-4">
           <h2 className="font-semibold text-lg text-gray-800">My Notes</h2>
           <button className="text-[#1f7a8c] hover:text-[#3a9fb3] transition-colors p-1 rounded-full hover:bg-[#3a9fb3]/20">
