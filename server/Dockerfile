@@ -8,3 +8,4 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . .
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 RUN chmod -R 775 storage bootstrap/cache
+EXPOSE 8000
