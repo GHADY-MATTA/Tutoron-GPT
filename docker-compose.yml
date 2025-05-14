@@ -50,3 +50,5 @@ volumes:
       - backend
     ports:
       - "8000:8000"
+    ports:
+      - "3306:3306"
