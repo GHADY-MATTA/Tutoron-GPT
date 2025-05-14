@@ -118,3 +118,4 @@ const TutoronGPT = () => {
               Simple steps to transform your learning experience with AI.
             </p>
           </div>
+          <div className="grid md:grid-cols-3 gap-8">
