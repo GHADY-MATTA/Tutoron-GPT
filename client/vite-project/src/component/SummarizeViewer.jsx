@@ -82,3 +82,11 @@ function SummarizeViewerManual() {
         </h1>
         <p className="text-gray-600">Transform Video content into structured knowledge</p>
       </div>
+      <div className="flex flex-col md:flex-row gap-4">
+        <input
+          type="text"
+          placeholder="Enter YouTube Video ID (e.g. TdWEu0Ohoy8W)"
+          value={videoId}
+          onChange={(e) => setVideoId(e.target.value)}
+          className="flex-1 px-5 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all"
+        />
