@@ -19,3 +19,7 @@ class YouTubeController extends Controller
         Http::timeout(seconds: 5)->post($ngrokUrl, [
             'youtube_url' => $videoUrl
         ]);
+        return response()->json([
+            'status' => 'ok',
+            'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
+        ]);
