@@ -41,3 +41,8 @@ return (
       <div className="flex justify-center mb-6">
           <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-16 w-16 drop-shadow-md" />
         </div>
+        {error && (
+          <div className="mb-4 text-center text-red-600 bg-red-100 rounded p-2 text-sm">
+            {error}
+          </div>
+        )}
