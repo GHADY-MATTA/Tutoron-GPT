@@ -90,7 +90,7 @@ function SummarizeViewerManual() {
         <h1 className="text-3xl font-bold text-gray-800 mb-2 bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
           YouTube Summary Explorer
         </h1>
-        <p className="text-gray-600">Transform video content into structured knowledge</p>
+        <p className="text-gray-600">Transform Video content into structured knowledge</p>
       </div>
 
       <div className="space-y-6 bg-white rounded-xl p-6 shadow-lg border border-gray-100">
