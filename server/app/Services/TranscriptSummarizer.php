@@ -20,3 +20,4 @@ EOT;
             ->using(Provider::OpenAI, 'gpt-4-turbo')
             ->withPrompt($prompt)
             ->asText();
+        $summary = $response->text;
