@@ -30,3 +30,5 @@ const handleSubmit = async (e) => {
     console.log('✅ Registration Success:', response.data);
     setSuccess('Account created! Redirecting to login...');
     setTimeout(() => navigate('/login'), 2000);
+    setSuccess('Account created! Redirecting to login...');
+    setTimeout(() => navigate('/login'), 2000);
