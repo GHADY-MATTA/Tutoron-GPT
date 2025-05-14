@@ -29,7 +29,7 @@ function UploadUrl() {
     }
 
     setVideoId(id);
-    setLocalVideoId(id); // ✅ show immediately
+    setLocalVideoId(id); // ✅ show 
     console.log('📺 Extracted Video ID:', id);
 
     try {
