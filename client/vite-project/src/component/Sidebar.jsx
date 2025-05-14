@@ -33,7 +33,7 @@ function Sidebar({ isOpen }) {
           </button>
         </div>
 
-        {/* Filters */}
+        {/*  */}
         <div className="flex space-x-2 overflow-x-auto pb-2 mb-4">
           <button className="px-3 py-1 text-sm bg-[#1f7a8c] text-white rounded-full font-medium">All</button>
           <button className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors">Work</button>
