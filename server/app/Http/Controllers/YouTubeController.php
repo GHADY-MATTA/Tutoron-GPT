@@ -13,3 +13,4 @@ class YouTubeController extends Controller
         $request->validate([
             'url' => 'required|url'
         ]);
+        $videoUrl = $request->input('url');
