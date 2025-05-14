@@ -2,7 +2,7 @@ function LogVideoIdButton({ videoId }) {
   const handleClick = () => {
     console.log('🎬 Stored Video ID:', videoId);
   };
-//just for testing
+//just for testing now
   return (
     <button
       onClick={handleClick}
