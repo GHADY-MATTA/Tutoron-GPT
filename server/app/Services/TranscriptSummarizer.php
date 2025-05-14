@@ -10,3 +10,9 @@ use Illuminate\Support\Facades\Storage;
 class TranscriptSummarizer
 {    public function handle(string $video_id, string $title, string $transcript): array
     {
+        $prompt = <<<EOT
+You are an advanced AI learning assistant designed to convert raw video transcripts into complete educational content packages. The output must be structured JSON designed for advanced learners, including university students and professionals.
+
+Transform the following transcript into valid structured JSON with these fields:
+...
+EOT;
