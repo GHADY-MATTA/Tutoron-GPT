@@ -27,3 +27,5 @@ const handleSubmit = async (e) => {
     setLoading(false);
   }
 };
+return (
+  <div className="min-h-screen bg-gradient-to-br from-[#006166] via-[#0C9DB1] to-[#54B5CD] flex flex-col items-center justify-center p-4 relative overflow-hidden font-inter">
