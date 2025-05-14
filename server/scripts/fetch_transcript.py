@@ -25,3 +25,5 @@ if not video_id:
     yt = YouTube(url)
     title = yt.title or "Unknown"
     channel = yt.author or "Unknown"
+except Exception:
+    pass  # Still continue even if metadata fails
