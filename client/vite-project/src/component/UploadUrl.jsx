@@ -24,4 +24,10 @@ function UploadUrl() {
     setLoading(true);
     setSuccessMessage('');
     setErrorMessage('');
-  
+    const id = extractVideoId(url);
+    if (!id) {
+      setErrorMessage('❌ Invalid YouTube URL');
+      setLoading(false);
+      return;
+    }
+    
