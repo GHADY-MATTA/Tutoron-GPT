@@ -41,3 +41,8 @@ services:
       - backend
 volumes:
   mysql_data:
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=tutorongpt
+      - MYSQL_USER=ghady
+      - MYSQL_PASSWORD=ghady123
