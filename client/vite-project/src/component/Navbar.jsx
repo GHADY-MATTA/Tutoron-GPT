@@ -69,7 +69,7 @@ function Navbar({ onToggleSidebar }) {
               </span>
             </button>
 
-            {/* Profile +  Toggle */}
+            {/* Profile + Dropdown Toggle */}
             <div className="hidden md:flex items-center space-x-2 cursor-pointer group relative" onClick={() => setShowDropdown(!showDropdown)}>
               
               {/* <span className="text-sm font-medium text-gray-700">{username || 'User'}</span> */}
