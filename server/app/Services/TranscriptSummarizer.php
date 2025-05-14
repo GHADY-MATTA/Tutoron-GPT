@@ -21,3 +21,8 @@ EOT;
             ->withPrompt($prompt)
             ->asText();
         $summary = $response->text;
+        Log::info('🧠 AI Summary Generated:', [
+            'video_id' => $video_id,
+            'title' => $title,
+            'summary' => $summary,
+        ]);
