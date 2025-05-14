@@ -94,3 +94,15 @@ const handleSubmit = async (e) => {
               className="w-full px-4 py-2 rounded-lg bg-[#f0f9fb] text-[#054652] border border-[#0C9DB1] focus:outline-none focus:ring-2 focus:ring-[#0C9DB1]"
             />
           </div>
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full py-3 text-white font-semibold rounded-lg transition-all
+              bg-gradient-to-r from-[#006166] to-[#0C9DB1]
+              hover:from-[#0C9DB1] hover:to-[#054652]
+              hover:shadow-[0_0_20px_#0C9DB1]
+              active:scale-95 
+              disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {loading ? 'Creating account...' : 'Register'}
+          </button>
