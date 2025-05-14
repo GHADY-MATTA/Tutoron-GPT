@@ -63,3 +63,16 @@ finally {
     />
     <span className="absolute right-3 top-3 text-gray-400 text-sm">⌘V</span>
   </div>
+  <button
+  type="submit"
+  disabled={loading}
+  className="px-6 py-3 bg-gradient-to-r from-[#1f7a8c] to-[#3a9fb3] text-white rounded-lg hover:from-[#3a9fb3] hover:to-[#1f7a8c] transition-all transform hover:-translate-y-0.5 shadow-md font-medium flex items-center justify-center"
+>
+  {loading ? (
+    <span className="flex items-center justify-center">
+      <span className="animate-spin mr-2">🌀</span> Loading...
+    </span>
+  ) : (
+    'Upload'
+  )}
+</button>
