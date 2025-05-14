@@ -53,3 +53,7 @@ except Exception as e:
     "transcript": transcript
 }
 print(json.dumps(output, ensure_ascii=False), flush=True)
+
+
+if __name__ == "__main__":
+    main()
