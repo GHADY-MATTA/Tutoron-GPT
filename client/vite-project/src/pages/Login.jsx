@@ -97,3 +97,4 @@ return (
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#54B5CD]/30 rounded-full blur-3xl animate-pulse -z-10" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#006166]/40 rounded-full blur-2xl animate-pulse -z-10" />
       <div className="min-h-screen bg-gradient-to-br from-[#006166] via-[#0C9DB1] to-[#54B5CD] flex flex-col items-center justify-center p-4 relative overflow-hidden font-inter">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 text-[#054652] border border-[#0C9DB1] drop-shadow-[0_0_30px_#0C9DB155]">
