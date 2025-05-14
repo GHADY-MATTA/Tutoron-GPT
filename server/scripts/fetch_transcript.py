@@ -21,4 +21,7 @@ video_id = extract_video_id(url)
 if not video_id:
     print(json.dumps({"error": "Invalid YouTube URL"}, ensure_ascii=False), flush=True)
     sys.exit(1)
-    
+    try:
+    yt = YouTube(url)
+    title = yt.title or "Unknown"
+    channel = yt.author or "Unknown"
