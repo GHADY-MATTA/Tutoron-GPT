@@ -18,3 +18,6 @@ if len(sys.argv) < 2:
     sys.exit(1)
     url = sys.argv[1]
 video_id = extract_video_id(url)
+if not video_id:
+    print(json.dumps({"error": "Invalid YouTube URL"}, ensure_ascii=False), flush=True)
+    sys.exit(1)
