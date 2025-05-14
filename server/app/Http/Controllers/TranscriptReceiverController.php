@@ -26,7 +26,7 @@ class TranscriptReceiverController extends Controller
             'transcript' => $request->transcript_raw
         ]);
 
-        // ✅ Forward to opsummarizer
+        // ✅ Forward to AI summarizer
         $summary = $summarizer->handle(
             $request->video_id,
             $request->title,
