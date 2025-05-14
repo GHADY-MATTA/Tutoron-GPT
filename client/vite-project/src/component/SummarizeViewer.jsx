@@ -35,3 +35,21 @@ function SummarizeViewerManual() {
     <div className={`p-6 rounded-xl border-l-4 ${colorClass} shadow-sm transition-all hover:shadow-md`}>
       <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
         <span className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center mr-3">
+        { 
+          Objective: '🎯',
+          Summary: '📝',
+          Highlights: '🌟',
+          "Key Insights": '💡',
+          "Key Points": '🔑',
+          Concepts: '📚',
+          Examples: '🌍',
+          "Why It Matters": '❗',
+          "What If Not Used": '⚠️',
+          "Use Cases": '🏢',
+          "Best Practices": '🏆',
+          "Steps to Apply": '👣',
+          Reflection: '🤔',
+          Quiz: '🧠',
+          "Explore More": '🔍',
+          "Final Insight": '✨'
+        }[title] || '📌'}
