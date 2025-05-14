@@ -42,7 +42,7 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
 
-        // Attempt login via AuthService
+        // Attempt login via 
         $token = $this->authService->login($request->only('email', 'password'));
 
         // If login failed
