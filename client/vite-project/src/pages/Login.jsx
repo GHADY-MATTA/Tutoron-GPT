@@ -19,3 +19,7 @@ const handleSubmit = async (e) => {
     localStorage.setItem('token', response.data.data.token);
     localStorage.setItem('username', response.data.data.user.name);
     setSuccess('Login successful! Redirecting...');
+  } catch (err) {
+    console.error('⛔ Login Error:', err.response?.data || err.message);
+    setError(err.response?.data?.message || 'Something went wrong.');
+  }
