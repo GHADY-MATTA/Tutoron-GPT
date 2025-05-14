@@ -25,7 +25,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be  for serialization.
+     * The attributes that should be hidden for serialization.
      *
      * @var list<string>
      */
