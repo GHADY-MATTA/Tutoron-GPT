@@ -33,3 +33,11 @@ function UploadUrl() {
     setVideoId(id);
 setLocalVideoId(id); // ✅ show immediately
 console.log('📺 Extracted Video ID:', id);
+const response = await axios.post(
+  'http://52.47.190.216:8000/api/youtube-transcript',
+  { url },
+  {
+    headers: { 'Content-Type': 'application/json' },
+    withCredentials: true,
+  }
+);
