@@ -52,3 +52,8 @@ const handleSubmit = async (e) => {
         <div className="flex justify-center mb-6">
           <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-16 w-16 drop-shadow-md" />
         </div>
+        {success && (
+          <div className="mb-4 text-center text-green-700 bg-green-100 rounded p-2 text-sm">
+            {success}
+          </div>
+        )}
