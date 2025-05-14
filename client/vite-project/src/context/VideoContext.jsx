@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-//create use context for video
+//create use context for 
 const VideoContext = createContext();
 
 export const useVideo = () => useContext(VideoContext);
