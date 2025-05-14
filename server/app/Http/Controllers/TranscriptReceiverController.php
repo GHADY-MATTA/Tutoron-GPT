@@ -8,32 +8,14 @@ use App\Services\TranscriptSummarizer;
 
 class TranscriptReceiverController extends Controller
 {
-public function receive(Request $request, TranscriptSummarizer $summarizer)
-{
-$request->validate([
-'video_id' => 'required|string',
-'title' => 'required|string',
-'transcript_raw' => 'required|string',
-]);
-        Log::info('📥 Transcript received from Node.js', [
-            'video_id' => $request->video_id,
-            'title' => $request->title,
-            'lines' => substr_count($request->transcript_raw, "\n")
+    public function receive(Request $request, TranscriptSummarizer $summarizer)
+    {
+        $request->validate([
+            'video_id' => 'required|string',
+            'title' => 'required|string',
+            'transcript_raw' => 'required|string',
         ]);
-        Log::debug('🧾 Full transcript content:', [
-            'transcript' => $request->transcript_raw
-        ]);
-        $summary = $summarizer->handle(
-            $request->video_id,
-            $request->title,
-            $request->transcript_raw
-        );
-        return response()->json([
-            'status' => true,
-            'message' => 'Transcript received and summarized successfully',
-            'video_id' => $request->video_id, // Added this
-            'summary' => $summary
-        ]);
+
         Log::info('📥 Transcript received from Node.js', [
             'video_id' => $request->video_id,
             'title' => $request->title,
@@ -43,22 +25,20 @@ $request->validate([
         Log::debug('🧾 Full transcript content:', [
             'transcript' => $request->transcript_raw
         ]);
-        if (empty($request->transcript_raw)) {
-            return response()->json([
-                'status' => false,
-                'message' => 'Transcript is empty'
-            ], 400);
-        }
-'message' => 'Transcript received and summarized successfully'
-        try {
-            $summary = $summarizer->handle(
-                $request->video_id,
-                $request->title,
-                $request->transcript_raw
-            );
-        } catch (\Exception $e) {
-            return response()->json([
-                'status' => false,
-                'message' => 'Error summarizing transcript: ' . $e->getMessage()
-            ], 500);
-        }
+
+        // ✅ Forward to AI summarizer
+        $summary = $summarizer->handle(
+            $request->video_id,
+            $request->title,
+            $request->transcript_raw
+        );
+
+        // ✅ Return the summary result
+        return response()->json([
+            'status' => true,
+            'message' => 'Transcript received and summarized successfully',
+            'video_id' => $request->video_id, //Added this
+            'summary' => $summary
+        ]);
+    }
+}
