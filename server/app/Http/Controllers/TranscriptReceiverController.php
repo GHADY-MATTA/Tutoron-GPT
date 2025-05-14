@@ -49,3 +49,4 @@ $request->validate([
                 'message' => 'Transcript is empty'
             ], 400);
         }
+'message' => 'Transcript received and summarized successfully'
