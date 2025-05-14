@@ -59,7 +59,7 @@ function Navbar({ onToggleSidebar }) {
             </nav>
           </div>
 
-          {/* Right  */}
+          {/* Right Section */}
           <div className="flex items-center space-x-4 relative" ref={dropdownRef}>
             {/* Notification */}
             <button className="relative p-1.5 rounded-full text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors">
