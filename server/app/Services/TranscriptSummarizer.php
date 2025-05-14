@@ -16,3 +16,7 @@ You are an advanced AI learning assistant designed to convert raw video transcri
 Transform the following transcript into valid structured JSON with these fields:
 ...
 EOT;
+        $response = Prism::text()
+            ->using(Provider::OpenAI, 'gpt-4-turbo')
+            ->withPrompt($prompt)
+            ->asText();
