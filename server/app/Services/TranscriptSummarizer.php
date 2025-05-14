@@ -33,3 +33,4 @@ EOT;
     use Prism\Prism\Enums\Provider;
     use Illuminate\Support\Facades\Log;
     use Illuminate\Support\Facades\Storage;
+    $summary = $response->text;
