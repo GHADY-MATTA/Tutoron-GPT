@@ -13,3 +13,7 @@ def extract_video_id(url):
         return qs.get("v", [None])[0]
     except Exception:
         return None
+
+if len(sys.argv) < 2:
+    print(json.dumps({"error": "No URL provided"}, ensure_ascii=False), flush=True)
+    sys.exit(1)
