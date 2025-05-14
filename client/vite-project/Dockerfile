@@ -8,7 +8,7 @@ COPY . .
 RUN npm install
 RUN npm run build
 
-# --- Stage 2: Serve with Nginx ---
+# --- Stage 2: Serve with Nginx 
 FROM nginx:alpine
 
 # Clean default Nginx conf
