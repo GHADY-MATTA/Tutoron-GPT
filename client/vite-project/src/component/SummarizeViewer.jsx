@@ -154,3 +154,4 @@ function SummarizeViewerManual() {
               <SectionCard title="Highlights" content={summary.highlights} colorClass="bg-amber-50 border-amber-300" />
               <SectionCard title="Key Insights" content={summary.keyInsights} colorClass="bg-green-50 border-green-300" />
               ...
+              <SectionCard title="Final Insight" content={summary.finalInsight} colorClass="bg-gray-100 border-gray-400" />
