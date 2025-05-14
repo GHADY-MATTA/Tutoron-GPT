@@ -101,3 +101,8 @@ finally {
     📺 Video ID: <code className="font-mono bg-gray-100 px-2 py-1 rounded">{localVideoId}</code>
   </div>
 )}
+<div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+    <h2 className="text-xl font-bold text-gray-800 mb-2 md:mb-0">Upload YouTube URL</h2>
+    <span className="text-sm text-gray-500">Supports all YouTube URLs</span>
+  </div>
