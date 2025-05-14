@@ -25,3 +25,11 @@ if not video_id:
     yt = YouTube(url)
     title = yt.title or "Unknown"
     channel = yt.author or "Unknown"
+    try:
+    transcript_raw = YouTubeTranscriptApi.get_transcript(video_id)
+    transcript = [
+        {
+            "text": line.get("text", ""),
+            "start": line.get("start", 0),
+            "duration": line.get("duration", 0)
+        }
