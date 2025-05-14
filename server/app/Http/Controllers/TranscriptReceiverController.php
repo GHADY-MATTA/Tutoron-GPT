@@ -50,3 +50,15 @@ $request->validate([
             ], 400);
         }
 'message' => 'Transcript received and summarized successfully'
+        try {
+            $summary = $summarizer->handle(
+                $request->video_id,
+                $request->title,
+                $request->transcript_raw
+            );
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Error summarizing transcript: ' . $e->getMessage()
+            ], 500);
+        }
