@@ -45,10 +45,4 @@ try:
 except Exception as e:
     print(json.dumps({"error": f"Transcript not found: {str(e)}"}, ensure_ascii=False), flush=True)
     sys.exit(1)
-   output = {
-    "video_id": video_id,
-    "title": title,
-    "channel": channel,
-    "language": language,
-    "transcript": transcript
-}
+    
