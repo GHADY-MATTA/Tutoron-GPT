@@ -62,3 +62,15 @@ function SummarizeViewerManual() {
             </li>
           ))}
         </ul>
+      ) : typeof content === 'object' ? (
+        <div className="grid gap-3 md:grid-cols-2">
+          {Object.entries(content).map(([key, val]) => (
+            <div key={key} className="bg-white p-3 rounded-lg shadow-xs">
+              <span className="text-sm font-medium text-blue-600">{key}:</span>
+              <p className="text-gray-700 text-sm mt-1">{val}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="text-gray-700 leading-relaxed text-sm">{content}</p>
+      )}
