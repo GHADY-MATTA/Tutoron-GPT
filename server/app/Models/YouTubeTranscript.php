@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class YouTubeTranscript extends Model
 {
-    // 👇 This tells Laravel to  name
+    // 👇 This tells Laravel to use the correct table name
     protected $table = 'youtube_transcripts';
 
     protected $fillable = [
