@@ -82,3 +82,8 @@ $response = $this->postJson('/api/register', [
 ]);
 $response->assertStatus(422) // Validation error
     ->assertJsonValidationErrors('email');
+/** @test */
+public function login_fails_with_wrong_password()
+{
+    // Test login failure with wrong password
+}
