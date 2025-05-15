@@ -113,3 +113,5 @@ return (
 <SectionCard title="Examples" content={summary.examples} colorClass="bg-teal-50 border-teal-300" />
 <SectionCard title="Final Insight" content={summary.finalInsight} colorClass="bg-gray-100 border-gray-400" />
 <SectionCard title="Reflection" content={summary.reflection} colorClass="bg-fuchsia-50 border-fuchsia-300" />
+<SectionCard title="Quiz" content={summary.quiz} colorClass="bg-rose-50 border-rose-300" />
+<SectionCard title="Best Practices" content={summary.globalBestPractices} colorClass="bg-cyan-50 border-cyan-300" />
