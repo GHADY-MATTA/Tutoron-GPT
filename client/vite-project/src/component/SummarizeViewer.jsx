@@ -150,3 +150,4 @@ return (
 const formatContent = (content) => {
   return Array.isArray(content) ? content.join(', ') : content;
 };
+setError('❌ Failed to fetch summary, please try again later.');
