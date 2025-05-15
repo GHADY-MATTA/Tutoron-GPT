@@ -39,3 +39,10 @@ public function test_openai_is_responding()
     $this->assertIsString($response->text);
     $this->assertNotEmpty($response->text);
 }
+private function sendOpenAIRequest(string $prompt)
+{
+    return Prism::text()
+        ->using(Provider::OpenAI, 'gpt-4-turbo')
+        ->withPrompt($prompt)
+        ->asText();
+}
