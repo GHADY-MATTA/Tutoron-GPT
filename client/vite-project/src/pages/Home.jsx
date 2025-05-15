@@ -6,3 +6,6 @@ const TutoronGPT = () => {
   // Component logic will be added here
 };
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+<nav className="bg-white shadow-sm">
+  {/* Navigation content */}
+</nav>
