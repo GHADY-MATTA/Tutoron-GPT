@@ -12,3 +12,8 @@ public function a_user_can_register()
 {
 // Test user registration logic here
 }
+$response = $this->postJson('/api/register', [
+    'name' => 'Alice Wonderland',
+    'email' => 'alice@example.com',
+    'password' => 'password123',
+]);
