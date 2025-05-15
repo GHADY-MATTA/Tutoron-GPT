@@ -64,17 +64,6 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/LogIn.gif) | ![fsdaf](./readme/demo/SignUp.gif) | ![fsdaf](./readme/demo/homePage.gif) |
 
-
-### user Screen (Web)
-
-| Dashboard screen                            | Dashboard screen                       |
-| --------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/dashboard%20gif.gif) | ![fsdaf](./readme/demo/Dashboard.png) |
-
-
-<br><br>
- 
-<!-- Development & Testing -->
 <img src="./readme/title6.svg"/>
 
 ### [![Run CI Tests](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml)
