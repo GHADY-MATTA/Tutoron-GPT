@@ -96,3 +96,8 @@ $response = $this->postJson('/api/login', [
     'email' => 'wrongpass@example.com',
     'password' => 'wrongpassword',
 ]);
+$response->assertStatus(401) // Unauthorized
+    ->assertJson([
+        'status' => false,
+        'message' => 'Invalid credentials.',
+    ]);
