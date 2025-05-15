@@ -73,3 +73,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   <h3 className="text-xl font-semibold mb-3">Instant Feedback</h3>
   <p className="text-gray-600">Get real-time corrections and suggestions...</p>
 </div>
+<div className="text-center mb-16">
+  <h2 className="text-3xl font-bold text-[#022b3a] mb-4">How Tutoron-GPT Works</h2>
+  <p className="text-lg text-gray-600 max-w-2xl mx-auto">Simple steps to transform your learning...</p>
+</div>
