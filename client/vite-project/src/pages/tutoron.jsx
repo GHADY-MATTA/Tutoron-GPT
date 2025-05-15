@@ -89,3 +89,6 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
   </div>
   <p className="text-sm text-[var(--color-text-light)] truncate">List of books to read this summer</p>
 </li>
+<main className="w-full md:w-3/4 bg-transparent">
+  {/* Empty for now */}
+</main>
