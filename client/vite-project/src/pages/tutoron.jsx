@@ -44,3 +44,4 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   />
   <FaSearch className="absolute right-3 top-3 text-[var(--color-text-light)]" />
 </div>
+Create search bar inside the sidebar
