@@ -62,3 +62,5 @@ public function test_different_openai_models()
     $response = $this->sendOpenAIRequest('Test GPT-3 model', 'gpt-3');
     $this->assertIsString($response->text);
 }
+$this->expectException(\Exception::class);
+$response = $this->sendOpenAIRequest('This will timeout', 'gpt-4-turbo', 1); // set timeout for testing
