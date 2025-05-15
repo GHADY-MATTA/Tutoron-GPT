@@ -87,3 +87,8 @@ try {
 } catch (\Exception $e) {
     Log::error('Error while testing YouTube URL: ' . $e->getMessage());
 }
+public function test_forward_youtube_url_with_dynamic_data()
+{
+    $data = $this->getYouTubeData(); // Replace with actual dynamic data fetching
+    $response = $this->postJson('/api/youtube-transcript', $data);
+}
