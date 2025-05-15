@@ -82,7 +82,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 | Services                            | Validation                       | Testing                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo) | ![fsdaf](./readme/demo/testing-vs.png) |
+| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo/laravel_logs.png) | ![fsdaf](./readme/demo/testing-vs.png) |
 
 
 <br><br>
