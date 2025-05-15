@@ -92,3 +92,13 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
 <main className="w-full md:w-3/4 bg-transparent">
   {/* Empty for now */}
 </main>
+<style>
+  :root {
+    --color-bg: #f5f5f5;
+    --color-text: #333333;
+    --color-primary: #1f7a8c;
+    --color-secondary: #022b3a;
+    --color-accent: #3a9fb3;
+    --color-border: #e1e5f2;
+  }
+</style>
