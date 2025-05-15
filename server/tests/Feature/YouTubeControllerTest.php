@@ -93,3 +93,15 @@ public function test_forward_youtube_url_with_dynamic_data()
     $response = $this->postJson('/api/youtube-transcript', $data);
 }
 $response->assertJsonValidationErrors('url', 'The YouTube URL is invalid.');
+public function test_forward_multiple_youtube_urls_with_different_formats()
+{
+    $urls = [
+        'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        'https://m.youtube.com/v/dQw4w9WgXcQ'
+    ];
+
+    foreach ($urls as $url) {
+        $response = $this->postJson('/api/youtube-transcript', ['url' => $url]);
+        $response->assertStatus(200);
+    }
+}
