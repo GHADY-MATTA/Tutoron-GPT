@@ -92,3 +92,7 @@ User::create([
     'email' => 'wrongpass@example.com',
     'password' => Hash::make('correctpassword'),
 ]);
+$response = $this->postJson('/api/login', [
+    'email' => 'wrongpass@example.com',
+    'password' => 'wrongpassword',
+]);
