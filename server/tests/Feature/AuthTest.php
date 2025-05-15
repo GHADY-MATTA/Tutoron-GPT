@@ -25,3 +25,8 @@ $response->assertStatus(200)
 $this->assertDatabaseHas('users', [
     'email' => 'alice@example.com',
 ]);
+/** @test */
+public function a_user_can_login()
+{
+    // Test user login logic here
+}
