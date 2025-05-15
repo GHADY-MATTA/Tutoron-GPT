@@ -45,3 +45,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 </div>
 <a href="#" className="bg-[#1f7a8c] hover:bg-[#3a9fb3] px-8 py-3 rounded-md text-lg font-semibold transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md">Get Started Free</a>
 <a href="#" className="bg-white text-[#022b3a] px-8 py-3 rounded-md text-lg font-semibold hover:bg-opacity-90 transition">See How It Works</a>
+<div className="text-center mb-16">
+  <h2 className="text-3xl font-bold text-[#022b3a] mb-4">Powerful Learning Features</h2>
+  <p className="text-lg text-gray-600 max-w-2xl mx-auto">Tutoron-GPT adapts to your learning style and pace...</p>
+</div>
