@@ -78,3 +78,11 @@ Log::info('📥 Transcript received and processing started', [
     'title' => $request->title,
     'lines' => substr_count($request->transcript_raw, "\n")
 ]);
+return response()->json([
+    'status' => true,
+    'message' => 'Transcript received and summarized successfully',
+    'video_id' => $request->video_id,
+    'summary' => $summary,
+    'timestamp' => now()->toDateTimeString(),
+    'processing_time' => microtime(true) - LARAVEL_START // Placeholder for actual processing time
+]);
