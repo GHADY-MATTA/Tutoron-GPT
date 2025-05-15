@@ -119,3 +119,9 @@ $summary = $summarizer->handle(
 if (!$summary) {
     return response()->json(['message' => 'No summary available.'], 500);
 }
+return response()->json([
+    'status' => 'success',
+    'message' => 'Transcript received and summarized successfully',
+    'video_id' => $request->video_id,
+    'summary' => $summary
+]);
