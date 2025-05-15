@@ -64,3 +64,9 @@ public function it_throws_error_for_invalid_url_format()
     
     $response->assertStatus(422); // Validation error
 }
+/** @test */
+public function it_throws_error_for_missing_url_parameter()
+{
+    $response = $this->postJson('/api/youtube-transcript', []);
+    $response->assertStatus(422); // Validation error
+}
