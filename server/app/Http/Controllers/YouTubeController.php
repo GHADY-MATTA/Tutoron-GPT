@@ -120,3 +120,4 @@ public function store(Request $request)
 $request->validate([
     'url' => 'required|url'
 ]);
+Log::error("💥 Exception during communication with ngrok: " . $e->getMessage());
