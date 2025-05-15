@@ -57,3 +57,8 @@ public function test_openai_with_empty_prompt()
     $response = $this->sendOpenAIRequest('');
     $this->assertNotEmpty($response->text);
 }
+public function test_different_openai_models()
+{
+    $response = $this->sendOpenAIRequest('Test GPT-3 model', 'gpt-3');
+    $this->assertIsString($response->text);
+}
