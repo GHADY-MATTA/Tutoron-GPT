@@ -46,3 +46,4 @@ private function sendOpenAIRequest(string $prompt)
         ->withPrompt($prompt)
         ->asText();
 }
+$response = $this->sendOpenAIRequest('Hello AI, are you working?');
