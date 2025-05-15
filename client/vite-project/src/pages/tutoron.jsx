@@ -44,4 +44,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   />
   <FaSearch className="absolute right-3 top-3 text-[var(--color-text-light)]" />
 </div>
-Create search bar inside the sidebar
+Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-auto pb-2 mb-4">
+<button className="px-3 py-1 text-sm bg-[var(--color-accent)] text-[var(--color-primary)] rounded-full">All</button>
+{/* Other categories */}
+</div>
