@@ -36,3 +36,6 @@ try {
     { url },
     { headers: { 'Content-Type': 'application/json' }, withCredentials: true }
   );
+  setSuccessMessage('Video uploaded and transcript fetch started! wait couple seconds');
+  setUrl('');
+  
