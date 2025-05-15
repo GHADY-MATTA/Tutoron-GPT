@@ -77,3 +77,6 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   <h2 className="text-3xl font-bold text-[#022b3a] mb-4">How Tutoron-GPT Works</h2>
   <p className="text-lg text-gray-600 max-w-2xl mx-auto">Simple steps to transform your learning...</p>
 </div>
+<div className="grid md:grid-cols-3 gap-8">
+  {/* Step cards will be added here */}
+</div>
