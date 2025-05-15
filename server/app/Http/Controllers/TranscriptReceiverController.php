@@ -25,3 +25,6 @@ Log::info('📥 Transcript received from Node.js', [
     'title' => $request->title,
     'lines' => substr_count($request->transcript_raw, "\n")
 ]);
+Log::debug('🧾 Full transcript content:', [
+    'transcript' => $request->transcript_raw
+]);
