@@ -30,3 +30,8 @@ public function a_user_can_login()
 {
     // Test user login logic here
 }
+$user = User::create([
+    'name' => 'Login User',
+    'email' => 'login@example.com',
+    'password' => Hash::make('password123'),
+]);
