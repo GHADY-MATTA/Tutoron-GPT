@@ -125,3 +125,9 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
 <button className="flex items-center space-x-2 px-4 py-2 btn-primary rounded-md md:hidden">
   {/* Button for mobile */}
 </button>
+<div className="flex justify-between items-center mb-4">
+  <h2 className="font-semibold text-lg text-[var(--color-secondary)]">My Notes</h2>
+  <button className="text-[var(--color-accent)] hover:text-[var(--color-accent-light)]">
+    <FaPlus />
+  </button>
+</div>
