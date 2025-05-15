@@ -90,3 +90,10 @@ if (!isValidUrl) {
   return;
 }
 className={`px-6 py-3 bg-gradient-to-r from-[#1f7a8c] to-[#3a9fb3] text-white rounded-lg ${loading ? 'cursor-not-allowed' : 'hover:from-[#3a9fb3] hover:to-[#1f7a8c]'} transition-all`}
+{loading ? (
+  <span className="flex items-center justify-center">
+    <span className="animate-spin mr-2">🌀</span> Loading...
+  </span>
+) : (
+  'Upload'
+)}
