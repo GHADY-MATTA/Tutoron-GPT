@@ -64,3 +64,12 @@ public function test_different_openai_models()
 }
 $this->expectException(\Exception::class);
 $response = $this->sendOpenAIRequest('This will timeout', 'gpt-4-turbo', 1); // set timeout for testing
+public function test_openai_is_responding()
+{
+    // Send prompt to OpenAI using Prism and assert the response is valid
+    $response = $this->sendOpenAIRequest('Hello AI, are you working?');
+    $this->assertIsString($response->text, 'AI response should be a string');
+    $this->assertNotEmpty($response->text, 'AI response should not be empty');
+    
+    Log::info('AI Response: ' . $response->text); // Log response for debugging
+}
