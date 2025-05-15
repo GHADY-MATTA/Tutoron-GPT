@@ -85,3 +85,7 @@ try {
     // Handle exception
 }
 Log::error("💥 Exception: " . $e->getMessage());
+return response()->json([
+    'message' => 'Error communicating with local Node.js service',
+    'error' => $e->getMessage()
+], 500);
