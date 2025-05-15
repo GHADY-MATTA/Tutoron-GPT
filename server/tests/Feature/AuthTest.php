@@ -87,3 +87,8 @@ public function login_fails_with_wrong_password()
 {
     // Test login failure with wrong password
 }
+User::create([
+    'name' => 'Wrong Password User',
+    'email' => 'wrongpass@example.com',
+    'password' => Hash::make('correctpassword'),
+]);
