@@ -32,3 +32,16 @@ public function store(Request $request)
 
     // Further logic will be added here
 }
+public function store(Request $request)
+{
+    $request->validate([
+        'url' => 'required|url'
+    ]);
+
+    $videoUrl = $request->input('url');
+    Log::info("🎯 Forwarding YouTube URL to Node via ngrok: {$videoUrl}");
+
+    $ngrokUrl = 'https://00c2-185-84-106-202.ngrok-free.app/receive';
+
+    // Further logic will be added here
+}
