@@ -5,3 +5,4 @@ import { Link } from 'react-router-dom';
 const TutoronGPT = () => {
   // Component logic will be added here
 };
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
