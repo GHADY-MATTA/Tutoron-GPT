@@ -22,3 +22,6 @@ $response->assertStatus(200)
         'status' => true,
         'message' => 'User registered successfully.',
     ]);
+$this->assertDatabaseHas('users', [
+    'email' => 'alice@example.com',
+]);
