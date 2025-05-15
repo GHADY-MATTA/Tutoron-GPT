@@ -95,3 +95,10 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   <h3 className="text-xl font-semibold mb-3">Learn, Practice, Master</h3>
   <p className="text-gray-600">Engage with interactive lessons and get instant feedback...</p>
 </div>
+<div className="bg-gradient-to-br from-[#1f7a8c] to-[#022b3a] text-white py-16">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Learning?</h2>
+    <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">Join thousands of learners...</p>
+    <a href="#" className="inline-block bg-white text-[#022b3a] px-8 py-3 rounded-md text-lg font-semibold hover:bg-opacity-90 transition">Start Your Free Trial</a>
+  </div>
+</div>
