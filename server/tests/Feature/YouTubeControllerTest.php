@@ -54,3 +54,4 @@ public function it_forwards_multiple_youtube_urls()
         $response->assertStatus(200);
     }
 }
+$response->assertJsonValidationErrors('url');
