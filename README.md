@@ -62,7 +62,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 | Login screen                            | Register screen                       | Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/Mobile-Login.jpg) | ![fsdaf](./readme/demo/Mobile-SignUp.jpg) | ![fsdaf](./readme/demo/Mobile-home.jpg) |
+| ![Landing](./readme/demo/LogIn.mp4) | ![fsdaf](./readme/demo/Mobile-SignUp.jpg) | ![fsdaf](./readme/demo/Mobile-home.jpg) |
 
 
 ### Admin Screen (Web)
