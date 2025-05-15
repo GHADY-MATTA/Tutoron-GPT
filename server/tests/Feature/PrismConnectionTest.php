@@ -52,3 +52,8 @@ if (!isset($response->text)) {
     Log::error('Invalid AI response structure');
 }
 $this->assertIsString($response->text ?? '', 'AI response should be a string');
+public function test_openai_with_empty_prompt()
+{
+    $response = $this->sendOpenAIRequest('');
+    $this->assertNotEmpty($response->text);
+}
