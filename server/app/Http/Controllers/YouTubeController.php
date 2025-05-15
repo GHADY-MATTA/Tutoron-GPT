@@ -125,3 +125,7 @@ return response()->json([
     'status' => 'ok',
     'message' => 'YouTube URL successfully forwarded'
 ]);
+return response()->json([
+    'message' => 'Error with Node.js communication',
+    'error' => $e->getMessage()
+], 500);
