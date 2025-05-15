@@ -11,3 +11,11 @@ class YouTubeController extends Controller
         // Method logic will be added here
     }
 }
+public function store(Request $request)
+{
+    $request->validate([
+        'url' => 'required|url'
+    ]);
+
+    // Additional logic will be added here
+}
