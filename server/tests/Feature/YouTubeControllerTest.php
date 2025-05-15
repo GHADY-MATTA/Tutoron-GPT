@@ -35,3 +35,7 @@ public function it_forwards_youtube_url_and_returns_success_response()
         ]);
 }
 Log::info('Sending YouTube URL request:', $data);
+$response->assertJson([
+    'status' => 'ok',
+    'message' => 'YouTube URL successfully forwarded.'
+]);
