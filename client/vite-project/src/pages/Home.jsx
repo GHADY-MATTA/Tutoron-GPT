@@ -59,3 +59,10 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   <h3 className="text-xl font-semibold mb-3">Smart Explanations</h3>
   <p className="text-gray-600">Get concepts broken down in multiple ways...</p>
 </div>
+<div className="bg-white p-8 rounded-lg shadow-md transition duration-300 hover:translate-y-[-5px] hover:shadow-lg">
+  <div className="w-14 h-14 bg-[#bfdbf7] rounded-full flex items-center justify-center mb-6">
+    {/* Icon for feature */}
+  </div>
+  <h3 className="text-xl font-semibold mb-3">Personalized Learning</h3>
+  <p className="text-gray-600">Our AI adapts to your knowledge level...</p>
+</div>
