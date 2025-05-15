@@ -57,3 +57,10 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
     {/* Other note content */}
   </li>
 </ul>
+<li className="note-item active p-3 rounded cursor-pointer transition">
+  <div className="flex justify-between items-start">
+    <h3 className="font-medium text-[var(--color-secondary)]">Meeting Notes</h3>
+    <span className="text-xs text-[var(--color-text-light)]">Today</span>
+  </div>
+  <p className="text-sm text-[var(--color-text-light)] truncate">Project timeline discussion with design team</p>
+</li>
