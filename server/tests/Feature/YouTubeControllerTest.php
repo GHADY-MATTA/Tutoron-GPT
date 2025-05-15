@@ -39,3 +39,5 @@ $response->assertJson([
     'status' => 'ok',
     'message' => 'YouTube URL successfully forwarded.'
 ]);
+Log::info('Request data:', $data);
+Log::info('Response received:', $response->json());
