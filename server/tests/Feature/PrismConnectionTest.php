@@ -15,3 +15,5 @@ $response = Prism::text()
     ->using(Provider::OpenAI, 'gpt-4-turbo')
     ->withPrompt('Hello AI, are you working?')
     ->asText();
+$this->assertIsString($response->text);
+Add assertion to check response type is string
