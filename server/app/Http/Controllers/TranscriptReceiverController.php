@@ -42,3 +42,12 @@ return response()->json([
     'video_id' => $request->video_id,
     'summary' => $summary
 ]);
+$request->validate([
+    'video_id' => 'required|string',
+    'title' => 'required|string',
+    'transcript_raw' => 'required|string',
+], [
+    'video_id.required' => 'The video ID is required.',
+    'title.required' => 'The title is required.',
+    'transcript_raw.required' => 'The transcript is required.'
+]);
