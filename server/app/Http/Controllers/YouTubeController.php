@@ -65,3 +65,10 @@ public function store(Request $request)
 
     // Further logic will be added here
 }
+Http::timeout(5)->post($ngrokUrl, [
+    'youtube_url' => $videoUrl
+]);
+return response()->json([
+    'status' => 'ok',
+    'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
+]);
