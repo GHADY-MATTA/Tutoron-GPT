@@ -80,3 +80,8 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 <div className="grid md:grid-cols-3 gap-8">
   {/* Step cards will be added here */}
 </div>
+<div className="text-center">
+  <div className="w-20 h-20 bg-[#1f7a8c] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1</div>
+  <h3 className="text-xl font-semibold mb-3">Tell Us What You Want to Learn</h3>
+  <p className="text-gray-600">Share your learning goals, subjects of interest...</p>
+</div>
