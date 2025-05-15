@@ -22,3 +22,5 @@ public function test_openai_is_responding()
 {
     // Sending prompt to OpenAI GPT-4 turbo using Prism
 }
+$this->assertIsString($response->text, 'AI response should be a string');
+$this->assertNotEmpty($response->text, 'AI response should not be empty');
