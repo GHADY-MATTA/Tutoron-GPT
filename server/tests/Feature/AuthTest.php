@@ -65,3 +65,8 @@ $response->assertStatus(200)
         'status' => true,
         'message' => 'Logged out successfully.',
     ]);
+/** @test */
+public function registration_fails_if_email_already_exists()
+{
+    // Test registration failure with duplicate email
+}
