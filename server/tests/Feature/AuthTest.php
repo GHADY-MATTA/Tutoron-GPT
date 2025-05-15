@@ -17,3 +17,8 @@ $response = $this->postJson('/api/register', [
     'email' => 'alice@example.com',
     'password' => 'password123',
 ]);
+$response->assertStatus(200)
+    ->assertJson([
+        'status' => true,
+        'message' => 'User registered successfully.',
+    ]);
