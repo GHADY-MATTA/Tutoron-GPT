@@ -110,3 +110,12 @@ if (empty($summary)) {
     Log::warning("💥 Summary for video {$request->video_id} is empty");
     return response()->json(['message' => 'Empty summary response.'], 500);
 }
+$summary = $summarizer->handle(
+    $request->video_id,
+    $request->title,
+    $request->transcript_raw
+);
+
+if (!$summary) {
+    return response()->json(['message' => 'No summary available.'], 500);
+}
