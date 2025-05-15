@@ -38,4 +38,7 @@ try {
   );
   setSuccessMessage('Video uploaded and transcript fetch started! wait couple seconds');
   setUrl('');
-  
+} catch (err) {
+  console.error('⛔ Upload Error:', err.response?.data || err.message);
+  setErrorMessage('❌ Failed to upload video or fetch transcript');
+}
