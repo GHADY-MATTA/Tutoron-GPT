@@ -34,3 +34,14 @@ const handleFetch = async () => {
       setLoading(false);
   }
 };
+const SectionCard = ({ title, content, colorClass = 'bg-blue-50 border-blue-200' }) => (
+  <div className={`p-6 rounded-xl border-l-4 ${colorClass} shadow-sm transition-all hover:shadow-md`}>
+      <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+          <span className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center mr-3">
+              {/* Emoji based on title */}
+          </span>
+          {title}
+      </h4>
+      {/* Display content based on its type */}
+  </div>
+);
