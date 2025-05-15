@@ -114,3 +114,4 @@ const testUrls = [
 testUrls.forEach(url => {
   // Test with various valid formats
 });
+setSuccessMessage('Video uploaded successfully. Transcript fetch started!');
