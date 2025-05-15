@@ -27,3 +27,6 @@ if (!id) {
   setLoading(false);
   return;
 }
+setVideoId(id);
+setLocalVideoId(id); // ✅ show immediately
+console.log('📺 Extracted Video ID:', id);
