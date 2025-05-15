@@ -97,3 +97,12 @@ className={`px-6 py-3 bg-gradient-to-r from-[#1f7a8c] to-[#3a9fb3] text-white ro
 ) : (
   'Upload'
 )}
+<input
+  type="url"
+  placeholder="Enter YouTube video URL..."
+  value={url}
+  onChange={(e) => setUrl(e.target.value)}
+  required
+  className="w-full px-4 py-3 border border-gray-200 rounded-lg"
+  aria-invalid={url ? 'false' : 'true'}
+/>
