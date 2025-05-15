@@ -19,3 +19,8 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 </div>
 <Link to="/login" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c] ml-6">Log In</Link>
 <Link to="/register" className="px-4 py-2 bg-[#1f7a8c] hover:bg-[#3a9fb3] text-white rounded-md text-sm font-medium transition ml-2">Sign Up</Link>
+<div className="flex md:hidden">
+  <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="inline-flex items-center justify-center p-2 text-[#022b3a]">
+    {/* Button content */}
+  </button>
+</div>
