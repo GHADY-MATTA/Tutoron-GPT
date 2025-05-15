@@ -4,3 +4,8 @@ import axios from 'axios';
 function SummarizeViewerManual() {
     // Component logic will be added here
 }
+const [videoId, setVideoId] = useState('');
+const [summary, setSummary] = useState(null);
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState('');
+const [availableSummaries, setAvailableSummaries] = useState([]);
