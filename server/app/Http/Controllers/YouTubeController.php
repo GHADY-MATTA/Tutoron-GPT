@@ -19,3 +19,16 @@ public function store(Request $request)
 
     // Additional logic will be added here
 }
+use Illuminate\Support\Facades\Log;
+
+public function store(Request $request)
+{
+    $request->validate([
+        'url' => 'required|url'
+    ]);
+
+    $videoUrl = $request->input('url');
+    Log::info("🎯 Forwarding YouTube URL to Node via ngrok: {$videoUrl}");
+
+    // Further logic will be added here
+}
