@@ -102,3 +102,6 @@ return (
       </div>
   </div>
 )}
+{summary && (
+  <SectionCard title="Objective" content={summary.objective} colorClass="bg-blue-50 border-blue-300" />
+)}
