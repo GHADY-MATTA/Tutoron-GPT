@@ -38,3 +38,8 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     {JSON.stringify(summary, null, 2)}
   </pre>
 </details>
+<div className="bg-gradient-to-br from-[#1f7a8c] to-[#022b3a] text-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    {/* Hero section content */}
+  </div>
+</div>
