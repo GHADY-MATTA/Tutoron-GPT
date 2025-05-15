@@ -63,3 +63,13 @@ return response()->json([
     'video_id' => $request->video_id,
     'summary' => $summary
 ]);
+try {
+    $summary = $summarizer->handle(
+        $request->video_id,
+        $request->title,
+        $request->transcript_raw
+    );
+} catch (\Exception $e) {
+    Log::error('Error in AI summarizer: ' . $e->getMessage());
+    return response()->json(['message' => 'AI summarization failed.'], 500);
+}
