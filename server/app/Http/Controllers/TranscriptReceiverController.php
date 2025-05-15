@@ -20,3 +20,8 @@ Log::info('📥 Transcript received from Node.js', [
     'video_id' => $request->video_id,
     'title' => $request->title,
 ]);
+Log::info('📥 Transcript received from Node.js', [
+    'video_id' => $request->video_id,
+    'title' => $request->title,
+    'lines' => substr_count($request->transcript_raw, "\n")
+]);
