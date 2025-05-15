@@ -35,3 +35,7 @@ $user = User::create([
     'email' => 'login@example.com',
     'password' => Hash::make('password123'),
 ]);
+$response = $this->postJson('/api/login', [
+    'email' => 'login@example.com',
+    'password' => 'password123',
+]);
