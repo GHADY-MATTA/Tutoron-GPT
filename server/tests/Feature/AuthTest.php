@@ -60,3 +60,8 @@ $token = $user->createToken('auth_token')->plainTextToken;
 $response = $this->withHeaders([
     'Authorization' => 'Bearer ' . $token,
 ])->postJson('/api/logout');
+$response->assertStatus(200)
+    ->assertJson([
+        'status' => true,
+        'message' => 'Logged out successfully.',
+    ]);
