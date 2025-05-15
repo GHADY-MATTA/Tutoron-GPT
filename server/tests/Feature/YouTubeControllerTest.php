@@ -41,3 +41,16 @@ $response->assertJson([
 ]);
 Log::info('Request data:', $data);
 Log::info('Response received:', $response->json());
+/** @test */
+public function it_forwards_multiple_youtube_urls()
+{
+    $urls = [
+        'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        'https://www.youtube.com/watch?v=J---aiyznGQ'
+    ];
+    
+    foreach ($urls as $url) {
+        $response = $this->postJson('/api/youtube-transcript', ['url' => $url]);
+        $response->assertStatus(200);
+    }
+}
