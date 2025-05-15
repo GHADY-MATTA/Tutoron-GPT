@@ -33,3 +33,9 @@ try {
     echo "Error: " . $e->getMessage();
 }
 Log::info('AI response received: ' . $response->text);
+public function test_openai_is_responding()
+{
+    $response = $this->sendOpenAIRequest('Hello AI, are you working?');
+    $this->assertIsString($response->text);
+    $this->assertNotEmpty($response->text);
+}
