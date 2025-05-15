@@ -125,3 +125,37 @@ return response()->json([
     'video_id' => $request->video_id,
     'summary' => $summary
 ]);
+// Finalized the controller method with validation, summarization, and error handling
+public function receive(Request $request, TranscriptSummarizer $summarizer)
+{
+    // Validate input
+    $request->validate([
+        'video_id' => 'required|string',
+        'title' => 'required|string',
+        'transcript_raw' => 'required|string',
+    ]);
+
+    // Log and process transcript
+    try {
+        Log::info('📥 Transcript received', [
+            'video_id' => $request->video_id,
+            'title' => $request->title
+        ]);
+
+        $summary = $summarizer->handle(
+            $request->video_id,
+            $request->title,
+            $request->transcript_raw
+        );
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Transcript successfully summarized',
+            'video_id' => $request->video_id,
+            'summary' => $summary
+        ]);
+    } catch (\Exception $e) {
+        Log::error('Error processing transcript: ' . $e->getMessage());
+        return response()->json(['message' => 'Error processing transcript.'], 500);
+    }
+}
