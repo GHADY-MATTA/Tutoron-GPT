@@ -16,3 +16,4 @@ $response = Prism::text()
     ->withPrompt('Hello AI, are you working?')
     ->asText();
 $this->assertIsString($response->text);
+echo "\n✅ AI Response: " . $response->text . "\n";
