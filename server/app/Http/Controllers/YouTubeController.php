@@ -117,3 +117,6 @@ public function store(Request $request)
         ], 500);
     }
 }
+$request->validate([
+    'url' => 'required|url'
+]);
