@@ -69,3 +69,10 @@ finally {
     📺 Video ID: <code className="font-mono bg-gray-100 px-2 py-1 rounded">{localVideoId}</code>
   </div>
 )}
+{successMessage && (
+  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
+    <div className="flex items-center">
+      <span className="text-green-800 font-medium">{successMessage}</span>
+    </div>
+  </div>
+)}
