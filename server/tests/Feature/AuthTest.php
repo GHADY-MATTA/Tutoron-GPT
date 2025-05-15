@@ -101,3 +101,8 @@ $response->assertStatus(401) // Unauthorized
         'status' => false,
         'message' => 'Invalid credentials.',
     ]);
+/** @test */
+public function logout_fails_without_token()
+{
+    // Test logout failure without a token
+}
