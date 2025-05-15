@@ -18,5 +18,9 @@ public function it_forwards_youtube_url_and_returns_success_response()
     ]);
 
 
-// Test methods will be added here
+    // Test methods will be added here/** @test */
+    public function it_forwards_youtube_url_and_returns_success_response()
+    {
+        // Testing the forwarding of YouTube URL
+    }
 }
