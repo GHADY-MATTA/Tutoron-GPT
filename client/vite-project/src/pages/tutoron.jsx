@@ -25,3 +25,8 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     <span>Settings</span>
   </button>
 </div>
+<div className="flex md:hidden">
+  <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="inline-flex items-center justify-center p-2 text-[#022b3a]">
+    {/* Toggle button content */}
+  </button>
+</div>
