@@ -23,4 +23,14 @@ public function it_forwards_youtube_url_and_returns_success_response()
     {
         // Testing the forwarding of YouTube URL
     }
+}public function it_forwards_youtube_url_and_returns_success_response()
+{
+    $data = ['url' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'];
+    $response = $this->postJson('/api/youtube-transcript', $data);
+    
+    $response->assertStatus(200)
+        ->assertJson([
+            'status' => 'ok',
+            'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
+        ]);
 }
