@@ -36,3 +36,11 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     {/* Other mobile links */}
   </div>
 )}
+<div className="relative mb-6">
+  <input
+    type="text"
+    placeholder="Search notes..."
+    className="search-input w-full px-4 py-2 border border-[var(--color-border)] rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+  />
+  <FaSearch className="absolute right-3 top-3 text-[var(--color-text-light)]" />
+</div>
