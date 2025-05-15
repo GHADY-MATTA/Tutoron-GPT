@@ -89,3 +89,4 @@ if (!isValidUrl) {
   setLoading(false);
   return;
 }
+className={`px-6 py-3 bg-gradient-to-r from-[#1f7a8c] to-[#3a9fb3] text-white rounded-lg ${loading ? 'cursor-not-allowed' : 'hover:from-[#3a9fb3] hover:to-[#1f7a8c]'} transition-all`}
