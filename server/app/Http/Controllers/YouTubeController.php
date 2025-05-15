@@ -130,3 +130,9 @@ return response()->json([
     'error' => $e->getMessage()
 ], 500);
 Log::info("🎯 Forwarding YouTube URL to Node: {$videoUrl}, ngrok URL: {$ngrokUrl}");
+public function sendToNode($ngrokUrl, $videoUrl)
+{
+    Http::timeout(5)->post($ngrokUrl, [
+        'youtube_url' => $videoUrl
+    ]);
+}
