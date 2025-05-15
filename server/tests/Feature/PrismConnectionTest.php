@@ -16,4 +16,3 @@ $response = Prism::text()
     ->withPrompt('Hello AI, are you working?')
     ->asText();
 $this->assertIsString($response->text);
-Add assertion to check response type is string
