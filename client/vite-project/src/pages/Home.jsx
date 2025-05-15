@@ -13,3 +13,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-8 w-8" />
   <span className="ml-2 text-xl font-bold text-[#022b3a]">Tutoron-GPT</span>
 </div>
+<div className="hidden md:flex items-center space-x-6">
+  <Link to="#" className="text-sm font-medium text-[#022b3a] hover:text-[#1f7a8c]">Features</Link>
+  {/* Additional links */}
+</div>
