@@ -84,3 +84,4 @@ try {
 } catch (\Exception $e) {
     // Handle exception
 }
+Log::error("💥 Exception: " . $e->getMessage());
