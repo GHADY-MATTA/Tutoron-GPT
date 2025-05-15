@@ -34,3 +34,4 @@ public function it_forwards_youtube_url_and_returns_success_response()
             'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
         ]);
 }
+Log::info('Sending YouTube URL request:', $data);
