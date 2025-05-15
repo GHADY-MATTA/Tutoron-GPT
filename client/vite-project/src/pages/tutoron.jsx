@@ -134,3 +134,4 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
 <div className="grid md:grid-cols-3 gap-8">
   {/* Grid layout for feature cards */}
 </div>
+<FaSearch className="absolute right-3 top-3 text-[var(--color-text-light)]" />
