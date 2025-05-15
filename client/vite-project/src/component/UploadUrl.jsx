@@ -115,3 +115,4 @@ testUrls.forEach(url => {
   // Test with various valid formats
 });
 setSuccessMessage('Video uploaded successfully. Transcript fetch started!');
+const apiUrl = process.env.REACT_APP_API_URL || 'http://52.47.190.216:8000/api/youtube-transcript';
