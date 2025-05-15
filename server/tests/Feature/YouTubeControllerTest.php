@@ -82,3 +82,8 @@ public function it_forwards_youtube_url_and_returns_success_response()
     $response->assertStatus(200)
         ->assertJson(['status' => 'ok']);
 }
+try {
+    $response = $this->postJson('/api/youtube-transcript', ['url' => $url]);
+} catch (\Exception $e) {
+    Log::error('Error while testing YouTube URL: ' . $e->getMessage());
+}
