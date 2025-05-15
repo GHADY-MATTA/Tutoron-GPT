@@ -74,3 +74,11 @@ $response->assertJsonStructure([
     'status',
     'message'
 ]);
+public function it_forwards_youtube_url_and_returns_success_response()
+{
+    $url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    $response = $this->postJson('/api/youtube-transcript', ['url' => $url]);
+    
+    $response->assertStatus(200)
+        ->assertJson(['status' => 'ok']);
+}
