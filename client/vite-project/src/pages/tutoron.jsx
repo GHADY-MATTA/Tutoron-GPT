@@ -64,3 +64,7 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
   </div>
   <p className="text-sm text-[var(--color-text-light)] truncate">Project timeline discussion with design team</p>
 </li>
+<div className="flex mt-2 gap-1 flex-wrap">
+  <span className="text-xs tag px-2 py-1 rounded-full">work</span>
+  {/* Other tags */}
+</div>
