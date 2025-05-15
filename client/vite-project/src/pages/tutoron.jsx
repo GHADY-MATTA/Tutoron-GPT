@@ -68,3 +68,10 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
   <span className="text-xs tag px-2 py-1 rounded-full">work</span>
   {/* Other tags */}
 </div>
+<li className="note-item p-3 rounded cursor-pointer transition">
+  <div className="flex justify-between items-start">
+    <h3 className="font-medium text-[var(--color-secondary)]">Research Findings</h3>
+    <span className="text-xs text-[var(--color-text-light)]">2 days ago</span>
+  </div>
+  <p className="text-sm text-[var(--color-text-light)] truncate">2023 AI progress review and future predictions</p>
+</li>
