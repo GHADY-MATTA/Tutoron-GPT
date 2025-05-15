@@ -152,3 +152,10 @@ const formatContent = (content) => {
 };
 setError('❌ Failed to fetch summary, please try again later.');
 setError('');
+<input
+    type="text"
+    placeholder="Enter YouTube Video ID (e.g. TdWEu0Ohoy8W)"
+    value={videoId}
+    onChange={(e) => setVideoId(e.target.value)}
+    className="flex-1 px-5 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all"
+/>
