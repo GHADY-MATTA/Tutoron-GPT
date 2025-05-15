@@ -57,3 +57,9 @@ try {
     Log::error('💥 Error while processing transcript: ' . $e->getMessage());
     return response()->json(['message' => 'Error processing transcript.'], 500);
 }
+return response()->json([
+    'status' => true,
+    'message' => 'Transcript received and processed.',
+    'video_id' => $request->video_id,
+    'summary' => $summary
+]);
