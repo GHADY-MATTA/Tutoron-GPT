@@ -102,3 +102,8 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     <a href="#" className="inline-block bg-white text-[#022b3a] px-8 py-3 rounded-md text-lg font-semibold hover:bg-opacity-90 transition">Start Your Free Trial</a>
   </div>
 </div>
+<footer className="bg-[#022b3a] text-white py-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Footer content */}
+  </div>
+</footer>
