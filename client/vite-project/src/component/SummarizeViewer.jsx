@@ -108,3 +108,6 @@ return (
 <SectionCard title="Summary" content={summary.summary} colorClass="bg-gray-50 border-gray-300" />
 <SectionCard title="Highlights" content={summary.highlights} colorClass="bg-amber-50 border-amber-300" />
 <SectionCard title="Key Insights" content={summary.keyInsights} colorClass="bg-green-50 border-green-300" />
+<SectionCard title="Key Points" content={summary.keyPoints} colorClass="bg-purple-50 border-purple-300" />
+<SectionCard title="Concepts" content={summary.concepts} colorClass="bg-indigo-50 border-indigo-300" />
+<SectionCard title="Examples" content={summary.examples} colorClass="bg-teal-50 border-teal-300" />
