@@ -76,3 +76,10 @@ finally {
     </div>
   </div>
 )}
+{errorMessage && (
+  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg shadow-sm">
+    <div className="flex items-center">
+      <span className="text-red-800 font-medium">{errorMessage}</span>
+    </div>
+  </div>
+)}
