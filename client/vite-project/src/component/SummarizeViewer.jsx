@@ -115,3 +115,12 @@ return (
 <SectionCard title="Reflection" content={summary.reflection} colorClass="bg-fuchsia-50 border-fuchsia-300" />
 <SectionCard title="Quiz" content={summary.quiz} colorClass="bg-rose-50 border-rose-300" />
 <SectionCard title="Best Practices" content={summary.globalBestPractices} colorClass="bg-cyan-50 border-cyan-300" />
+<details className="mt-8 group">
+    <summary className="cursor-pointer text-blue-600 hover:text-blue-700 font-medium flex items-center">
+        <span className="mr-2">📦</span>
+        View Raw JSON Data
+    </summary>
+    <pre className="mt-4 bg-gray-50 p-4 rounded-lg text-sm overflow-x-auto border border-gray-200">
+        {JSON.stringify(summary, null, 2)}
+    </pre>
+</details>
