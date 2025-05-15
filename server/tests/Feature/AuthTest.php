@@ -106,3 +106,4 @@ public function logout_fails_without_token()
 {
     // Test logout failure without a token
 }
+$response = $this->postJson('/api/logout');
