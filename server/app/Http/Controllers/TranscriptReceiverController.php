@@ -11,3 +11,8 @@ class TranscriptReceiverController extends Controller
         // Initial method setup
     }
 }
+$request->validate([
+    'video_id' => 'required|string',
+    'title' => 'required|string',
+    'transcript_raw' => 'required|string',
+]);
