@@ -51,3 +51,9 @@ $request->validate([
     'title.required' => 'The title is required.',
     'transcript_raw.required' => 'The transcript is required.'
 ]);
+try {
+    // Forwarding and summarizing logic
+} catch (\Exception $e) {
+    Log::error('💥 Error while processing transcript: ' . $e->getMessage());
+    return response()->json(['message' => 'Error processing transcript.'], 500);
+}
