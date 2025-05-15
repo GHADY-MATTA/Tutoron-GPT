@@ -45,3 +45,23 @@ public function store(Request $request)
 
     // Further logic will be added here
 }
+use Illuminate\Support\Facades\Http;
+
+public function store(Request $request)
+{
+    $request->validate([
+        'url' => 'required|url'
+    ]);
+
+    $videoUrl = $request->input('url');
+    Log::info("🎯 Forwarding YouTube URL to Node via ngrok: {$videoUrl}");
+
+    $ngrokUrl = 'https://00c2-185-84-106-202.ngrok-free.app/receive';
+
+    // Fire and forget: don't wait for Node to finish AI
+    Http::timeout(5)->post($ngrokUrl, [
+        'youtube_url' => $videoUrl
+    ]);
+
+    // Further logic will be added here
+}
