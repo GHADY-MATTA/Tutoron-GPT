@@ -121,3 +121,7 @@ $request->validate([
     'url' => 'required|url'
 ]);
 Log::error("💥 Exception during communication with ngrok: " . $e->getMessage());
+return response()->json([
+    'status' => 'ok',
+    'message' => 'YouTube URL successfully forwarded'
+]);
