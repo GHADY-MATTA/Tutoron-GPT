@@ -136,3 +136,8 @@ public function sendToNode($ngrokUrl, $videoUrl)
         'youtube_url' => $videoUrl
     ]);
 }
+return response()->json([
+    'message' => 'Failed to forward YouTube URL',
+    'error' => $e->getMessage(),
+    'error_code' => $e->getCode()
+], 500);
