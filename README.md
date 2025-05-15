@@ -62,14 +62,14 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 | Login screen                            | Register screen                       | Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/LogIn.gif) | ![fsdaf](./readme/demo/Mobile-SignUp.jpg) | ![fsdaf](./readme/demo/Mobile-home.jpg) |
+| ![Landing](./readme/demo/LogIn.gif) | ![fsdaf](./readme/demo/SignUp.gif) | ![fsdaf](./readme/demo/homePage.gif) |
 
 
-### Admin Screen (Web)
+### user Screen (Web)
 
-| Login screen                            | Register screen                       |
+| Dashboard screen                            | Dashboard screen                       |
 | --------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/Login.png) | ![fsdaf](./readme/demo/SignUp.png) |
+| ![Landing](./readme/demo/dashboard%20gif.gif) | ![fsdaf](./readme/demo/Dashboard.png) |
 
 
 <br><br>
