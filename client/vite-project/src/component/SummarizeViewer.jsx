@@ -124,3 +124,6 @@ return (
         {JSON.stringify(summary, null, 2)}
     </pre>
 </details>
+<div className={`p-6 rounded-xl border-l-4 ${colorClass} shadow-sm transition-all hover:shadow-md`}>
+    {/* SectionCard content */}
+</div>
