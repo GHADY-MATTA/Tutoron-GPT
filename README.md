@@ -69,7 +69,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 | Dashboard screen                            | Dashboard screen                       |
 | --------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/dashboard%20gif.gif) | ![fsdaf](./readme/demo/Dashboard.png) |
+| ![Landing](./readme/demo/dashboard%20gif.gif) | ![fsdaf](./readme/demo/dashboard2.png) |
 
 
 <br><br>
