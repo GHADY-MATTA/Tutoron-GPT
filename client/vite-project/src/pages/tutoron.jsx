@@ -122,3 +122,6 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
   placeholder="Search notes..."
   className="search-input w-full px-4 py-2 border border-[var(--color-border)] rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
 />
+<button className="flex items-center space-x-2 px-4 py-2 btn-primary rounded-md md:hidden">
+  {/* Button for mobile */}
+</button>
