@@ -45,3 +45,8 @@ $response->assertStatus(200)
         'message',
         'data' => ['token'],
     ]);
+/** @test */
+public function a_user_can_logout()
+{
+    // Test user logout logic here
+}
