@@ -89,3 +89,31 @@ return response()->json([
     'message' => 'Error communicating with local Node.js service',
     'error' => $e->getMessage()
 ], 500);
+public function store(Request $request)
+{
+    $request->validate([
+        'url' => 'required|url'
+    ]);
+
+    $videoUrl = $request->input('url');
+    Log::info("🎯 Forwarding YouTube URL to Node via ngrok: {$videoUrl}");
+
+    try {
+        $ngrokUrl = 'https://00c2-185-84-106-202.ngrok-free.app/receive';
+
+        Http::timeout(5)->post($ngrokUrl, [
+            'youtube_url' => $videoUrl
+        ]);
+
+        return response()->json([
+            'status' => 'ok',
+            'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
+        ]);
+    } catch (\Exception $e) {
+        Log::error("💥 Exception: " . $e->getMessage());
+        return response()->json([
+            'message' => 'Error communicating with local Node.js service',
+            'error' => $e->getMessage()
+        ], 500);
+    }
+}
