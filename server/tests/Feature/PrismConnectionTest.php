@@ -51,3 +51,4 @@ $this->assertArrayHasKey('text', (array) $response);
 if (!isset($response->text)) {
     Log::error('Invalid AI response structure');
 }
+$this->assertIsString($response->text ?? '', 'AI response should be a string');
