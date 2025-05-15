@@ -82,3 +82,10 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
   </div>
   <p className="text-sm text-[var(--color-text-light)] truncate">Groceries for the week and household items</p>
 </li>
+<li className="note-item p-3 rounded cursor-pointer transition">
+  <div className="flex justify-between items-start">
+    <h3 className="font-medium text-[var(--color-secondary)]">Book Recommendations</h3>
+    <span className="text-xs text-[var(--color-text-light)]">2 weeks ago</span>
+  </div>
+  <p className="text-sm text-[var(--color-text-light)] truncate">List of books to read this summer</p>
+</li>
