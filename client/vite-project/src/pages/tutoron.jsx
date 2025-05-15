@@ -11,3 +11,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     {/* Logo and Profile/Settings buttons */}
   </div>
 </header>
+<div className="flex items-center space-x-2">
+  <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-8 w-8" />
+  <span className="text-xl font-bold text-[var(--color-primary)]">Tutoron-GPT</span>
+</div>
