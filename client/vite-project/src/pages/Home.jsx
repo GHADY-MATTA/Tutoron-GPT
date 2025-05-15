@@ -24,3 +24,9 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     {/* Button content */}
   </button>
 </div>
+{mobileMenuOpen && (
+  <div className="md:hidden px-2 pt-2 pb-3 space-y-1">
+    <Link to="#" className="block px-3 py-2 rounded-md text-base font-medium text-[#022b3a] hover:text-[#1f7a8c]">Features</Link>
+    {/* Additional links */}
+  </div>
+)}
