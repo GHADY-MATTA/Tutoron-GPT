@@ -147,3 +147,6 @@ return (
 >
     ▶ Preview on YouTube
 </a>
+const formatContent = (content) => {
+  return Array.isArray(content) ? content.join(', ') : content;
+};
