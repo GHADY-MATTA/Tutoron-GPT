@@ -24,3 +24,11 @@ public function test_openai_is_responding()
 }
 $this->assertIsString($response->text, 'AI response should be a string');
 $this->assertNotEmpty($response->text, 'AI response should not be empty');
+try {
+    $response = Prism::text()
+        ->using(Provider::OpenAI, 'gpt-4-turbo')
+        ->withPrompt('Hello AI, are you working?')
+        ->asText();
+} catch (\Exception $e) {
+    echo "Error: " . $e->getMessage();
+}
