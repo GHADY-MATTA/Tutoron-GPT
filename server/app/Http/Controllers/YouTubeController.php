@@ -129,3 +129,4 @@ return response()->json([
     'message' => 'Error with Node.js communication',
     'error' => $e->getMessage()
 ], 500);
+Log::info("🎯 Forwarding YouTube URL to Node: {$videoUrl}, ngrok URL: {$ngrokUrl}");
