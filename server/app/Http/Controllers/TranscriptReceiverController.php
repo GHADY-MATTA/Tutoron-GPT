@@ -106,3 +106,7 @@ Log::debug('🧠 Summarizing transcript for video ID:', [
     'video_id' => $request->video_id,
     'title' => $request->title,
 ]);
+if (empty($summary)) {
+    Log::warning("💥 Summary for video {$request->video_id} is empty");
+    return response()->json(['message' => 'Empty summary response.'], 500);
+}
