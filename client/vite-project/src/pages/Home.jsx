@@ -49,3 +49,6 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   <h2 className="text-3xl font-bold text-[#022b3a] mb-4">Powerful Learning Features</h2>
   <p className="text-lg text-gray-600 max-w-2xl mx-auto">Tutoron-GPT adapts to your learning style and pace...</p>
 </div>
+<div className="grid md:grid-cols-3 gap-8">
+  {/* Feature cards will be added here */}
+</div>
