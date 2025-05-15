@@ -28,3 +28,5 @@ Log::info('📥 Transcript received from Node.js', [
 Log::debug('🧾 Full transcript content:', [
     'transcript' => $request->transcript_raw
 ]);
+
+use App\Services\TranscriptSummarizer;
