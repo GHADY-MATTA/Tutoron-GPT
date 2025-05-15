@@ -50,3 +50,10 @@ public function a_user_can_logout()
 {
     // Test user logout logic here
 }
+$user = User::create([
+    'name' => 'Logout User',
+    'email' => 'logout@example.com',
+    'password' => Hash::make('password123'),
+]);
+
+$token = $user->createToken('auth_token')->plainTextToken;
