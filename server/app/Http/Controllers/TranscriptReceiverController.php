@@ -102,3 +102,7 @@ $logContext = [
 
 Log::info('📥 Transcript received from Node.js', $logContext);
 Log::debug('🧾 Full transcript content:', ['transcript' => $request->transcript_raw]);
+Log::debug('🧠 Summarizing transcript for video ID:', [
+    'video_id' => $request->video_id,
+    'title' => $request->title,
+]);
