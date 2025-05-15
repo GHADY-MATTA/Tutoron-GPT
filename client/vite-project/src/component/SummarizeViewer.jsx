@@ -50,3 +50,17 @@ return (
       {/* Main UI for the SummarizeViewerManual */}
   </div>
 );
+<input
+    type="text"
+    placeholder="Enter YouTube Video ID (e.g. TdWEu0Ohoy8W)"
+    value={videoId}
+    onChange={(e) => setVideoId(e.target.value)}
+    className="flex-1 px-5 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all"
+/>
+<button
+    onClick={handleFetch}
+    disabled={loading || !videoId}
+    className="px-6 py-3 rounded-lg font-medium transition-all"
+>
+    {loading ? 'Loading...' : 'Generate Summary'}
+</button>
