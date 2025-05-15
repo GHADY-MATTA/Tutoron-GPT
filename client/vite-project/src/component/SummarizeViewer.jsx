@@ -92,3 +92,13 @@ return (
       {error}
   </div>
 )}
+{summary && (
+  <div className="space-y-6">
+      <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">
+              {summary.title}
+          </h2>
+          {/* SectionCard for different content */}
+      </div>
+  </div>
+)}
