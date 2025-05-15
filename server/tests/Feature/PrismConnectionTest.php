@@ -48,3 +48,6 @@ private function sendOpenAIRequest(string $prompt)
 }
 $response = $this->sendOpenAIRequest('Hello AI, are you working?');
 $this->assertArrayHasKey('text', (array) $response);
+if (!isset($response->text)) {
+    Log::error('Invalid AI response structure');
+}
