@@ -55,3 +55,12 @@ public function it_forwards_multiple_youtube_urls()
     }
 }
 $response->assertJsonValidationErrors('url');
+/** @test */
+public function it_throws_error_for_invalid_url_format()
+{
+    $response = $this->postJson('/api/youtube-transcript', [
+        'url' => 'invalid_url'
+    ]);
+    
+    $response->assertStatus(422); // Validation error
+}
