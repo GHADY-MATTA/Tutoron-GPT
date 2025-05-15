@@ -83,3 +83,9 @@ finally {
     </div>
   </div>
 )}
+const isValidUrl = url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/]+\/)+|youtu\.be\/)[a-zA-Z0-9_-]{11}/);
+if (!isValidUrl) {
+  setErrorMessage('❌ Invalid YouTube URL');
+  setLoading(false);
+  return;
+}
