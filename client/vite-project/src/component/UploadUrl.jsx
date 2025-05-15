@@ -107,3 +107,10 @@ className={`px-6 py-3 bg-gradient-to-r from-[#1f7a8c] to-[#3a9fb3] text-white ro
   aria-invalid={url ? 'false' : 'true'}
 />
 setErrorMessage('❌ Failed to upload video or fetch transcript. Please try again.');
+const testUrls = [
+  'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  'https://youtu.be/dQw4w9WgXcQ'
+];
+testUrls.forEach(url => {
+  // Test with various valid formats
+});
