@@ -39,3 +39,9 @@ $response = $this->postJson('/api/login', [
     'email' => 'login@example.com',
     'password' => 'password123',
 ]);
+$response->assertStatus(200)
+    ->assertJsonStructure([
+        'status',
+        'message',
+        'data' => ['token'],
+    ]);
