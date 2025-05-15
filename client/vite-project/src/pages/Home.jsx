@@ -107,3 +107,6 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     {/* Footer content */}
   </div>
 </footer>
+<div className="flex space-x-4">
+  {/* Social media links */}
+</div>
