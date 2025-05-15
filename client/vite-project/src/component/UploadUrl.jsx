@@ -21,3 +21,9 @@ const handleSubmit = async (e) => {
   setSuccessMessage('');
   setErrorMessage('');
 };
+const id = extractVideoId(url);
+if (!id) {
+  setErrorMessage('❌ Invalid YouTube URL');
+  setLoading(false);
+  return;
+}
