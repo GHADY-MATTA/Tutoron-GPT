@@ -80,3 +80,5 @@ $response = $this->postJson('/api/register', [
     'email' => 'existing@example.com',
     'password' => 'password123',
 ]);
+$response->assertStatus(422) // Validation error
+    ->assertJsonValidationErrors('email');
