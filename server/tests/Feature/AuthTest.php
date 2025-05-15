@@ -70,3 +70,8 @@ public function registration_fails_if_email_already_exists()
 {
     // Test registration failure with duplicate email
 }
+User::create([
+    'name' => 'Existing User',
+    'email' => 'existing@example.com',
+    'password' => Hash::make('password123'),
+]);
