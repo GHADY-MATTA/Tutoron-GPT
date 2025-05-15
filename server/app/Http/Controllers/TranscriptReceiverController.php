@@ -30,3 +30,9 @@ Log::debug('🧾 Full transcript content:', [
 ]);
 
 use App\Services\TranscriptSummarizer;
+
+$summary = $summarizer->handle(
+    $request->video_id,
+    $request->title,
+    $request->transcript_raw
+);
