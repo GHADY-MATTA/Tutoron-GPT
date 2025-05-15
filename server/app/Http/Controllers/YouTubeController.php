@@ -72,3 +72,15 @@ return response()->json([
     'status' => 'ok',
     'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
 ]);
+try {
+    Http::timeout(5)->post($ngrokUrl, [
+        'youtube_url' => $videoUrl
+    ]);
+
+    return response()->json([
+        'status' => 'ok',
+        'message' => 'YouTube URL successfully forwarded to local service. Processing will continue in the background.'
+    ]);
+} catch (\Exception $e) {
+    // Handle exception
+}
