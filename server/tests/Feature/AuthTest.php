@@ -75,3 +75,8 @@ User::create([
     'email' => 'existing@example.com',
     'password' => Hash::make('password123'),
 ]);
+$response = $this->postJson('/api/register', [
+    'name' => 'Another User',
+    'email' => 'existing@example.com',
+    'password' => 'password123',
+]);
