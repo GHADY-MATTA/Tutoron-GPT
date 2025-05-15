@@ -73,3 +73,8 @@ try {
     Log::error('Error in AI summarizer: ' . $e->getMessage());
     return response()->json(['message' => 'AI summarization failed.'], 500);
 }
+Log::info('📥 Transcript received and processing started', [
+    'video_id' => $request->video_id,
+    'title' => $request->title,
+    'lines' => substr_count($request->transcript_raw, "\n")
+]);
