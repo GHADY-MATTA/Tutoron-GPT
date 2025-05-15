@@ -86,3 +86,19 @@ return response()->json([
     'timestamp' => now()->toDateTimeString(),
     'processing_time' => microtime(true) - LARAVEL_START // Placeholder for actual processing time
 ]);
+$logContext = [
+    'video_id' => $request->video_id,
+    'title' => $request->title,
+    'lines' => substr_count($request->transcript_raw, "\n")
+];
+
+Log::info('📥 Transcript received from Node.js', $logContext);
+Log::debug('🧾 Full transcript content:', ['transcript' => $request->transcript_raw]);
+$logContext = [
+    'video_id' => $request->video_id,
+    'title' => $request->title,
+    'lines' => substr_count($request->transcript_raw, "\n")
+];
+
+Log::info('📥 Transcript received from Node.js', $logContext);
+Log::debug('🧾 Full transcript content:', ['transcript' => $request->transcript_raw]);
