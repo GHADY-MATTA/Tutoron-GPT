@@ -42,3 +42,6 @@ try {
   console.error('⛔ Upload Error:', err.response?.data || err.message);
   setErrorMessage('❌ Failed to upload video or fetch transcript');
 }
+finally {
+  setLoading(false);
+}
