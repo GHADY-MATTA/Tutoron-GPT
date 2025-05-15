@@ -92,3 +92,4 @@ public function test_forward_youtube_url_with_dynamic_data()
     $data = $this->getYouTubeData(); // Replace with actual dynamic data fetching
     $response = $this->postJson('/api/youtube-transcript', $data);
 }
+$response->assertJsonValidationErrors('url', 'The YouTube URL is invalid.');
