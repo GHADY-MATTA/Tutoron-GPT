@@ -105,3 +105,6 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
 <li className="note-item active p-3 rounded cursor-pointer transition">
   {/* Active state applied */}
 </li>
+<div className="w-full md:w-1/4 bg-[var(--color-primary)] p-4 rounded-lg shadow">
+  {/* Sidebar */}
+</div>
