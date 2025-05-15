@@ -111,3 +111,5 @@ return (
 <SectionCard title="Key Points" content={summary.keyPoints} colorClass="bg-purple-50 border-purple-300" />
 <SectionCard title="Concepts" content={summary.concepts} colorClass="bg-indigo-50 border-indigo-300" />
 <SectionCard title="Examples" content={summary.examples} colorClass="bg-teal-50 border-teal-300" />
+<SectionCard title="Final Insight" content={summary.finalInsight} colorClass="bg-gray-100 border-gray-400" />
+<SectionCard title="Reflection" content={summary.reflection} colorClass="bg-fuchsia-50 border-fuchsia-300" />
