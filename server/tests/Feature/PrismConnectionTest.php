@@ -47,3 +47,4 @@ private function sendOpenAIRequest(string $prompt)
         ->asText();
 }
 $response = $this->sendOpenAIRequest('Hello AI, are you working?');
+$this->assertArrayHasKey('text', (array) $response);
