@@ -64,7 +64,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/LogIn.gif) | ![fsdaf](./readme/demo/SignUp.gif) | ![fsdaf](./readme/demo/homePage.gif) |
 
-
+a
 ### user Screen (Web)
 
 | Dashboard screen                            | Dashboard screen                       |
