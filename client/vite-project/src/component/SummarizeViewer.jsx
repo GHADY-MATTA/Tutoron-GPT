@@ -45,3 +45,8 @@ const SectionCard = ({ title, content, colorClass = 'bg-blue-50 border-blue-200'
       {/* Display content based on its type */}
   </div>
 );
+return (
+  <div className="w-full p-6 space-y-6">
+      {/* Main UI for the SummarizeViewerManual */}
+  </div>
+);
