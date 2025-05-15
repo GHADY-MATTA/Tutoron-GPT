@@ -108,3 +108,8 @@ Create search bar inside the sidebar<div className="flex space-x-2 overflow-x-au
 <div className="w-full md:w-1/4 bg-[var(--color-primary)] p-4 rounded-lg shadow">
   {/* Sidebar */}
 </div>
+<input
+  type="text"
+  placeholder="Search notes..."
+  className="search-input w-full px-4 py-2 border border-[var(--color-border)] rounded-md focus:outline-none"
+/>
