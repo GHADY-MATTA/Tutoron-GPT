@@ -12,8 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-    $middleware->append(\App\Http\Middleware\LogAllRequests::class);
-    //
+        $middleware->group('api', [
+            \App\Http\Middleware\LogAllRequests::class,
+        ]);
 })
     ->withExceptions(function (Exceptions $exceptions) {
         //
