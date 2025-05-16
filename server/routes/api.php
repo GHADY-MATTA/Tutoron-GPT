@@ -6,11 +6,17 @@ use App\Http\Controllers\YouTubeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TranscriptReceiverController;
 use Illuminate\Support\Facades\File;
+use App\Http\Controllers\QuizController;
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
 
+
+
+Route::get('/quiz/{video_id}', [QuizController::class, 'show']);
+Route::post('/quiz', [QuizController::class, 'store']);
 
 
 // AUTH ROUTES
