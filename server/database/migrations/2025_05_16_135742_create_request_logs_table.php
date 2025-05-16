@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('request_logs', function (Blueprint $table) {
             $table->id();
+            $table->string('method');
+            $table->string('url');
+            $table->ipAddress('ip');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->string('controller')->nullable();
+            $table->json('payload')->nullable();
             $table->timestamps();
         });
     }
