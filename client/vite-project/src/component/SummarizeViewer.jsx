@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import QuizViewer from './QuizViewer';
 
-
 function SummarizeViewerManual() {
   const [videoId, setVideoId] = useState('');
   const [summary, setSummary] = useState(null);
@@ -10,7 +9,6 @@ function SummarizeViewerManual() {
   const [error, setError] = useState('');
   const [availableSummaries, setAvailableSummaries] = useState([]);
   const [quiz, setQuiz] = useState([]);
-
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/summaries')
@@ -22,12 +20,25 @@ function SummarizeViewerManual() {
     if (!videoId) return;
     setLoading(true);
     setSummary(null);
+    setQuiz([]); // ✅ clear quiz
     setError('');
 
     try {
       const res = await axios.get(`http://localhost:8000/api/summary/${videoId}`);
       if (res.data.status && res.data.summary) {
         setSummary(res.data.summary);
+
+        try {
+          const quizRes = await axios.get(`http://localhost:8000/api/quiz/${videoId}`);
+          if (quizRes.data.status) {
+            setQuiz(quizRes.data.quiz);
+          } else {
+            setQuiz([]);
+          }
+        } catch (err) {
+          setQuiz([]);
+        }
+
       } else {
         setError('❌ Summary not found.');
       }
@@ -197,6 +208,10 @@ function SummarizeViewerManual() {
                 {JSON.stringify(summary, null, 2)}
               </pre>
             </details>
+
+            {/* ✅ Quiz Viewer added cleanly */}
+            <QuizViewer quiz={quiz} />
+
           </div>
         </div>
       )}
