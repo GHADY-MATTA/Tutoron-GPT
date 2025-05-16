@@ -7,10 +7,14 @@ use Prism\Prism\Enums\Provider;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
+
 class QuizGenerator
 {
     public function handle(string $video_id, string $title, string $transcript): array
     {
+        // ⬅️ Allow up to 5 minutes for this AI request only
+        set_time_limit(300);
+
         $prompt = <<<EOT
 You are an expert AI tutor. Your job is to generate a high-quality multiple-choice quiz from the following transcript.
 
@@ -27,7 +31,7 @@ Each question must be directly tied to one of the following core educational sec
 - stepsToApply
 - concepts
 
-Generate 6 to 10 questions maximum. Each question must:
+Generate at least 10 questions maximum(generate more question if the transcript is too big). Each question must:
 
 - Be linked to one of the above sections using a "section" field
 - Include a short, clear "question"
