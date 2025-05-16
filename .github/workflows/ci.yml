@@ -26,49 +26,44 @@ jobs:
           --health-retries=5
 
     steps:
-      - name:  Checkout Code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name:  Set up PHP
+      - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.2
 
-      - name:  Install Laravel
+      - name: Install Laravel dependencies
         run: composer install --no-interaction --prefer-dist
         working-directory: server
 
-      - name:  Use .env.ci as runtime env
+      - name: Use .env.ci as runtime env
         run: cp .env.ci .env
         working-directory: server
 
-      - name:  Set Laravel Key and Migrate
+      - name: Set Laravel Key and Migrate (SQLite in-memory)
         run: |
           php artisan key:generate
-          php artisan migrate --force
+          php artisan migrate --database=sqlite --force
         working-directory: server
         env:
-          DB_CONNECTION: mysql
-          DB_HOST: 127.0.0.1
-          DB_PORT: 3306
-          DB_DATABASE: tutorongpt
-          DB_USERNAME: root
-          DB_PASSWORD: root
+          DB_CONNECTION: sqlite
+          DB_DATABASE: ':memory:'
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-      - name:  Run Laravel Tests (without hitting AI)
+      - name: Run Laravel Tests (without hitting AI)
         run: |
           php artisan test tests/Feature/AuthTest.php
           php artisan test tests/Feature/YouTubeControllerTest.php
-
         working-directory: server
 
-      - name: 🔧 Set up Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name:  Build React (Vite)
+      - name: Build React (Vite)
         run: |
           npm install
           npm run build
