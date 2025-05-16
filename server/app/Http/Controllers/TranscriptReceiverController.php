@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Services\TranscriptSummarizer;
+use App\Services\QuizGenerator; // ✅ Added to support quiz generation
 
 class TranscriptReceiverController extends Controller
 {
-    public function receive(Request $request, TranscriptSummarizer $summarizer)
+    public function receive(Request $request, TranscriptSummarizer $summarizer, QuizGenerator $quizGen)
     {
         $request->validate([
             'video_id' => 'required|string',
@@ -26,18 +27,25 @@ class TranscriptReceiverController extends Controller
             'transcript' => $request->transcript_raw
         ]);
 
-        // ✅ Forward to AI summarizer
+        // ✅ Generate Summary
         $summary = $summarizer->handle(
             $request->video_id,
             $request->title,
             $request->transcript_raw
         );
 
-        // ✅ Return the summary result
+        // ✅ Generate Quiz
+        $quizGen->handle(
+            $request->video_id,
+            $request->title,
+            $request->transcript_raw
+        );
+
+        // ✅ Final response (same as before)
         return response()->json([
             'status' => true,
             'message' => 'Transcript received and summarized successfully',
-            'video_id' => $request->video_id, //Added this
+            'video_id' => $request->video_id,
             'summary' => $summary
         ]);
     }
