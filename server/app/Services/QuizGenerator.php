@@ -69,6 +69,16 @@ EOT;
       ->asText();
 
     $quiz = $response->text;
+    Log::info('✅ AI Quiz Generated:', [
+      'video_id' => $video_id,
+      'title' => $title,
+      'quiz_length' => substr_count($quiz, '"question":'),
+    ]);
+
+    Storage::put("quizzes/{$video_id}.json", $quiz);
+    return json_decode($quiz, true);
   }
+
+  
   
 }
