@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import QuizViewer from './QuizViewer';
+
 
 function SummarizeViewerManual() {
   const [videoId, setVideoId] = useState('');
@@ -7,6 +9,8 @@ function SummarizeViewerManual() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [availableSummaries, setAvailableSummaries] = useState([]);
+  const [quiz, setQuiz] = useState([]);
+
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/summaries')
