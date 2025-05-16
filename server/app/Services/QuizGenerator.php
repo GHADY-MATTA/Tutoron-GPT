@@ -63,5 +63,12 @@ Rules:
 Transcript:
 {$transcript}
 EOT;
+    $response = Prism::text()
+      ->using(Provider::OpenAI, 'gpt-4-turbo')
+      ->withPrompt($prompt)
+      ->asText();
+
+    $quiz = $response->text;
   }
+  
 }
