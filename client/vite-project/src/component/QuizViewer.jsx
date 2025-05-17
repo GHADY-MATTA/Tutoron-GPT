@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function QuizViewer({ quiz }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [startTime, setStartTime] = useState(Date.now());
 
   if (!quiz || quiz.length === 0) return null;
 
@@ -29,12 +30,29 @@ function QuizViewer({ quiz }) {
     }
   };
 
+  const handleRetakeQuiz = () => {
+    setCurrentQuestion(0);
+    setSelectedOption(null);
+    setShowExplanation(false);
+    setQuizCompleted(false);
+    setStartTime(Date.now()); // reset timer
+  };
+
+  const formatTime = (ms) => {
+    const totalSeconds = Math.floor(ms / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
   const question = quiz[currentQuestion];
   const isCorrect = selectedOption === question.correct;
 
   if (quizCompleted) {
-    const correctAnswers = quiz.filter((q, i) => q.correct === selectedOption).length;
+    const correctAnswers = quiz.filter((q) => q.correct === selectedOption).length;
     const score = Math.round((correctAnswers / quiz.length) * 100);
+    const timeTaken = Date.now() - startTime;
+
     return (
       <div className="max-w-2xl mx-auto text-center">
         <div className="bg-white rounded-xl shadow-sm p-8">
@@ -51,7 +69,7 @@ function QuizViewer({ quiz }) {
           <div className="grid grid-cols-2 gap-4 mb-8">
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="text-gray-500">Time Taken</p>
-              <p className="text-xl font-bold text-gray-800">12:45</p>
+              <p className="text-xl font-bold text-gray-800">{formatTime(timeTaken)}</p>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="text-gray-500">Correct Answers</p>
@@ -63,8 +81,11 @@ function QuizViewer({ quiz }) {
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium">
               Review Answers
             </button>
-            <button className="w-full bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 py-3 rounded-lg font-medium">
-              Find Similar Quizzes
+            <button
+              onClick={handleRetakeQuiz}
+              className="w-full bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 py-3 rounded-lg font-medium"
+            >
+              Retake Test
             </button>
           </div>
         </div>
