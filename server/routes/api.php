@@ -7,11 +7,16 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TranscriptReceiverController;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\NoteController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+
+
+Route::get('/notes', [NoteController::class, 'index']);
+Route::post('/notes', [NoteController::class, 'store']);
 
 
 
@@ -64,7 +69,7 @@ Route::get('/summaries', function () {
                 'title' => $json['title'] ?? 'Untitled'
             ];
         })
-        ->sortByDesc('id') // Optional: sort by ID (most recent)
+        ->sortByDesc('id') // ID (most recent)
         ->values();
 
     return response()->json($summaries);
