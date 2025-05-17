@@ -31,7 +31,7 @@ function UploadUrl() {
     }
 
     setVideoId(id);
-    setLocalVideoId(id); // ✅ show immediately
+    setLocalVideoId(id);
     console.log('📺 Extracted Video ID:', id);
 
     try {
@@ -47,6 +47,14 @@ function UploadUrl() {
       console.log('✅ Upload Success:', response.data);
       setSuccessMessage('Video uploaded and transcript fetch started! wait couple seconds');
       setUrl('');
+
+      // ✅ Additional request to log user + video info
+      await axios.post('http://127.0.0.1:8000/api/log-user-video', {
+        user_id: userId,
+        video_url: url,
+        youtube_video_id: id
+      });
+
     } catch (err) {
       console.error('⛔ Upload Error:', err.response?.data || err.message);
       setErrorMessage('Video uploaded and transcript fetch started! wait couple seconds');
@@ -92,41 +100,30 @@ function UploadUrl() {
             📺 Video ID: <code className="font-mono bg-gray-100 px-2 py-1 rounded">{localVideoId}</code>
           </div>
         )}
-        {successMessage && (
-  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
-    <div className="flex items-center">
-      <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-      </svg>
-      <span className="text-green-800 font-medium">{successMessage}</span>
-    </div>
-  </div>
-)}
 
-{errorMessage && (
-  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
-    <div className="flex items-center">
-      <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-      </svg>
-      <span className="text-green-800 font-medium">{errorMessage}</span>
-    </div>
-  </div>
-)}
+        {successMessage && (
+          <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
+            <div className="flex items-center">
+              <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="text-green-800 font-medium">{successMessage}</span>
+            </div>
+          </div>
+        )}
+
+        {errorMessage && (
+          <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
+            <div className="flex items-center">
+              <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="text-green-800 font-medium">{errorMessage}</span>
+            </div>
+          </div>
+        )}
 
       </div>
-
-      {/* <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 min-h-[400px]">
-        <div className="flex flex-col items-center justify-center h-full text-center py-12">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-          <h3 className="text-lg font-medium text-gray-700 mb-2">Your Video Content</h3>
-          <p className="text-gray-500 max-w-md">
-            Upload a YouTube video to generate summarized notes, transcripts, and key insights.
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 }
