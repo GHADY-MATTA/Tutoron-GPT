@@ -19,7 +19,7 @@ class YouTubeController extends Controller
 
         try {
             // Replace with your actual ngrok URL
-            $ngrokUrl = 'https://fdb5-185-84-106-202.ngrok-free.app/receive';
+            $ngrokUrl = 'https://c62e-185-84-106-202.ngrok-free.app/receive';
 
             // ✅ Fire and forget: don't wait for Node to finish AI
             Http::timeout(seconds: 5)->post($ngrokUrl, [

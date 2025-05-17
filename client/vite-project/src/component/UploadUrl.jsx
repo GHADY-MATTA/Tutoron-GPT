@@ -34,6 +34,17 @@ function UploadUrl() {
     setLocalVideoId(id);
     console.log('📺 Extracted Video ID:', id);
 
+    // Fire log request immediately and independently
+    axios.post('http://127.0.0.1:8000/api/log-user-video', {
+      user_id: userId,
+      video_url: url,
+      youtube_video_id: id
+    }).then(res => {
+      console.log('✅ User Log Success:', res.data);
+    }).catch(err => {
+      console.error('⛔ User Log Error:', err.response?.data || err.message);
+    });
+
     try {
       const response = await axios.post(
         'http://127.0.0.1:8000/api/youtube-transcript',
@@ -47,14 +58,6 @@ function UploadUrl() {
       console.log('✅ Upload Success:', response.data);
       setSuccessMessage('Video uploaded and transcript fetch started! wait couple seconds');
       setUrl('');
-
-      // ✅ Additional request to log user + video info
-      await axios.post('http://127.0.0.1:8000/api/log-user-video', {
-        user_id: userId,
-        video_url: url,
-        youtube_video_id: id
-      });
-
     } catch (err) {
       console.error('⛔ Upload Error:', err.response?.data || err.message);
       setErrorMessage('Video uploaded and transcript fetch started! wait couple seconds');
@@ -122,7 +125,6 @@ function UploadUrl() {
             </div>
           </div>
         )}
-
       </div>
     </div>
   );
