@@ -9,11 +9,12 @@ class UserYouTubeLog extends Model
 {
     use HasFactory;
 
-    protected $table = 'user_youtube_logs'; // ✅ Fix typo from "user_you_tube_logs"
+    protected $table = 'user_youtube_logs';
 
     protected $fillable = [
         'user_id',
         'youtube_video_id',
+        'video_url', // ✅ new field to store full URL
     ];
 
     public function user()
@@ -26,4 +27,3 @@ class UserYouTubeLog extends Model
         return $this->belongsTo(YouTubeVideo::class, 'youtube_video_id');
     }
 }
-
