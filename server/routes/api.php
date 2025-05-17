@@ -8,13 +8,14 @@ use App\Http\Controllers\TranscriptReceiverController;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\UserYouTubeLogController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
 
-
+Route::post('/log-user-video', [UserYouTubeLogController::class, 'store']);
 Route::get('/notes', [NoteController::class, 'index']);
 Route::post('/notes', [NoteController::class, 'store']);
 
