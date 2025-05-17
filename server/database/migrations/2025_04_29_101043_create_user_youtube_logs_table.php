@@ -14,11 +14,8 @@ return new class extends Migration
             // Foreign key to users
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
 
-            // Optional foreign key to youtube_videos
-            $table->foreignId('youtube_video_id')
-                ->nullable()
-                ->constrained('youtube_videos')
-                ->onDelete('cascade');
+            // Just store the YouTube video ID as a string (no foreign key)
+            $table->string('youtube_video_id');
 
             // Full YouTube URL (optional)
             $table->string('video_url')->nullable();
