@@ -40,6 +40,8 @@ class TranscriptReceiverController extends Controller
             $request->title,
             $request->transcript_raw
         );
+        
+
 
         // ✅ Final response (same as before)
         return response()->json([

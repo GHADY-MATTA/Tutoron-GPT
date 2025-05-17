@@ -14,6 +14,8 @@ function UploadUrl() {
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const user = JSON.parse(localStorage.getItem('user'));
+  const userId = user?.id;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
