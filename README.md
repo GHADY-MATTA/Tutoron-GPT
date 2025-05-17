@@ -58,9 +58,9 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 <!-- Demo -->
 <img src="./readme/title5.svg"/>
 
-### User Screens (Mobile)
+### User Screens (Responsive)
 
-| Login screen                            | Register screen                       | Homepage screen                       |
+| Login screen                            | Register screen                       |  Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/LogIn.gif) | ![fsdaf](./readme/demo/SignUp.gif) | ![fsdaf](./readme/demo/homePage.gif) |
 
