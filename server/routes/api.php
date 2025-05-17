@@ -10,10 +10,14 @@ use App\Http\Controllers\QuizController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\UserYouTubeLogController;
 use App\Http\Controllers\SummaryController;
+use App\Http\Controllers\UserQuizAnswerController;
+
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
+
+Route::post('/user-quiz-answers', [UserQuizAnswerController::class, 'store']);
 
 
 Route::post('/log-user-video', [UserYouTubeLogController::class, 'store']);
