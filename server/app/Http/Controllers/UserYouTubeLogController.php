@@ -4,37 +4,30 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UserYouTubeLog;
-use App\Models\YouTubeVideo;
 
 class UserYouTubeLogController extends Controller
 {
     public function store(Request $request)
     {
-        $request->validate([
+        // ✅ Validate incoming request
+        $validated = $request->validate([
             'user_id' => 'required|integer|exists:users,id',
-            'video_id' => 'required|string',
             'video_url' => 'required|url',
+            'youtube_video_id' => 'nullable|string', // Not required anymore
         ]);
 
-        // ✅ Find YouTubeVideo by its public YouTube video_id (not DB ID)
-        $video = YouTubeVideo::where('video_id', $request->video_id)->first();
-
-        if (!$video) {
-            return response()->json(['message' => 'Video not found'], 404);
-        }
-
-        // ✅ Create the log
-        $log = UserYouTubeLog::firstOrCreate([
-            'user_id' => $request->user_id,
-            'youtube_video_id' => $video->id,
-        ], [
-            'video_url' => $request->video_url, // optionally log the URL for audit
+        // ✅ Store the log without checking if video exists in YouTubeVideo table
+        $log = UserYouTubeLog::create([
+            'user_id'          => $validated['user_id'],
+            'video_url'        => $validated['video_url'],
+            'youtube_video_id' => $validated['youtube_video_id'] ?? null,
         ]);
 
+        // ✅ Return success response
         return response()->json([
-            'status' => true,
-            'message' => 'YouTube view logged successfully.',
-            'data' => $log
+            'status'  => true,
+            'message' => 'YouTube log created successfully.',
+            'data'    => $log,
         ]);
     }
 }
