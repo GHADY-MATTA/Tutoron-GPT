@@ -20,10 +20,13 @@ function Login() {
     setSuccess('');
     setLoading(true);
 
+    
+
     try {
       const response = await API.post('/login', form);
       localStorage.setItem('token', response.data.data.token);
       localStorage.setItem('username', response.data.data.user.name);
+      localStorage.setItem('user', JSON.stringify(response.data.data.user));
       setSuccess('Login successful! Redirecting...');
       setTimeout(() => navigate('/dashboard'), 2000);
     } catch (err) {
