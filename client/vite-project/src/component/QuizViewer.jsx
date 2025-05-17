@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import API from '../api/api';
 
 function QuizViewer({ quiz }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -6,20 +7,36 @@ function QuizViewer({ quiz }) {
   const [showExplanation, setShowExplanation] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [startTime, setStartTime] = useState(Date.now());
+  const [userAnswers, setUserAnswers] = useState([]);
+
+  const user = JSON.parse(localStorage.getItem('user'));
+  const userId = user?.id;
 
   if (!quiz || quiz.length === 0) return null;
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setShowExplanation(false);
+
+    setUserAnswers((prev) => {
+      const updated = [...prev];
+      updated[currentQuestion] = {
+        question: quiz[currentQuestion].question,
+        selected: option,
+        correct: quiz[currentQuestion].correct,
+        video_id: quiz[currentQuestion].video_id || null
+      };
+      return updated;
+    });
   };
 
-  const handleNextQuestion = () => {
+  const handleNextQuestion = async () => {
     if (currentQuestion < quiz.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedOption(null);
     } else {
       setQuizCompleted(true);
+      await submitAnswers();
     }
   };
 
@@ -35,7 +52,20 @@ function QuizViewer({ quiz }) {
     setSelectedOption(null);
     setShowExplanation(false);
     setQuizCompleted(false);
-    setStartTime(Date.now()); // reset timer
+    setUserAnswers([]);
+    setStartTime(Date.now());
+  };
+
+  const submitAnswers = async () => {
+    try {
+      await API.post('/user-quiz-answers', {
+        user_id: userId,
+        answers: userAnswers
+      });
+      console.log('✅ Quiz answers submitted');
+    } catch (err) {
+      console.error('⛔ Failed to submit answers:', err);
+    }
   };
 
   const formatTime = (ms) => {
@@ -49,7 +79,7 @@ function QuizViewer({ quiz }) {
   const isCorrect = selectedOption === question.correct;
 
   if (quizCompleted) {
-    const correctAnswers = quiz.filter((q) => q.correct === selectedOption).length;
+    const correctAnswers = userAnswers.filter(a => a.selected === a.correct).length;
     const score = Math.round((correctAnswers / quiz.length) * 100);
     const timeTaken = Date.now() - startTime;
 
@@ -78,8 +108,11 @@ function QuizViewer({ quiz }) {
           </div>
 
           <div className="space-y-4">
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium">
-              Review Answers
+            <button
+              onClick={submitAnswers}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium"
+            >
+              Submit Answers
             </button>
             <button
               onClick={handleRetakeQuiz}
@@ -104,8 +137,8 @@ function QuizViewer({ quiz }) {
         </div>
         <div className="flex items-center">
           <div className="w-32 bg-gray-200 rounded-full h-2.5 mr-3">
-            <div 
-              className="bg-blue-600 h-2.5 rounded-full" 
+            <div
+              className="bg-blue-600 h-2.5 rounded-full"
               style={{ width: `${((currentQuestion + 1) / quiz.length) * 100}%` }}
             ></div>
           </div>
@@ -157,10 +190,10 @@ function QuizViewer({ quiz }) {
               onClick={() => setShowExplanation(!showExplanation)}
               className="flex items-center text-blue-600 hover:text-blue-800"
             >
-              <svg 
+              <svg
                 className={`w-5 h-5 mr-1 transition-transform ${showExplanation ? "rotate-180" : ""}`}
-                fill="none" 
-                stroke="currentColor" 
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
