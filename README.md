@@ -62,14 +62,14 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 | Login screen                            | Register screen                       |  Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/LogIn.gif) | ![fsdaf](./readme/demo/SignUp.gif) | ![fsdaf](./readme/demo/homePage.gif) |
+| ![Landing](./readme/demo/login.mp4) | ![fsdaf](./readme/demo/signup.mp4) | ![fsdaf](./readme/demo/homepage.mp4) |
 
 
 ### user Screen (Web)
 
-| Dashboard screen                            | Dashboard screen                       |
+| upload screen                            | Summary screen                       |
 | --------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/dashboard%20gif.gif) | ![fsdaf](./readme/demo/dashboard2.png) |
+| ![Landing](./readme/demo/upload.mp4) | ![fsdaf](./readme/demo/generate.mp4) |
 
 
 <br><br>
@@ -80,9 +80,9 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 ### [![Run CI Tests](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml)
 
 
-| Services                            | Validation                       | Testing                        |
+| Services                            | Validation                       | Quiz                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo/laravel_logs.png) | ![fsdaf](./readme/demo/testing-vs.png) |
+| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo/laravel_logs.png) | ![fsdaf](./readme/demo/quiz.mp4) |
 
 
 <br><br>
