@@ -62,14 +62,14 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 | Login screen                            | Register screen                       |  Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/login.mp4) | ![fsdaf](./readme/demo/signup.mp4) | ![fsdaf](./readme/demo/homepage.mp4) |
+| ![Landing](./readme/demo/login%20(1).gif) | ![fsdaf](./readme/demo/signup%20(1).gif | ![fsdaf](./readme/demo/homepage%20(1).gif) |
 
 
 ### user Screen (Web)
 
 | upload screen                            | Summary screen                       |
 | --------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/upload.mp4) | ![fsdaf](./readme/demo/generate.mp4) |
+| ![Landing](./readme/demo/upload.gif) | ![fsdaf](./readme/demo/generate.gif) |
 
 
 <br><br>
@@ -82,7 +82,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 | Services                            | Validation                       | Quiz                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo/laravel_logs.png) | ![fsdaf](./readme/demo/quiz.mp4) |
+| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo/laravel_logs.png) | ![fsdaf](./readme/demo/quiz.gif) |
 
 
 <br><br>
