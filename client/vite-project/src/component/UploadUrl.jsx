@@ -34,7 +34,6 @@ function UploadUrl() {
     setLocalVideoId(id);
     console.log('📺 Extracted Video ID:', id);
 
-    // Fire log request immediately and independently
     axios.post('http://127.0.0.1:8000/api/log-user-video', {
       user_id: userId,
       video_url: url,
@@ -68,6 +67,13 @@ function UploadUrl() {
 
   return (
     <div className="space-y-6 p-4 md:p-6">
+      <div className="text-center mb-6">
+        <h1 className="text-3xl font-bold text-gray-800 bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
+          YouTube Summary Explorer
+        </h1>
+        <p className="text-gray-600 mt-2">Transform Video content into structured knowledge</p>
+      </div>
+
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
           <h2 className="text-xl font-bold text-gray-800 mb-2 md:mb-0">Upload YouTube URL</h2>
