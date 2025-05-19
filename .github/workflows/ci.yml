@@ -67,9 +67,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-
       - name:  Build React (Vite)
         run: |
-          npm install
-          npm run build
+            npm ci --include=dev
+            npx vite build
         working-directory: client/vite-project
+            
+
+      # - name:  Build React (Vite)
+      #   run: |
+      #     npm install
+      #     npm run build
+      #   working-directory: client/vite-project
