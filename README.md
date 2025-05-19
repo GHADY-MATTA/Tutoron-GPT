@@ -21,6 +21,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 ### 🧠 Hybrid Cloud-to-Local Transcript Fetching Architecture
 ![Landing](./readme/demo/erdiagram.png)
+
 -- **Why:**  
   Cloud VMs like EC2 are often blocked from accessing YouTube transcripts due to IP-based restrictions.
 
@@ -107,3 +108,31 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 <br><br>
 <img src="./readme/title8.svg"/>
+
+### AI Processing Pipeline (Prism + OpenAI GPT-4 Turbo)
+
+- **User Inputs YouTube URL
+         ↓
+Laravel Controller receives URL
+         ↓
+▶ shell_exec('python fetch_transcript.py')
+         ↓
+Python script fetches transcript using YouTubeTranscriptAPI
+         ↓
+Transcript returned to Laravel
+         ↓
+Prism AI Service handles prompt building
+         ↓
+→ Sends to OpenAI GPT-4 Turbo (via Prism)
+         ↓
+Receives structured JSON:
+    ├── 🧠 Summary
+    └── ✅ Quiz
+         ↓
+Stored in Laravel:
+ ↓
+React Frontend fetches data via Axios
+         ↓
+User sees: Summary Viewer + Quiz Viewer**  
+
+![Landing](./readme/demo/workflow-ai.png) | ![fsdaf](./readme/demo/Screenshot%20(363).png)  |
