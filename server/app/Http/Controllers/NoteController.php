@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Note;
 use Illuminate\Http\Request;
 use App\Traits\ResponseTrait;
+use App\Http\Requests\StoreNoteRequest;
 
 class NoteController extends Controller
 {
