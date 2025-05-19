@@ -27,13 +27,9 @@ class QuizController extends Controller
         ]);
     }
 
-    public function store(Request $request, QuizGenerator $generator)
+    public function store(StoreQuizRequest $request, QuizGenerator $generator)
     {
-        $request->validate([
-            'video_id' => 'required|string',
-            'title' => 'required|string',
-            'transcript_raw' => 'required|string'
-        ]);
+        
 
         $quiz = $generator->handle(
             $request->video_id,
