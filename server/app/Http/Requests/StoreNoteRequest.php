@@ -11,7 +11,7 @@ class StoreNoteRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,6 +22,8 @@ class StoreNoteRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'user_id' => 'required|exists:users,id',
+            'content' => 'required|string',
             //
         ];
     }
