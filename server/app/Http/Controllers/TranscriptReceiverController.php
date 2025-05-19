@@ -6,16 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Services\TranscriptSummarizer;
 use App\Services\QuizGenerator; // ✅ Added to support quiz generation
+use App\Http\Requests\StoreTranscriptRequest;
 
 class TranscriptReceiverController extends Controller
 {
-    public function receive(Request $request, TranscriptSummarizer $summarizer, QuizGenerator $quizGen)
+    public function receive(StoreTranscriptRequest $request, TranscriptSummarizer $summarizer, QuizGenerator $quizGen)
     {
-        $request->validate([
-            'video_id' => 'required|string',
-            'title' => 'required|string',
-            'transcript_raw' => 'required|string',
-        ]);
+        
 
         Log::info('📥 Transcript received from Node.js', [
             'video_id' => $request->video_id,
