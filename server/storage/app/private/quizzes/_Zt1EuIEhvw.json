@@ -1,0 +1,112 @@
+[
+  {
+    "section": "summary",
+    "question": "What is the primary focus of the episode hosted by Jerry James Stone?",
+    "options": {
+      "a": "Discussing the nutritional benefits of milk",
+      "b": "Reviewing different brands of ice cream",
+      "c": "Showing how to make homemade ice cream",
+      "d": "Comparing ice cream and frozen yogurt"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What type of milk does Jerry James Stone suggest using for making ice cream?",
+    "options": {
+      "a": "Skim milk",
+      "b": "1% milk",
+      "c": "2% milk",
+      "d": "Whole milk"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is used to lower the temperature in Jerry's ice cream making process?",
+    "options": {
+      "a": "Baking soda",
+      "b": "Rock salt",
+      "c": "Sugar",
+      "d": "Flour"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "examples",
+    "question": "Which type of ice cream did Jerry mention you could make using his method?",
+    "options": {
+      "a": "Vanilla only",
+      "b": "Strawberry and Chocolate",
+      "c": "Chocolate only",
+      "d": "Strawberry only"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "useCases",
+    "question": "According to the episode, what is a recommended use of the homemade ice cream?",
+    "options": {
+      "a": "Using it in baking",
+      "b": "Adding it to coffee",
+      "c": "Putting your favorite toppings on it",
+      "d": "Freezing it for later use"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is it important to dissolve the sugar completely in the ice cream mixture according to Jerry?",
+    "options": {
+      "a": "To prevent the formation of ice crystals",
+      "b": "To enhance the color of the ice cream",
+      "c": "To make the mixture easier to freeze",
+      "d": "To increase the sweetness arbitrarily"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is the next step after sealing the ice cream mixture in a plastic bag?",
+    "options": {
+      "a": "Leave it to settle",
+      "b": "Heat it slightly",
+      "c": "Place it inside another bag with ice and rock salt",
+      "d": "Freeze it for an hour"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What is the best practice mentioned for containing the ice cream mixture?",
+    "options": {
+      "a": "Using a metal container",
+      "b": "Using a plastic bag with a zipper",
+      "c": "Using a paper bag",
+      "d": "Using a glass jar"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What key insight is provided about the choice of cream for making ice cream?",
+    "options": {
+      "a": "Skim cream is better for health",
+      "b": "Half-and-half is the best",
+      "c": "Use cream because you want the fat content",
+      "d": "Use whipped cream for lighter texture"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "concepts",
+    "question": "What simple concept does Jerry James Stone emphasize about the ingredients needed for making ice cream?",
+    "options": {
+      "a": "Only exotic ingredients are used",
+      "b": "Only ingredients readily available at home are used",
+      "c": "A large number of ingredients is necessary",
+      "d": "Specialized equipment is mandatory"
+    },
+    "correct": "b"
+  }
+]

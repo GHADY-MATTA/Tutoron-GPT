@@ -1,0 +1,68 @@
+[
+  {
+    "section": "keyPoints",
+    "question": "Which programming languages are primarily used for coding apps in React Native and Flutter?",
+    "options": {
+      "a": "React Native uses Dart and Flutter uses JavaScript.",
+      "b": "React Native uses Python and Flutter uses C++.",
+      "c": "React Native uses JavaScript and Flutter uses Dart.",
+      "d": "React Native uses C# and Flutter uses Java."
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "In the video, what type of application was developed as a comparison between Flutter and React Native?",
+    "options": {
+      "a": "A payment system",
+      "b": "A social media app",
+      "c": "An ecommerce platform",
+      "d": "A chat app"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What command is used to create a new app using React Native?",
+    "options": {
+      "a": "flutter create",
+      "b": "npx react-native init",
+      "c": "npm start",
+      "d": "react new"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "Which technology does NOT require reaching out to npm to download packages during the initial setup?",
+    "options": {
+      "a": "Flutter",
+      "b": "React Native",
+      "c": "TypeScript",
+      "d": "Dart"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is it important for mobile apps to limit runtime errors?",
+    "options": {
+      "a": "To increase app complexity",
+      "b": "To avoid poor user reviews in app stores",
+      "c": "To enhance the graphical display",
+      "d": "To reduce development time"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "concepts",
+    "question": "How does the UI rendering differ between Flutter and React Native?",
+    "options": {
+      "a": "Flutter uses native UI components, React Native uses a high-performance rendering engine.",
+      "b": "Both use the same rendering engine.",
+      "c": "Flutter uses a high-performance rendering engine, React Native uses native UI components.",
+      "d": "Both use native UI components."
+    },
+    "correct": "c"
+  }
+]

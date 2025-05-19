@@ -1,0 +1,57 @@
+[
+  {
+    "section": "examples",
+    "question": "According to the transcript, what part of the tomato should be teased out before planting?",
+    "options": {
+      "a": "The top leaves",
+      "b": "The flowers",
+      "c": "The bottom of the roots",
+      "d": "The fruit"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "Up to where should you plant the tomato stem in the ground according to the described technique?",
+    "options": {
+      "a": "Up to the top leaves",
+      "b": "Up to the bottom leaf",
+      "c": "Just below the soil surface",
+      "d": "Above the root crown"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is it important to plant the tomato up to the bottom leaf?",
+    "options": {
+      "a": "To avoid leaf diseases",
+      "b": "To increase fruit production",
+      "c": "To help the stem develop additional roots",
+      "d": "To reduce water consumption"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "What benefit is mentioned for allowing roots to shoot off the side of the tomato stem?",
+    "options": {
+      "a": "Decreases plant height",
+      "b": "Increases resistance in the dirt",
+      "c": "Improves fruit color",
+      "d": "Enhances flavor of the tomatoes"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What is a key point highlighted in the gardening tip about planting tomatoes?",
+    "options": {
+      "a": "Use of organic fertilizers is crucial",
+      "b": "Stems should be buried up to the bottom leaf to promote root growth",
+      "c": "Tomatoes should be watered daily",
+      "d": "Only certain types of tomatoes can be planted this way"
+    },
+    "correct": "b"
+  }
+]

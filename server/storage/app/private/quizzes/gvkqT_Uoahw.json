@@ -1,0 +1,68 @@
+[
+  {
+    "section": "summary",
+    "question": "What does React Native primarily allow developers to do?",
+    "options": {
+      "a": "Write native desktop applications",
+      "b": "Build apps for iOS, Android, and the web from a single codebase",
+      "c": "Generate static websites",
+      "d": "Create server-side applications"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "According to Atwood's law, what is anticipated about applications written in JavaScript?",
+    "options": {
+      "a": "They will only run on web browsers",
+      "b": "They require additional plugins",
+      "c": "Any application that can be written in JavaScript, will eventually be written in JavaScript",
+      "d": "They are less secure than other languages"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "Which examples of tools were used before React Native to build mobile apps?",
+    "options": {
+      "a": "Vue and Ember",
+      "b": "Apache Cordova and Adobe PhoneGap",
+      "c": "Django and Laravel",
+      "d": "Webpack and Babel"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "concepts",
+    "question": "What core concept differentiates React Native's development process?",
+    "options": {
+      "a": "It uses native UI components",
+      "b": "It only supports web development",
+      "c": "It exclusively uses HTML and CSS",
+      "d": "It requires a server-side codebase"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "useCases",
+    "question": "Besides building standalone mobile applications, for what other purpose can you use React Native?",
+    "options": {
+      "a": "Creating animations",
+      "b": "Data science projects",
+      "c": "Integrating with existing iOS and Android projects",
+      "d": "Building command-line tools"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What feature of React Native allows for instantaneous visualization of code changes on any platform?",
+    "options": {
+      "a": "Node.js integration",
+      "b": "Live server execution",
+      "c": "Fast refresh",
+      "d": "Dynamic component loading"
+    },
+    "correct": "c"
+  }
+]

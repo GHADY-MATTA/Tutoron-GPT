@@ -1,0 +1,112 @@
+[
+    {
+        "section": "summary",
+        "question": "What is Kotlin primarily designed for?",
+        "options": {
+            "a": "To run on physical calculators",
+            "b": "As a better alternative to Java",
+            "c": "To compile only to JavaScript",
+            "d": "To replace all scripting languages"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "keyPoints",
+        "question": "In which year did Google name Kotlin as the preferred language for Android development?",
+        "options": {
+            "a": "2011",
+            "b": "2016",
+            "c": "2019",
+            "d": "2021"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "examples",
+        "question": "What file extension do Kotlin files end with?",
+        "options": {
+            "a": ".kt",
+            "b": ".kot",
+            "c": ".kotlin",
+            "d": ".java"
+        },
+        "correct": "a"
+    },
+    {
+        "section": "whyItMatters",
+        "question": "Why is Kotlin's interoperability with Java significant?",
+        "options": {
+            "a": "It allows for faster web browsing.",
+            "b": "It lets developers use Kotlin in space travel.",
+            "c": "It means developers can gradually adopt Kotlin without discarding existing Java code.",
+            "d": "It automatically translates Kotlin code to Java."
+        },
+        "correct": "c"
+    },
+    {
+        "section": "whatIfNotUsed",
+        "question": "What is a potential consequence if Kotlin is not used in Android development?",
+        "options": {
+            "a": "Developers might have to deal with more verbose syntax of older languages.",
+            "b": "Mobile phones would not be able to run applications.",
+            "c": "The Internet would become significantly slower.",
+            "d": "Java would immediately become obsolete."
+        },
+        "correct": "a"
+    },
+    {
+        "section": "useCases",
+        "question": "Besides running on the JVM, to what else can Kotlin be compiled?",
+        "options": {
+            "a": "Native code and JavaScript",
+            "b": "Python bytecode",
+            "c": "Bare machine code only",
+            "d": "PHP script"
+        },
+        "correct": "a"
+    },
+    {
+        "section": "globalBestPractices",
+        "question": "What popular IDE is recommended for Kotlin development, also developed by JetBrains?",
+        "options": {
+            "a": "Eclipse",
+            "b": "Visual Studio",
+            "c": "IntelliJ IDEA",
+            "d": "Atom"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "stepsToApply",
+        "question": "How do you start writing Kotlin code in a file?",
+        "options": {
+            "a": "Define a function with 'void main'",
+            "b": "Use the 'fun' keyword to define a main function",
+            "c": "Start with 'public static void main'",
+            "d": "Write 'script start' at the top of the file"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "concepts",
+        "question": "What special feature in Kotlin allows modification of a class behavior without using inheritance?",
+        "options": {
+            "a": "Polymorphism",
+            "b": "Encapsulation",
+            "c": "Extension functions",
+            "d": "Interface declarations"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "keyInsights",
+        "question": "What type of development community has Kotlin been most influential in?",
+        "options": {
+            "a": "Web development",
+            "b": "Android development",
+            "c": "Game development",
+            "d": "Embedded systems"
+        },
+        "correct": "b"
+    }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "section": "stepsToApply",
+    "question": "How long should the dough rest at room temperature before it is shaped?",
+    "options": {
+      "a": "30 minutes",
+      "b": "10 minutes",
+      "c": "2 hours",
+      "d": "15 minutes"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is the first step in preparing the dough for the bread?",
+    "options": {
+      "a": "Mix flour and salt",
+      "b": "Rest the dough",
+      "c": "Add yeast to warm water",
+      "d": "Shape the bread with hands"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "After covering with a lid, at what temperature should the bread be initially baked?",
+    "options": {
+      "a": "200°C / 392°F",
+      "b": "220°C / 428°F",
+      "c": "180°C / 356°F",
+      "d": "250°C / 482°F"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "examples",
+    "question": "Which type of pot is recommended to use for baking the bread in the oven?",
+    "options": {
+      "a": "Non-stick",
+      "b": "Cast iron, enamel, Pyrex or ceramic",
+      "c": "Stainless steel",
+      "d": "Aluminum"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is the last step in the baking process of the bread according to the transcript?",
+    "options": {
+      "a": "Let it cool down",
+      "b": "Cut a slit across the top",
+      "c": "Rest the dough again",
+      "d": "Remove lid and bake another 15 to 20 minutes"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What happens to the dough during its first resting period at room temperature for 2 hours?",
+    "options": {
+      "a": "It rises slightly",
+      "b": "It dries out",
+      "c": "It doubles in size",
+      "d": "It becomes hard"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is it important to allow the bread dough to rest at room temperature?",
+    "options": {
+      "a": "To cool it down",
+      "b": "To allow it to rise",
+      "c": "To mix the ingredients better",
+      "d": "To heat it up slightly"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "useCases",
+    "question": "What type of knife is recommended for use on the bread just before baking?",
+    "options": {
+      "a": "Butter knife",
+      "b": "Steak knife",
+      "c": "Sharp knife",
+      "d": "Plastic knife"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What is a characteristic of the bread's texture once completely baked as described in the transcript?",
+    "options": {
+      "a": "Incredibly crusty",
+      "b": "Slightly soft",
+      "c": "Very moist",
+      "d": "Chewy"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "concept",
+    "question": "The transcript mentions using 'dry yeast' in the recipe. What is the primary role of yeast in bread making?",
+    "options": {
+      "a": "To add flavor",
+      "b": "To help the dough rise",
+      "c": "To bind ingredients",
+      "d": "To add moisture"
+    },
+    "correct": "b"
+  }
+]

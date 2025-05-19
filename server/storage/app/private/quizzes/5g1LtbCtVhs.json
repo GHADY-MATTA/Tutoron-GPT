@@ -1,0 +1,112 @@
+[
+  {
+    "section": "summary",
+    "question": "What is the main theme of the story involving Rohan and Mr. Gupta?",
+    "options": {
+      "a": "Adventure and exploration",
+      "b": "Conflict and resolution",
+      "c": "Time management and personal growth",
+      "d": "Romance and relationships"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What crucial object did Mr. Gupta use to teach Rohan about time?",
+    "options": {
+      "a": "A clock",
+      "b": "A compass",
+      "c": "An hourglass",
+      "d": "A calendar"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What does each grain of sand in the hourglass represent, according to Mr. Gupta?",
+    "options": {
+      "a": "A moment of joy",
+      "b": "A wasted opportunity",
+      "c": "A day in a year",
+      "d": "A successful task"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "examples",
+    "question": "What immediate actions did Rohan take to improve his time management?",
+    "options": {
+      "a": "He took a vacation",
+      "b": "He threw a party",
+      "c": "He organized his daily routine",
+      "d": "He read more books"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "How did Rohan's new understanding of time impact his relationships?",
+    "options": {
+      "a": "He spent quality time with loved ones",
+      "b": "He avoided his friends",
+      "c": "He focused solely on work",
+      "d": "He moved to a new village"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What would likely have happened if Rohan did not heed Mr. Gupta's advice?",
+    "options": {
+      "a": "He would achieve his goals sooner",
+      "b": "He would wake up filled with regret",
+      "c": "He would become wealthier",
+      "d": "He would travel the world"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "useCases",
+    "question": "What primary lesson did the villagers learn from Rohan's transformation?",
+    "options": {
+      "a": "To value possessions over time",
+      "b": "To underestimate personal potential",
+      "c": "To treasure every moment and manage time wisely",
+      "d": "To avoid seeking advice from others"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What global value can be universally extracted from the teachings of Mr. Gupta?",
+    "options": {
+      "a": "The universal applicability of time as a precious resource",
+      "b": "The importance of traveling",
+      "c": "The necessity of technological advancement",
+      "d": "The benefits of economic growth"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "According to Mr. Gupta, what is the first step in valuing time?",
+    "options": {
+      "a": "Setting long-term goals only",
+      "b": "Purchasing a fancy watch",
+      "c": "Procrastinating more",
+      "d": "Setting goals and prioritizing tasks"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "concepts",
+    "question": "Which concept is central to Mr. Gupta's lesson to Rohan?",
+    "options": {
+      "a": "Economic investment",
+      "b": "Time as a limited resource",
+      "c": "Agricultural development",
+      "d": "Political strategies"
+    },
+    "correct": "b"
+  }
+]

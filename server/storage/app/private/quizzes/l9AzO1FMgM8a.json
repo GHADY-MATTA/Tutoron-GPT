@@ -1,0 +1,112 @@
+[
+  {
+    "section": "summary",
+    "question": "Who designed Java?",
+    "options": {
+      "a": "Mark Zuckerberg",
+      "b": "Guido van Rossum",
+      "c": "James Gosling",
+      "d": "Dennis Ritchie"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyPoints",
+    "question": "In what year was Java designed?",
+    "options": {
+      "a": "1990",
+      "b": "1985",
+      "c": "2001",
+      "d": "1995"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "examples",
+    "question": "Which of the following is an application of Java mentioned in the transcript?",
+    "options": {
+      "a": "IOS mobile apps",
+      "b": "Maestro Mars Rover controller",
+      "c": "Photoshop software",
+      "d": "Blockchain technology"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What makes Java innovative compared to languages like C or C++?",
+    "options": {
+      "a": "Java is only an interpreted language",
+      "b": "Java machine code is platform-dependent",
+      "c": "Java allows direct hardware manipulation",
+      "d": "Java compiles to bytecode that runs on any OS"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "What advantage does the Java Virtual Machine (JVM) provide?",
+    "options": {
+      "a": "Allows platform-independent code execution",
+      "b": "Increases the execution speed of programs",
+      "c": "Eliminates the need for a JRE",
+      "d": "Supports only static typing"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "concepts",
+    "question": "Which keyword in Java indicates that a method can be accessed from outside its class?",
+    "options": {
+      "a": "private",
+      "b": "protected",
+      "c": "public",
+      "d": "internal"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is the first step to get started with Java development?",
+    "options": {
+      "a": "Create a .java file",
+      "b": "Install the Java Virtual Machine",
+      "c": "Install the Java Development Kit",
+      "d": "Write the main method"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "useCases",
+    "question": "Apart from powering mobile apps on Android, which other use case of Java is mentioned?",
+    "options": {
+      "a": "Standalone desktop gaming apps",
+      "b": "Big Data pipelines with Hadoop",
+      "c": "Quantitative financial simulations",
+      "d": "3D rendering software development"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What practice is suggested in the transcript for better Java programming?",
+    "options": {
+      "a": "Using anonymous lambda methods",
+      "b": "Minimize the use of the static keyword",
+      "c": "Avoid using the public keyword",
+      "d": "Do not use classes or objects"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "If bytecode was not used in Java, what would be the likely impact?",
+    "options": {
+      "a": "Improved garbage collection",
+      "b": "Decreased cross-platform compatibility",
+      "c": "Faster direct machine-level execution",
+      "d": "Simpler syntax similar to scripting languages"
+    },
+    "correct": "b"
+  }
+]

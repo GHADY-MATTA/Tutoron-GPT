@@ -1,0 +1,112 @@
+[
+    {
+        "section": "keyPoints",
+        "question": "What does Sun Tzu emphasize as crucial for ensuring victory?",
+        "options": {
+            "a": "Physical strength and large numbers",
+            "b": "Wealth and resources",
+            "c": "Knowing both yourself and your enemy",
+            "d": "Technological advancements"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "keyPoints",
+        "question": "According to 'The Art of War', what is vital in overcoming challenges?",
+        "options": {
+            "a": "Ruthless aggression",
+            "b": "Adaptability and quick thinking",
+            "c": "Superior weapons",
+            "d": "Numerical superiority"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "keyPoints",
+        "question": "What does Sun Tzu teach about misleading opponents?",
+        "options": {
+            "a": "It is an unfair tactic and should not be used",
+            "b": "It should be used sparingly",
+            "c": "It is only effective in large-scale conflicts",
+            "d": "It can give you a strategic advantage"
+        },
+        "correct": "d"
+    },
+    {
+        "section": "examples",
+        "question": "Which of the following fields can the principles of 'The Art of War' be applied to?",
+        "options": {
+            "a": "Business, sports, and personal life",
+            "b": "Only military and politics",
+            "c": "Science and mathematics",
+            "d": "Religion and philosophy"
+        },
+        "correct": "a"
+    },
+    {
+        "section": "keyPoints",
+        "question": "What does Sun Tzu suggest about using resources?",
+        "options": {
+            "a": "Using as many resources as possible guarantees success",
+            "b": "Resources should be used wisely and efficiently",
+            "c": "Resource allocation is irrelevant to success",
+            "d": "Only renewable resources should be used in conflicts"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "keyPoints",
+        "question": "According to 'The Art of War', how should a commander approach leadership?",
+        "options": {
+            "a": "Focus solely on their own safety",
+            "b": "Be wise, courageous, and disciplined",
+            "c": "Always seek to delegate responsibilities",
+            "d": "Use fear to ensure obedience"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "keyPoints",
+        "question": "What quality does Sun Tzu highlight as important for leaders to maintain in their troops?",
+        "options": {
+            "a": "Fear of the enemy",
+            "b": "Competitiveness",
+            "c": "Morale",
+            "d": "Indifference to results"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "globalBestPractices",
+        "question": "How has 'The Art of War' influenced readers worldwide?",
+        "options": {
+            "a": "It has discouraged readers from engaging in conflicts",
+            "b": "Its teachings are mainly historical",
+            "c": "It is used primarily in educational settings",
+            "d": "By providing strategies for overcoming obstacles and achieving success"
+        },
+        "correct": "d"
+    },
+    {
+        "section": "summary",
+        "question": "What does 'The Art of War' primarily focus on offering?",
+        "options": {
+            "a": "Entertainment through fictional war stories",
+            "b": "Timeless wisdom on strategy and leadership",
+            "c": "Biographies of famous generals",
+            "d": "Detailed historical war timelines"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "whyItMatters",
+        "question": "Why is 'The Art of War' considered valuable beyond just military use?",
+        "options": {
+            "a": "It is a good source for ancient Chinese history",
+            "b": "It only focuses on past wars and strategies",
+            "c": "Its principles are relevant in various modern-day fields",
+            "d": "It provides entertainment through storytelling"
+        },
+        "correct": "c"
+    }
+]

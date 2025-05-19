@@ -1,0 +1,101 @@
+[
+  {
+    "section": "summary",
+    "question": "What is the primary theme of the song described in the transcript?",
+    "options": {
+      "a": "Adventure and discovery",
+      "b": "Financial prosperity",
+      "c": "Love and emotional dependence",
+      "d": "Historical events"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What does the repeated mention of 'a bottle' in the song likely symbolize?",
+    "options": {
+      "a": "Celebration",
+      "b": "Mystery",
+      "c": "Dependency or struggle",
+      "d": "Travel"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "Which lyric exemplifies the feeling of destitution in the song?",
+    "options": {
+      "a": "'listen to me people what I tell you is the truth'",
+      "b": "'make sure you catch me when I fall'",
+      "c": "'I’m just standing here with that bottle'",
+      "d": "'I've spent my last nickel and my credit's no good no more'"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why might the theme of emotional dependence discussed in the song matter to listeners?",
+    "options": {
+      "a": "It provides a method for financial management",
+      "b": "It relates to personal experiences of love and loss",
+      "c": "It offers advice on travel",
+      "d": "It teaches historical facts"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What might be the impact of not including the theme of dependency in the song?",
+    "options": {
+      "a": "The song could lack emotional depth",
+      "b": "The song could be more upbeat",
+      "c": "The song could focus more on historic events",
+      "d": "The song could be shorter"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "useCases",
+    "question": "In what context might this song be particularly impactful?",
+    "options": {
+      "a": "Dance competitions",
+      "b": "Support groups for emotional struggles",
+      "c": "Historical documentaries",
+      "d": "Financial seminars"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "Which of the following could be a method to enhance the emotional impact of the song?",
+    "options": {
+      "a": "Adding a faster rhythm",
+      "b": "Including more metaphors such as 'running from door to door'",
+      "c": "Reducing the number of musical instruments",
+      "d": "Changing the theme to a more positive one"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "concepts",
+    "question": "Which concept best relates to the narrative technique used in the song's lyrics?",
+    "options": {
+      "a": "Alliteration",
+      "b": "Character development",
+      "c": "Metaphor",
+      "d": "Simile"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "Which practice aligns with creating emotionally resonant music as demonstrated in the song?",
+    "options": {
+      "a": "Frequent tempo changes",
+      "b": "Using everyday language",
+      "c": "Complex orchestral arrangements",
+      "d": "Focus on technical skill over narrative"
+    },
+    "correct": "b"
+  }
+]

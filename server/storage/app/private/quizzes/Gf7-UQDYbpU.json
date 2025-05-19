@@ -1,0 +1,112 @@
+[
+  {
+    "section": "summary",
+    "question": "What ancient Chinese book was discussed in the transcript?",
+    "options": {
+      "a": "The Book of Five Rings",
+      "b": "The Art of War",
+      "c": "Zhou Dynasty Scrolls",
+      "d": "Ancient Chinese Tales"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "According to the transcript, who is the author of 'The Art of War'?",
+    "options": {
+      "a": "Confucius",
+      "b": "Machiavelli",
+      "c": "Sun Tzu",
+      "d": "Carl von Clausewitz"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyInsights",
+    "question": "Which Western author wrote a book with the same title 'The Art of War' as mentioned in the transcript?",
+    "options": {
+      "a": "Karl Marx",
+      "b": "Machiavelli",
+      "c": "Plato",
+      "d": "Freud"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "examples",
+    "question": "What strategy did Mr. Khan use to protect his village according to the transcript?",
+    "options": {
+      "a": "Direct combat",
+      "b": "Economic sanctions",
+      "c": "Diplomatic negotiation",
+      "d": "Deception strategy"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is the study of 'The Art of War' deemed important in the transcript?",
+    "options": {
+      "a": "To wage war effectively",
+      "b": "To avoid direct confrontation and manage conflicts",
+      "c": "For historical knowledge",
+      "d": "For entertainment purposes"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What might happen if the teachings of 'The Art of War' are not applied, according to the transcript?",
+    "options": {
+      "a": "Increased likelihood of unnecessary conflicts",
+      "b": "Decrease in military strategies",
+      "c": "Improved international relationships",
+      "d": "More effective use of resources"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "useCases",
+    "question": "Which groups of people find 'The Art of War' useful as stated in the transcript?",
+    "options": {
+      "a": "Artists and musicians",
+      "b": "Politicians and homemakers",
+      "c": "Military strategists and business leaders",
+      "d": "Scientists and researchers"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "In terms of global strategies and leadership, how does the Eastern approach to warfare differ from the Western according to the transcript?",
+    "options": {
+      "a": "Eastern strategies favor direct conflict",
+      "b": "Western strategies emphasize deception",
+      "c": "Eastern strategies prefer attacking the enemy's strategy",
+      "d": "Western strategies rely solely on diplomacy"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "How does the transcript suggest one should study 'The Art of War'?",
+    "options": {
+      "a": "By memorizing the chapters",
+      "b": "By underlining significant sentences and reflecting on them",
+      "c": "By reading it once thoroughly",
+      "d": "By focusing on the illustrations"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "concepts",
+    "question": "What concept from 'The Art of War' is highlighted in the transcript for managing confrontations effectively?",
+    "options": {
+      "a": "Direct assault",
+      "b": "Economic blockade",
+      "c": "Stratagems based on deception",
+      "d": "Political alliances"
+    },
+    "correct": "c"
+  }
+]

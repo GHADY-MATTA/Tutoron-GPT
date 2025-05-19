@@ -1,0 +1,113 @@
+[
+  {
+    "section": "summary",
+    "question": "What is the overall theme expressed in the lyrics?",
+    "options": {
+      "a": "Betrayal and mistrust",
+      "b": "Workplace ethics",
+      "c": "Unyielding support and loyalty",
+      "d": "Historical events"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyPoints",
+    "question": "Which action does the singer repeatedly promise not to do?",
+    "options": {
+      "a": "Leave suddenly",
+      "b": "Keep secrets",
+      "c": "Make phone calls",
+      "d": "Ignore messages"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What key emotional assurance is given throughout the song?",
+    "options": {
+      "a": "Excitement",
+      "b": "Anxiety",
+      "c": "Joy",
+      "d": "Security"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "examples",
+    "question": "Which phrase is used to emphasize commitment in the song?",
+    "options": {
+      "a": "Never gonna run around and desert you",
+      "b": "Always gonna bring you joy",
+      "c": "Sometimes gonna make you frown",
+      "d": "Often gonna be around"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why does the emphasis on never 'giving you up or letting you down' matter in the context of the song?",
+    "options": {
+      "a": "It highlights the theme of distrust",
+      "b": "It underscores a promise of reliability and trust",
+      "c": "It discusses the potential consequences of failure",
+      "d": "It indicates a casual commitment"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "If the phrases 'never gonna give you up' or 'never gonna let you down' were not used in the song, what would be lacking?",
+    "options": {
+      "a": "Clarity on the singer's intentions",
+      "b": "Description of daily activities",
+      "c": "Details about past relationships",
+      "d": "Instructions for a task"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "useCases",
+    "question": "In what situation might the repeated promises in the lyrics be most valued?",
+    "options": {
+      "a": "In a casual friendship",
+      "b": "In a deep and trusting relationship",
+      "c": "While making a business deal",
+      "d": "During a casual meeting"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "Which global best practice in relationships is echoed by the lyrics of the song?",
+    "options": {
+      "a": "Regular communication",
+      "b": "Financial independence",
+      "c": "Unconditional loyalty and support",
+      "d": "Healthy competition"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What step can individuals take to emulate the commitment expressed in the song?",
+    "options": {
+      "a": "Setting clear boundaries",
+      "b": "Making unconditional promises",
+      "c": "Avoiding commitments",
+      "d": "Planning frequent meetings"
+    },
+    "correct": "b"
+  },
+  {
+{
+    "section": "concepts",
+    "question": "What fundamental concept is highlighted by the promise 'never gonna tell a lie and hurt you'?",
+    "options": {
+      "a": "Transparency",
+      "b": "Perfection",
+      "c": "Compliance",
+      "d": "Efficiency"
+    },
+    "correct": "a"
+  }
+]

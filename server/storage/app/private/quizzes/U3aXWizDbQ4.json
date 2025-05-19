@@ -1,0 +1,112 @@
+[
+    {
+        "section": "summary",
+        "question": "Who created the C programming language?",
+        "options": {
+            "a": "Linus Torvalds",
+            "b": "Ken Thompson",
+            "c": "Dennis Richie",
+            "d": "James Gosling"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "keyPoints",
+        "question": "In which year was the C programming language created?",
+        "options": {
+            "a": "1982",
+            "b": "1972",
+            "c": "1992",
+            "d": "1962"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "keyInsights",
+        "question": "The C programming language compiles directly to what?",
+        "options": {
+            "a": "Intermediate code",
+            "b": "Assembly language",
+            "c": "Machine code",
+            "d": "Bytecode"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "examples",
+        "question": "Which operating system kernel is developed using C?",
+        "options": {
+            "a": "Windows",
+            "b": "Linux",
+            "c": "Mac",
+            "d": "All of the above"
+        },
+        "correct": "d"
+    },
+    {
+        "section": "whyItMatters",
+        "question": "What feature of C allows it to have low-level control over memory and hardware?",
+        "options": {
+            "a": "Garbage collector",
+            "b": "Object-oriented features",
+            "c": "Low-level language design",
+            "d": "No garbage collector"
+        },
+        "correct": "d"
+    },
+    {
+        "section": "whatIfNotUsed",
+        "question": "If a variable is no longer needed in C, what must be done to prevent memory leaks?",
+        "options": {
+            "a": "Do nothing",
+            "b": "Use a garbage collector",
+            "c": "Free it",
+            "d": "Convert it to another type"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "useCases",
+        "question": "Besides operating system kernels, which is another application area where C is utilized?",
+        "options": {
+            "a": "Web development",
+            "b": "Databases",
+            "c": "Scripting",
+            "d": "Cloud computing"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "globalBestPractices",
+        "question": "What is a commonly used C compiler mentioned in the transcript?",
+        "options": {
+            "a": "Python interpreter",
+            "b": "GCC",
+            "c": "Visual Studio",
+            "d": "Eclipse"
+        },
+        "correct": "b"
+    },
+    {
+        "section": "stepsToApply",
+        "question": "What would be the first step to start programming in C according to the transcript?",
+        "options": {
+            "a": "Create a file ending in .C",
+            "b": "Compile the code",
+            "c": "Install a C compiler",
+            "d": "Write the main function"
+        },
+        "correct": "c"
+    },
+    {
+        "section": "concepts",
+        "question": "What is used in C to store a memory address?",
+        "options": {
+            "a": "Integer variable",
+            "b": "Pointer",
+            "c": "Char variable",
+            "d": "Float variable"
+        },
+        "correct": "b"
+    }
+]

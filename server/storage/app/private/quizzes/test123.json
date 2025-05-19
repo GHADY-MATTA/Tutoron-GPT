@@ -1,0 +1,68 @@
+[
+  {
+    "section": "summary",
+    "question": "What best describes artificial intelligence?",
+    "options": {
+      "a": "The study of computer hardware",
+      "b": "The simulation of human intelligence in machines",
+      "c": "A scientific theory on human brain function",
+      "d": "The use of electricity in computing"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "Which of the following is a component of artificial intelligence?",
+    "options": {
+      "a": "Emotional sensing",
+      "b": "Chemical analysis",
+      "c": "Mathematical theorems",
+      "d": "Machine learning"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What is a critical insight about AI?",
+    "options": {
+      "a": "It primarily focuses on numerical data processing.",
+      "b": "It cannot process more data than a human.",
+      "c": "AI includes self-correction and reasoning capabilities.",
+      "d": "It is exclusively used in robotic applications."
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "Which of the following is an example of AI application?",
+    "options": {
+      "a": "Statistical calculations",
+      "b": "Word processing",
+      "c": "Data entry",
+      "d": "Machine learning algorithms"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why does artificial intelligence matter?",
+    "options": {
+      "a": "It can perform tasks that require human-like intelligence.",
+      "b": "It makes computers operate faster.",
+      "c": "It reduces the need for electronic devices.",
+      "d": "It exclusively improves entertainment technologies."
+    },
+    "correct": "a"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What best practice is recommended for implementing AI globally?",
+    "options": {
+      "a": "Limiting use to military applications",
+      "b": "Focusing on automation of manual jobs only",
+      "c": "Ensuring ethical guidelines are followed",
+      "d": "Restricting AI development to specific countries"
+    },
+    "correct": "c"
+  }
+]

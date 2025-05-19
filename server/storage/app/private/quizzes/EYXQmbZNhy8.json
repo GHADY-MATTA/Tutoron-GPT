@@ -1,0 +1,112 @@
+[
+  {
+    "section": "stepsToApply",
+    "question": "What is the initial step to prepare for making the vanilla cake?",
+    "options": {
+      "a": "Cream the butter with sugar",
+      "b": "Set your oven to 350 degrees",
+      "c": "Add eggs one at a time",
+      "d": "Measure out the flour with a scale"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What is crucial when measuring flour for the cake according to the transcript?",
+    "options": {
+      "a": "Measure without leveling the cup",
+      "b": "Use a teaspoon for smaller amounts",
+      "c": "Fluff it up and sprinkle it into the cup",
+      "d": "Always use brown flour for cakes"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "Which example did John provide to emphasize the importance of using parchment paper?",
+    "options": {
+      "a": "Preventing the cake from sticking to the pan",
+      "b": "Making it easier to clean the pan",
+      "c": "For keeping the cake moist",
+      "d": "To enhance the flavor of the cake"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "According to the transcript, why is it important to keep the cake batter at room temperature?",
+    "options": {
+      "a": "To make the mixing process easier",
+      "b": "To prevent the cake from baking unevenly",
+      "c": "To reduce the amount of sugar needed",
+      "d": "To increase the baking time"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "useCases",
+    "question": "For which occasion was the vanilla cake being made in the transcript?",
+    "options": {
+      "a": "A wedding celebration",
+      "b": "A cooking show",
+      "c": "Brian's mom's birthday",
+      "d": "A baking competition"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What could happen if room temperature ingredients are not used as mentioned in the transcript?",
+    "options": {
+      "a": "The cake may have a dome and burnt edges",
+      "b": "The sugar will not dissolve properly",
+      "c": "The eggs might curdle",
+      "d": "Butter will not blend with other ingredients"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What does the transcript suggest could happen if cake batter is overmixed?",
+    "options": {
+      "a": "The cake will not rise at all",
+      "b": "The cake will be gummy and tough when cooled",
+      "c": "The flavor of vanilla will be subdued",
+      "d": "The cake will not set properly"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What key insight is provided about the addition of granulated sugar to the butter?",
+    "options": {
+      "a": "Add it all at once and mix",
+      "b": "Add before butter for best results",
+      "c": "Increase mixing speed after adding sugar",
+      "d": "Reduce mixing speed to low after adding"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is the method for adding dry ingredients and buttermilk into the cake mix?",
+    "options": {
+      "a": "Add all at once and mix at high speed",
+      "b": "Alternate between dry ingredients and buttermilk",
+      "c": "Add only buttermilk first and then the dry ingredients",
+      "d": "Mix dry ingredients and buttermilk separately before adding"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What does John suggest using to ensure the cake layers are perfectly flat?",
+    "options": {
+      "a": "Parchment paper only",
+      "b": "Cake strips",
+      "c": "A water bath",
+      "d": "Baking soda"
+    },
+    "correct": "b"
+  }
+]

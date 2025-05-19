@@ -1,0 +1,101 @@
+[
+  {
+    "section": "summary",
+    "question": "What is a primary method discussed for combatting climate change?",
+    "options": {
+      "a": "Reducing urbanization",
+      "b": "Planting more trees",
+      "c": "Increasing the use of fossil fuels",
+      "d": "Expanding industrial areas"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What is afforestation?",
+    "options": {
+      "a": "Protecting old forests from logging",
+      "b": "Planting trees in areas traditionally not forested",
+      "c": "Restoring recently degraded forests",
+      "d": "Harvesting mature trees for industry"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "examples",
+    "question": "According to the transcript, what resulted in no major carbon storage gains?",
+    "options": {
+      "a": "Restoration of degraded land globally",
+      "b": "Tree planting efforts in the UK by oil companies",
+      "c": "The Chilean government's funding of a million hectares of new trees",
+      "d": "Protecting existing forests"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is it crucial to consider the type of trees and the land when planting trees?",
+    "options": {
+      "a": "Only certain types of trees absorb carbon dioxide",
+      "b": "Some trees can contribute to warmer temperatures in specific regions",
+      "c": "All trees need the same type of soil to grow",
+      "d": "Planting trees is cheaper than other environmental initiatives"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What can happen if the wrong species of trees are planted in inappropriate locations?",
+    "options": {
+      "a": "It can disturb local ecosystems and fail to store carbon effectively",
+      "b": "It can increase urban housing development",
+      "c": "It will automatically boost the local economy",
+      "d": "It will lower the global temperatures immediately"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "useCases",
+    "question": "What is a potential negative consequence of using plantation trees as mentioned in the transcript?",
+    "options": {
+      "a": "No risk of fire",
+      "b": "They provide permanent carbon storage",
+      "c": "They can be highly flammable and their carbon storage can be lost in fires",
+      "d": "They absorb more carbon than natural forests"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What shift has Chile made regarding its tree planting practices?",
+    "options": {
+      "a": "Focus on urban tree planting",
+      "b": "Prioritizing planting native trees rather than timber plantations",
+      "c": "Stopping all tree planting efforts",
+      "d": "Only allowing foreign species of trees"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is one method mentioned for assisting natural regeneration of forests?",
+    "options": {
+      "a": "Preventing any public access to forests",
+      "b": "Removing competing grasses that harm young saplings",
+      "c": "Constantly irrigating the forest lands",
+      "d": "Applying chemical fertilizers to boost tree growth"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "concepts",
+    "question": "What term best describes the practice of restoring recently degraded forests?",
+    "options": {
+      "a": "Deforestation",
+      "b": "Afforestation",
+      "c": "Reforestation",
+      "d": "Agriculture"
+    },
+    "correct": "c"
+  }
+]

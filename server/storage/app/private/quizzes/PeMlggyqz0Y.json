@@ -1,0 +1,101 @@
+[
+  {
+    "section": "summary",
+    "question": "What is the main function of machine learning?",
+    "options": {
+      "a": "To create websites",
+      "b": "To teach computers to perform tasks without being explicitly programmed",
+      "c": "To improve human learning",
+      "d": "To develop new computer hardware"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "Who coined the term machine learning?",
+    "options": {
+      "a": "Alan Turing",
+      "b": "Elon Musk",
+      "c": "Arthur Samuel",
+      "d": "John McCarthy"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "Which of the following is an example of what machine learning models do?",
+    "options": {
+      "a": "Charge a smartphone",
+      "b": "Write books",
+      "c": "Classify data",
+      "d": "Design furniture"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "How does machine learning impact predictive modeling?",
+    "options": {
+      "a": "It has no impact on predictive modeling",
+      "b": "It complicates predictive modeling",
+      "c": "It is essential for creating accurate predictive models",
+      "d": "It decreases the need for data"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What would likely happen if machine learning were not used in data analysis?",
+    "options": {
+      "a": "Data analysis would be more efficient",
+      "b": "Manual data processing would increase",
+      "c": "All data analysis would stop",
+      "d": "There would be no significant impact"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "useCases",
+    "question": "What sector does NOT commonly use machine learning?",
+    "options": {
+      "a": "Automotive safety",
+      "b": "Health diagnostics",
+      "c": "Agricultural farming",
+      "d": "Orbital telescopes"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What is a best practice when applying machine learning?",
+    "options": {
+      "a": "Using the smallest data set possible",
+      "b": "Avoiding the use of algorithms",
+      "c": "Ensuring the data accurately represents the problem",
+      "d": "Ignoring the error function"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is the first step in the machine learning process?",
+    "options": {
+      "a": "Deploying the model to the cloud",
+      "b": "Acquiring and cleaning data",
+      "c": "Choosing an algorithm",
+      "d": "Training the model with live data"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "concepts",
+    "question": "Which algorithm might use features but also automatically create additional features?",
+    "options": {
+      "a": "Linear regression",
+      "b": "Decision tree",
+      "c": "Logistic regression",
+      "d": "Convolutional neural network"
+    },
+    "correct": "d"
+  }
+]

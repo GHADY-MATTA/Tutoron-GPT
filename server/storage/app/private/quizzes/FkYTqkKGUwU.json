@@ -1,0 +1,112 @@
+[
+  {
+    "section": "summary",
+    "question": "What makes Jungle an excellent choice for web application development?",
+    "options": {
+      "a": "Its moderate learning curve",
+      "b": "Its affordability",
+      "c": "Its rapid development, strong security, and scalability",
+      "d": "Its compatibility with multiple programming languages"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyPoints",
+    "question": "Which philosophy does Jungle follow to promote rapid development?",
+    "options": {
+      "a": "Minimal configuration",
+      "b": "First come first serve",
+      "c": "Battery included",
+      "d": "Plug and play"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyInsights",
+    "question": "Why is Jungle considered secure for web applications?",
+    "options": {
+      "a": "It offers built-in automation tools.",
+      "b": "It protects against vulnerabilities such as cross-site scripting and request forgery.",
+      "c": "It provides free SSL certificates.",
+      "d": "It uses a private cloud infrastructure."
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What feature of Jungle helps in managing the increasing demand as the web application grows?",
+    "options": {
+      "a": "Fixed scalability",
+      "b": "Limited flexibility",
+      "c": "Highly scalable and flexible architecture",
+      "d": "Static feature set"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "Which of the following is an example of a feature provided by Jungle for rapid development?",
+    "options": {
+      "a": "Multi-lingual support",
+      "b": "Integrated payment processing",
+      "c": "Admin interface",
+      "d": "Cloud-based hosting"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is the rapid development feature in Jungle important?",
+    "options": {
+      "a": "It reduces the time to launch the web application.",
+      "b": "It makes the application more expensive.",
+      "c": "It decreases the application's security.",
+      "d": "It limits the scalability of the application."
+    },
+    "correct": "a"
+  },
+  {
+    "section": "useCases",
+    "question": "For which type of projects is Jungle particularly well-suited?",
+    "options": {
+      "a": "Small static websites",
+      "b": "Single-page portfolios",
+      "c": "Web applications of any size",
+      "d": "Print media projects"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "Which aspect of Jungle aligns with global best practices for web development?",
+    "options": {
+      "a": "Extensive documentation requirements",
+      "b": "Protection against common web vulnerabilities",
+      "c": "Use of outdated frameworks",
+      "d": "Lack of community support"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What initial step should you take to start learning Jungle as recommended?",
+    "options": {
+      "a": "Subscribe to a Jungle specific newsletter",
+      "b": "Follow comprehensive tutorials about Jungle",
+      "c": "Start learning by coding small projects",
+      "d": "Join a Jungle beginner's coding bootcamp"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "concepts",
+    "question": "What is a fundamental concept driving the scalability in Jungle?",
+    "options": {
+      "a": "The ability to handle increasing workload without performance loss",
+      "b": "Adoption of blockchain technology",
+      "c": "Usage of physical servers over cloud servers",
+      "d": "Implementation of manual scaling methods"
+    },
+    "correct": "a"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "section": "summary",
+    "question": "What is the main topic of the discussed transcript?",
+    "options": {
+      "a": "Global politics",
+      "b": "The principles of stock trading",
+      "c": "Cooking recipes",
+      "d": "Sports analytics"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What does owning a stock in a company represent?",
+    "options": {
+      "a": "Debt to the company",
+      "b": "A license for selling the company's products",
+      "c": "Ownership in the company",
+      "d": "Legal partnership with the company"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "examples",
+    "question": "In the example provided, what is the name of the business Sarah wants to start?",
+    "options": {
+      "a": "Sarah's Bakery",
+      "b": "Sarah's Coffee Shop",
+      "c": "Sarah's Pizzeria",
+      "d": "Sarah's Bookstore"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why do companies issue stocks?",
+    "options": {
+      "a": "To hire more employees",
+      "b": "To raise money for business purposes",
+      "c": "To pay off their debts",
+      "d": "To buy supplies"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "useCases",
+    "question": "What was one of the funding options Sarah considered for her pizzeria?",
+    "options": {
+      "a": "Taking a government grant",
+      "b": "Winning a lottery",
+      "c": "Taking a loan from the bank",
+      "d": "Crowdfunding online"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What is a practice commonly associated with successful stock investment mentioned in the transcript?",
+    "options": {
+      "a": "Investing only in high-risk stocks",
+      "b": "Putting all money into one stock",
+      "c": "Buying shares in companies one is familiar with",
+      "d": "Avoiding dividend-paying stocks"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "According to the transcript, what should you do if interested in buying stocks?",
+    "options": {
+      "a": "Start by buying shares in companies you know and like",
+      "b": "Immediately invest all savings into a single stock",
+      "c": "Ignore market trends and invest randomly",
+      "d": "Buy only what competitors suggest"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "concepts",
+    "question": "What does it mean to be a shareholder?",
+    "options": {
+      "a": "To hold a managerial position in a company",
+      "b": "To be an employee of the company",
+      "c": "To own a share of what the company owns and earns",
+      "d": "To be a customer of the company"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What can be a potential negative consequence of investing in stocks?",
+    "options": {
+      "a": "The value of stocks may increase unpredictably",
+      "b": "Stock values can drop, possibly leading to financial loss",
+      "c": "Stocks ensure a fixed income",
+      "d": "Investing in stocks eliminates all other financial risks"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What might happen if investment options like stocks were not available?",
+    "options": {
+      "a": "Limited business expansion opportunities",
+      "b": "Increased personal savings",
+      "c": "Decreased market volatility",
+      "d": "More focus on non-monetary investments"
+    },
+    "correct": "a"
+  }
+]

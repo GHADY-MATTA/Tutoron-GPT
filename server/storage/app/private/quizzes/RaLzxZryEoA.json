@@ -1,0 +1,101 @@
+[
+  {
+    "section": "examples",
+    "question": "Which ingredient does the video suggest might accidentally be used instead of vanilla extract?",
+    "options": {
+      "a": "Almond extract",
+      "b": "Fish sauce",
+      "c": "Soy sauce",
+      "d": "Lemon juice"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What is the purpose of placing egg whites in the freezer before whipping them?",
+    "options": {
+      "a": "To decrease whipping time",
+      "b": "To trap air more effectively",
+      "c": "To make them easier to separate",
+      "d": "To prevent them from spoiling"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "What is a critical factor for cooking Japanese pancakes according to the video?",
+    "options": {
+      "a": "Cooking on high heat",
+      "b": "Using a large skillet",
+      "c": "Adding lots of sugar",
+      "d": "Maintaining low heat"
+    },
+    "correct": "d"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What should be done after mixing the egg yolks and whites together for the pancake batter?",
+    "options": {
+      "a": "Whip again with a mixer",
+      "b": "Gently fold with a spatula",
+      "c": "Set aside to rest for an hour",
+      "d": "Add more sugar"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is it important not to over-whip the egg whites when preparing Japanese pancakes?",
+    "options": {
+      "a": "It will make the batter too runny",
+      "b": "It could turn the batter sour",
+      "c": "It increases cooking time",
+      "d": "It makes the pancakes too sweet"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "useCases",
+    "question": "What does the addition of milk contribute to in the pancake batter?",
+    "options": {
+      "a": "Enhances the flavor only",
+      "b": "Makes the texture crisper",
+      "c": "Adds moisture and helps with consistency",
+      "d": "Changes the color of the pancakes"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "concepts",
+    "question": "What is the result of using low heat to cook Japanese pancakes?",
+    "options": {
+      "a": "The pancakes will not cook through",
+      "b": "Prevents them from puffing up quickly and deflating",
+      "c": "Makes the pancakes overly crispy",
+      "d": "Reduces the flavor intensity"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What key insight is mentioned about the texture of Japanese pancakes?",
+    "options": {
+      "a": "They should be thin and crispy",
+      "b": "They must be folded with a whisk",
+      "c": "The texture should be light and airy",
+      "d": "They should be flavored with vanilla"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What might happen if cold egg whites aren't used when whipping them for the pancake batter?",
+    "options": {
+      "a": "The meringue won't be as stable",
+      "b": "There would be no noticeable difference",
+      "c": "The pancake flavor will change",
+      "d": "Whipping will take less time"
+    },
+    "correct": "a"
+  }
+]

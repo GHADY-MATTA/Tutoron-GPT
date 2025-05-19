@@ -1,0 +1,112 @@
+[
+  {
+    "section": "summary",
+    "question": "What is the primary functionality of the 1 minute AI as described?",
+    "options": {
+      "a": "Improving dance skills",
+      "b": "Providing financial advice",
+      "c": "Generating quick and creative content",
+      "d": "Calculating complex math problems"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "keyPoints",
+    "question": "What kind of tasks does 1 minute AI specialize in as mentioned in the transcript?",
+    "options": {
+      "a": "Physical exercise routines",
+      "b": "Generating creative content and writing emails",
+      "c": "Gardening tips",
+      "d": "Cooking recipes"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "examples",
+    "question": "Which of the following is an example of a prompt you could give to 1 minute AI?",
+    "options": {
+      "a": "Write me a funny birthday message",
+      "b": "Translate a document to Japanese",
+      "c": "Show the nearest restaurant",
+      "d": "Fix computer bugs"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "whyItMatters",
+    "question": "Why is 1 minute AI considered beneficial according to the transcript?",
+    "options": {
+      "a": "It reduces screen time drastically",
+      "b": "It eliminates the need for physical labor",
+      "c": "It saves time by quickly creating content",
+      "d": "It improves physical health"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "useCases",
+    "question": "Which group of individuals is mentioned as potential users of 1 minute AI?",
+    "options": {
+      "a": "Astronauts in space",
+      "b": "Deep-sea divers",
+      "c": "Busy parents",
+      "d": "Animals in the wild"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "globalBestPractices",
+    "question": "Which of the following best practices for utilizing AI tools like 1 minute AI is highlighted in the transcript?",
+    "options": {
+      "a": "Frequently updating the software",
+      "b": "Using it to enhance productivity",
+      "c": "Ignoring the updates",
+      "d": "Using it once a year"
+    },
+    "correct": "b"
+  },
+  {
+    "section": "keyInsights",
+    "question": "What is a key insight about the AI's versatility as discussed?",
+    "options": {
+      "a": "It is only effective for email writing",
+      "b": "It can only create humorous content",
+      "c": "It is beneficial for brainstorming and creating unique presentation content",
+      "d": "It can't handle multiple tasks simultaneously"
+    },
+    "correct": "c"
+  },
+  {
+    "section": "stepsToApply",
+    "question": "What is the first step to using the 1 minute AI according to the transcript?",
+    "options": {
+      "a": "Provide a prompt",
+      "b": "Pay for a subscription",
+      "c": "Download multiple applications",
+      "d": "Attend a training seminar"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "concepts",
+    "question": "Which concept related to 1 minute AI is emphasized throughout the video?",
+    "options": {
+      "a": "Time efficiency and creativity",
+      "b": "Physical fitness enhancement",
+      "c": "Global warming awareness",
+      "d": "Historical education"
+    },
+    "correct": "a"
+  },
+  {
+    "section": "whatIfNotUsed",
+    "question": "What is suggested might happen if one does not use 1 minute AI based on the information given?",
+    "options": {
+      "a": "Increased productivity",
+      "b": "More time spent on creative tasks",
+      "c": "Less time for personal activities",
+      "d": "Improved skill in tasks"
+    },
+    "correct": "b"
+  }
+]
