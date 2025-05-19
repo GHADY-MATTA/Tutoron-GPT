@@ -7,9 +7,8 @@
 
 >
 >Tutoron-GPT: Your Personal AI Learning Assistant
-Tutoron-GPT is an AI-powered education platform designed to revolutionize how individuals learn online. By combining adaptive technology with personalized tutoring experiences, Tutoron-GPT helps users learn faster, understand deeper, and retain longer.
-
-Whether you're a student preparing for exams, a professional upskilling, or a curious mind exploring new topics, Tutoron-GPT tailors its teaching approach to your unique learning style and pace.
+Paste a YouTube link and Tutoron-GPT instantly pulls the transcript, distills it into a clear summary, and builds a custom quiz to lock in the concepts.
+Powered by adaptive AI, it tailors every explanation to your learning style so you grasp ideas quickly and remember them longer.
 
 
 > 
