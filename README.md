@@ -60,6 +60,8 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 - 📺 **YouTube Transcript Intelligence**  
   Upload any YouTube URL - get clean transcripts, summaries, key insights, and study material.
 
+![Landing](./readme/demo/highlights.gif)
+
 - 🌐 **Cloud-to-Local Microservice Bridge**  
   Bypasses YouTube transcript blocking with a hybrid Node.js + Python pipeline using Ngrok.
 
