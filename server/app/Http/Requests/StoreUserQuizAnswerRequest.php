@@ -11,7 +11,7 @@ class StoreUserQuizAnswerRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,6 +22,12 @@ class StoreUserQuizAnswerRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'user_id' => 'required|integer|exists:users,id',
+            'answers' => 'required|array',
+            'answers.*.question' => 'required|string',
+            'answers.*.selected' => 'required|string',
+            'answers.*.correct' => 'required|boolean',
+            'answers.*.video_id' => 'nullable|string',
             //
         ];
     }
