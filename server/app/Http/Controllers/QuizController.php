@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Services\QuizGenerator;
+use App\Http\Requests\StoreQuizRequest;
+
 
 class QuizController extends Controller
 {
