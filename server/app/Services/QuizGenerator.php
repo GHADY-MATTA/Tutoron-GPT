@@ -13,7 +13,7 @@ class QuizGenerator
   public function handle(string $video_id, string $title, string $transcript): array
   {
     // ⬅️ Allow up to 5 minutes for this AI request only
-    set_time_limit(300);
+    set_time_limit(400);
 
     $rawPrompt = file_get_contents(resource_path('prompts/quiz.txt'));
     $prompt = str_replace('{{transcript}}', $transcript, $rawPrompt);

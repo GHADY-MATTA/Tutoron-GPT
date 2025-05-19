@@ -10,7 +10,7 @@ return [
         'openai' => [
             'url' => env('OPENAI_URL', 'https://api.openai.com/v1'),
             'api_key' => env('OPENAI_API_KEY', ''),
-            'timeout' => 2000,
+            'timeout' => 90,
             'organization' => env('OPENAI_ORGANIZATION', null),
             'project' => env('OPENAI_PROJECT', null),
         ],

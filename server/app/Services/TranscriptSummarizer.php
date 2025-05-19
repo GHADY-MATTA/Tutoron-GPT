@@ -17,6 +17,7 @@ class TranscriptSummarizer
         $response = Prism::text()
             ->using(Provider::OpenAI, 'gpt-4-turbo')
             ->withPrompt($prompt)
+            
 
             ->asText();
 
