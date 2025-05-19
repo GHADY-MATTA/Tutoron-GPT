@@ -11,7 +11,7 @@ class StoreUserYouTubeLogRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,6 +22,9 @@ class StoreUserYouTubeLogRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'user_id' => 'required|integer|exists:users,id',
+            'video_url' => 'required|url',
+            'youtube_video_id' => 'nullable|string',
             //
         ];
     }
