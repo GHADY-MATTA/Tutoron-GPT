@@ -27,9 +27,10 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 <br><br>
 
-### 🧠 Hybrid Cloud-to-Local Transcript Fetching Architecture
-![Landing](./readme/demo/erdiagram.png)
+### Database Diagram
 
+![Landing](./readme/demo/erdiagram.png)
+### 🧠 Hybrid Cloud-to-Local Transcript Fetching Architecture
 
 -- **Why:**  
   Cloud VMs like EC2 are often blocked from accessing YouTube transcripts due to IP-based restrictions.
