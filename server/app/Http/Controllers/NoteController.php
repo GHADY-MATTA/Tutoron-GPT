@@ -6,6 +6,7 @@ use App\Models\Note;
 use Illuminate\Http\Request;
 use App\Traits\ResponseTrait;
 use App\Http\Requests\StoreNoteRequest;
+use App\Http\Requests\ListNotesRequest;
 
 class NoteController extends Controller
 {
