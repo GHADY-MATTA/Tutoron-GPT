@@ -5,58 +5,84 @@
 <!-- project overview -->
 <img src="./readme/title2.svg"/>
 
-> Description here.
 >
-> Description here.
+>Tutoron-GPT: Your Personal AI Learning Assistant
+Tutoron-GPT is an AI-powered education platform designed to revolutionize how individuals learn online. By combining adaptive technology with personalized tutoring experiences, Tutoron-GPT helps users learn faster, understand deeper, and retain longer.
+
+Whether you're a student preparing for exams, a professional upskilling, or a curious mind exploring new topics, Tutoron-GPT tailors its teaching approach to your unique learning style and pace.
+
+
+> 
 
 <br><br>
 
 <!-- System Design -->
 <img src="./readme/title3.svg"/>
 
-### Add Title Here
+### 🧠 Hybrid Cloud-to-Local Transcript Fetching Architecture
+![Landing](./readme/demo/erdiagram.png)
+-- **Why:**  
+  Cloud VMs like EC2 are often blocked from accessing YouTube transcripts due to IP-based restrictions.
 
-- To be decided on later on.
+- **The Challenge:**  
+  Fetching YouTube transcripts directly from a server results in failure or empty responses.
+
+- **The Solution:**  
+  Offload the transcript extraction to your **local machine with a residential IP**.
+
+- **How It Works:**  
+  - 🌐 Laravel (on EC2) sends an HTTP POST to a public Ngrok endpoint.  
+  - 🧩 Ngrok tunnels the request to your **local Node.js + Express** server.  
+  - 🐍 Node.js triggers a Python script (`fetch_transcript.py`) to extract the transcript.  
+  - 📬 The response is sent back to **Laravel via a secure HTTP route**, completing the flow.
+
+> ✅ This hybrid architecture enables **fast**, **secure**, and **reliable** transcript access even from cloud-restricted environments.
 
 <br><br>
 
 <!-- Project Highlights -->
 <img src="./readme/title4.svg"/>
 
-### Add Title Here
+### 🔥 Standout Features That Make Tutoron-GPT Shine
 
-- List the sexy features.
+- 📺 **YouTube Transcript Intelligence**  
+  Upload any YouTube URL - get clean transcripts, summaries, key insights, and study material.
 
+- 🌐 **Cloud-to-Local Microservice Bridge**  
+  Bypasses YouTube transcript blocking with a hybrid Node.js + Python pipeline using Ngrok.
+
+- 🧠 **Smart AI Summarization**  
+  Structured video breakdowns: Objectives, Key Points, Highlights, and Insights - powered by GPT.
 <br><br>
 
 <!-- Demo -->
 <img src="./readme/title5.svg"/>
 
-### User Screens (Mobile)
+### User Screens (Responsive)
 
-| Login screen                            | Register screen                       | Register screen                       |
+| Login screen                            | Register screen                       |  Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/demo/login%20(1).gif) | ![fsdaf](./readme/demo/signup%20(1).gif )| ![fsdaf](./readme/demo/homepage%20(1).gif) |
 
 
-### Admin Screens (Web)
+### user Screen (Web)
 
-| Login screen                            | Register screen                       |
+| upload screen                            | Summary screen                       |
 | --------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/demo/upload.gif) | ![fsdaf](./readme/demo/generate.gif) |
 
 
 <br><br>
-
+ 
 <!-- Development & Testing -->
 <img src="./readme/title6.svg"/>
 
-### Add Title Here
+### [![Run CI Tests](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml)
 
 
 | Services                            | Validation                       | Testing                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/demo/service.png) | ![fsdaf](./readme/demo/validation.png) | ![fsdaf](./readme/demo/laravel_logs.png) |
 
 
 <br><br>
@@ -64,13 +90,19 @@
 <!-- Deployment -->
 <img src="./readme/title7.svg"/>
 
-### Add Title Here
+### Cloud Deployment with CI/CD on Ubuntu EC2 + Docker
 
-- Description here.
+
+- **Automated CI/CD Pipeline**  
+- **Dockerized Infrastructure**  
+- **Ubuntu EC2 Hosting**  
+- **Production Build with Vite + Laravel Artisan**  
+- **.env Configuration + Secrets**  
+- **Persistent MySQL Volumes**
 
 
 | Postman API 1                            | Postman API 2                       | Postman API 3                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) |
 
 <br><br>

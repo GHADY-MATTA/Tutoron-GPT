@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: tutoron-backend
+    environment:
+      - LARAVEL_DATABASE_HOST=mysql
+      - LARAVEL_DATABASE_NAME=tutorongpt
+      - LARAVEL_DATABASE_USER=ghady
+      - LARAVEL_DATABASE_PASSWORD=ghady123
+      - LARAVEL_DATABASE_PORT_NUMBER=3306
+ 
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: tutoron-mysql
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=tutorongpt
+      - MYSQL_USER=ghady
+      - MYSQL_PASSWORD=ghady123
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  react:
+    build:
+      context: ./client/vite-project
+      dockerfile: Dockerfile
+    container_name: tutoron-react
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:

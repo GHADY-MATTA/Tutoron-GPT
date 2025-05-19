@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Transcript Uploader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0E0F12] text-white min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-8 py-4 shadow-sm bg-[#111213]">
+        <div class="text-2xl font-bold tracking-tight">Tutoron GPT</div>
+        <button class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded text-sm font-medium">
+            Upload Link
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-1 flex flex-col items-center justify-center px-6 text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
+            Turn any YouTube video into insight.
+        </h1>
+        <p class="text-gray-400 max-w-xl mb-8">
+            Paste a YouTube link below and instantly get the transcript saved and analyzed with AI.
+        </p>
+
+        <!-- Form -->
+        <form class="w-full max-w-md space-y-4">
+            <input type="url" placeholder="https://www.youtube.com/watch?v=..."
+                class="w-full px-4 py-3 rounded-md bg-[#1C1D21] border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                required />
+            <button type="submit"
+                class="w-full bg-indigo-600 hover:bg-indigo-700 py-3 rounded-md text-white font-semibold">
+                Upload & Analyze
+            </button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-sm text-gray-500 text-center py-6">
+        &copy; 2025 Tutoron GPT. All rights reserved.
+    </footer>
+</body>
+
+</html>

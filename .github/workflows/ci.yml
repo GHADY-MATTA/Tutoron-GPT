@@ -1,0 +1,75 @@
+name: Run CI Tests
+
+on:
+  push:
+    branches: ['main', 'dev', '**']
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: tutorongpt
+          MYSQL_USER: ghady
+          MYSQL_PASSWORD: ghady123
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+      - name:  Checkout Code
+        uses: actions/checkout@v3
+
+      - name:  Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+
+      - name:  Install Laravel
+        run: composer install --no-interaction --prefer-dist
+        working-directory: server
+
+      - name:  Use .env.ci as runtime env
+        run: cp .env.ci .env
+        working-directory: server
+
+      - name:  Set Laravel Key and Migrate
+        run: |
+          php artisan key:generate
+          php artisan migrate --force
+        working-directory: server
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: tutorongpt
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name:  Run Laravel Tests (without hitting AI)
+        run: |
+          php artisan test tests/Feature/AuthTest.php
+          php artisan test tests/Feature/YouTubeControllerTest.php
+
+        working-directory: server
+
+      - name: 🔧 Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name:  Build React (Vite)
+        run: |
+          npm install
+          npm run build
+        working-directory: client/vite-project

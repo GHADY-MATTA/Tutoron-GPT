@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel .env.testing Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+
+        .code-block {
+            font-family: 'Courier New', monospace;
+            background-color: #1e293b;
+            color: #f8fafc;
+        }
+    </style>
+</head>
+
+<body class="gradient-bg min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl font-bold text-indigo-800 mb-2">Laravel .env.testing Documentation</h1>
+            <p class="text-lg text-gray-600">Professional testing environment configuration</p>
+        </header>
+
+        <!-- What is .env.testing? -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                    <i class="fas fa-question-circle text-indigo-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">What is .env.testing?</h2>
+            </div>
+            <p class="text-gray-700 mb-4">
+                <code class="bg-gray-100 px-2 py-1 rounded text-sm">.env.testing</code> is a special environment file
+                used only when running Laravel tests (<code
+                    class="bg-gray-100 px-2 py-1 rounded text-sm">php artisan test</code> or PHPUnit).
+            </p>
+            <p class="text-gray-700">
+                It allows Laravel to separate the test environment from the real application environment, making sure
+                that tests run safely, fast, and isolated.
+            </p>
+        </section>
+
+        <!-- Why we created .env.testing -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <div class="bg-green-100 p-2 rounded-full mr-3">
+                    <i class="fas fa-bullseye text-green-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">Why we created .env.testing</h2>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Reason</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Protect real database</td>
+                            <td class="px-6 py-4">Avoid accidentally inserting, deleting, or modifying real user data
+                                during tests</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Faster test runs</td>
+                            <td class="px-6 py-4">Use in-memory database (SQLite :memory:) to speed up migrations and
+                                queries</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Separate environment
+                                settings</td>
+                            <td class="px-6 py-4">Use different cache, session, queue drivers for testing only</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Professional standard</td>
+                            <td class="px-6 py-4">All serious Laravel projects use .env.testing for clean, reliable
+                                CI/CD pipelines</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- What we put inside .env.testing -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                    <i class="fas fa-file-code text-blue-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">What we put inside .env.testing</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Here's the final <code
+                    class="bg-gray-100 px-2 py-1 rounded text-sm">.env.testing</code> content we used:</p>
+
+            <div class="code-block rounded-lg p-4 mb-6 overflow-x-auto">
+                <pre class="text-sm"><code>APP_ENV=testing
+APP_KEY=base64:GeneratedByKeyGenerateCommand
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=sqlite
+DB_DATABASE=:memory:
+
+CACHE_DRIVER=array
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=array</code></pre>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Variable</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Why we set it</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">APP_ENV=testing</td>
+                            <td class="px-6 py-4">Tells Laravel: "I'm running in TEST MODE"</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">APP_KEY=...</td>
+                            <td class="px-6 py-4">Needed for encryption to work during tests (sessions, cookies, etc.)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">APP_DEBUG=true</td>
+                            <td class="px-6 py-4">Show errors easily if a test fails</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">
+                                APP_URL=http://localhost</td>
+                            <td class="px-6 py-4">Local base URL</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">DB_CONNECTION=sqlite
+                            </td>
+                            <td class="px-6 py-4">Use SQLite instead of MySQL/Postgres for testing (lighter, no setup)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">DB_DATABASE=:memory:
+                            </td>
+                            <td class="px-6 py-4">Use in-memory database, built fresh every test run (fast + clean)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">CACHE_DRIVER=array
+                            </td>
+                            <td class="px-6 py-4">Store cache in RAM, not Redis/Memcached</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">
+                                QUEUE_CONNECTION=sync</td>
+                            <td class="px-6 py-4">Process jobs immediately without a queue worker</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-900">SESSION_DRIVER=array
+                            </td>
+                            <td class="px-6 py-4">Store session data in memory, not in files/database</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Setup Steps -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <div class="bg-yellow-100 p-2 rounded-full mr-3">
+                    <i class="fas fa-cogs text-yellow-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">Steps we followed to set it up</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-start">
+                    <div
+                        class="flex-shrink-0 bg-indigo-100 text-indigo-800 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                        1</div>
+                    <div>
+                        <p class="font-medium text-gray-900">Created <code
+                                class="bg-gray-100 px-2 py-1 rounded text-sm">.env.testing</code> at the root of the
+                            Laravel project</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div
+                        class="flex-shrink-0 bg-indigo-100 text-indigo-800 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                        2</div>
+                    <div>
+                        <p class="font-medium text-gray-900">Pasted the correct settings inside</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div
+                        class="flex-shrink-0 bg-indigo-100 text-indigo-800 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                        3</div>
+                    <div>
+                        <p class="font-medium text-gray-900">Ran <code
+                                class="bg-gray-100 px-2 py-1 rounded text-sm">php artisan key:generate --env=testing</code>
+                            to create a valid APP_KEY</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div
+                        class="flex-shrink-0 bg-indigo-100 text-indigo-800 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                        4</div>
+                    <div>
+                        <p class="font-medium text-gray-900">Ran <code
+                                class="bg-gray-100 px-2 py-1 rounded text-sm">php artisan test</code> and verified tests
+                            run isolated, without touching real database</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Laravel behaves -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                    <i class="fas fa-bolt text-purple-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">How Laravel behaves after .env.testing</h2>
+            </div>
+            <p class="text-gray-700 mb-4">
+                When you run <code class="bg-gray-100 px-2 py-1 rounded text-sm">php artisan test</code>:
+            </p>
+
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Laravel automatically detects <code
+                        class="bg-gray-100 px-2 py-1 rounded text-sm">.env.testing</code></li>
+                <li>Boots up a fresh environment in RAM</li>
+                <li>Migrates fresh tables</li>
+                <li>Runs all your tests</li>
+                <li>Destroys everything after tests finish</li>
+            </ul>
+
+            <div class="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-green-700 font-medium">Real database and real app are never touched.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Notes -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <div class="bg-red-100 p-2 rounded-full mr-3">
+                    <i class="fas fa-exclamation-triangle text-red-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">Important notes</h2>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Note</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Why it matters</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">You must generate a real
+                                APP_KEY</td>
+                            <td class="px-6 py-4">Otherwise Laravel encryption will fail</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">You don't need to manually
+                                migrate the real database for tests</td>
+                            <td class="px-6 py-4">Laravel will auto-migrate inside RAM</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">You must configure drivers
+                                like Cache/Queue/Session to array</td>
+                            <td class="px-6 py-4">Otherwise Redis/files could cause weird issues</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                    <i class="fas fa-check-circle text-indigo-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">Summary</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">
+                We created <code class="bg-gray-100 px-2 py-1 rounded text-sm">.env.testing</code> to run Laravel tests
+                safely, cleanly, and professionally using an isolated in-memory database without risking real app data.
+            </p>
+
+            <div class="space-y-3">
+                <div class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2"></i>
+                    <span class="text-gray-700">Full professional backend engineering practice.</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2"></i>
+                    <span class="text-gray-700">Required if you want real CI/CD, real test-driven development, and
+                        production-level quality.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>Laravel .env.testing Documentation | Best Practices</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+🧠 SYSTEM HEALTH + MONITORING
+Purpose Command
+🔋 Check disk space df -h
+🧠 Check RAM and SWAP usage free -h
+📈 System resource usage (top) top or htop (install: sudo apt install htop)
+🧍 Who's logged in who
+🗓️ System info uname -a or lsb_release -a
+📦 List services systemctl list-units --type=service
+
+🐳 DOCKER COMMANDS
+Purpose Command
+🐳 Docker version check docker -v and docker compose version
+🔍 List running containers docker ps
+📦 List all containers docker ps -a
+📦 List images docker images
+❌ Stop all containers docker stop $(docker ps -q)
+❌ Remove all containers docker rm $(docker ps -aq)
+🧼 Remove all images docker rmi $(docker images -q)
+🧽 Clean everything (volumes too) docker system prune -a --volumes
+🚢 Build and run project docker compose up --build -d
+🛑 Stop project docker compose down
+🔍 See logs docker compose logs -f
+📂 Access container shell docker exec -it <container_name> sh or bash
+
+    🔐 NETWORK + PORTS
+    Purpose Command
+    🕳️ Check open ports `sudo lsof -i -P -n
+    🔍 See what’s on port 80 sudo lsof -i :80
+    🌐 Check IP address curl ifconfig.me or ip a
+
+    🧪 DEBUGGING
+    Purpose Command
+    🔎 Ping a service (e.g. DB) ping mysql or telnet mysql 3306 inside container
+    ✅ Check if Laravel is live curl http://localhost:8000 from EC2
+    🛠️ Laravel logs docker exec -it tutoron-backend sh then tail -f storage/logs/laravel.log
+    🐘 MySQL CLI inside container docker exec -it tutoron-mysql mysql -u root -p
