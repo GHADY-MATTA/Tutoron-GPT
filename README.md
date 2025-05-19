@@ -60,6 +60,8 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 - 📺 **YouTube Transcript Intelligence**  
   Upload any YouTube URL - get clean transcripts, summaries, key insights, and study material.
 
+![Landing](./readme/demo/highlights.gif)
+
 - 🌐 **Cloud-to-Local Microservice Bridge**  
   Bypasses YouTube transcript blocking with a hybrid Node.js + Python pipeline using Ngrok.
 
@@ -206,3 +208,4 @@ Transcript:
 This project is licensed under the [MIT License](./LICENSE).
 
 > #AI #OpenAI #Laravel #React #Docker #DevOps #YouTubeTranscripts
+ #GPT4 #ReactJS #Laravel12 #ViteJS #DockerCompose #FullStack #PrismSDK #NodeJS #Python #YouTubeAPI #TailwindCSS #SanctumAuth #Ngrok #CI-CD #MySQL #RESTAPI #EduTech #LearningPlatform #TranscriptSummarizer #QuizGenerator #CodeQuality #CleanCode
