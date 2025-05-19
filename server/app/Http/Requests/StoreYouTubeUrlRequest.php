@@ -11,7 +11,7 @@ class StoreYouTubeUrlRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return True;
     }
 
     /**
@@ -22,6 +22,7 @@ class StoreYouTubeUrlRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'url' => 'required|url',
             //
         ];
     }
