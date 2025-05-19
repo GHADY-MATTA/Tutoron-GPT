@@ -8,14 +8,10 @@ use App\Http\Requests\StoreUserYouTubeLogRequest;
 
 class UserYouTubeLogController extends Controller
 {
-    public function store(Request $request)
+    public function store(StoreUserYouTubeLogRequest  $request)
     {
         // ✅ Validate incoming request
-        $validated = $request->validate([
-            'user_id' => 'required|integer|exists:users,id',
-            'video_url' => 'required|url',
-            'youtube_video_id' => 'nullable|string', // Not required anymore
-        ]);
+        $validated = $request->validated();
 
         // ✅ Store the log without checking if video exists in YouTubeVideo table
         $log = UserYouTubeLog::create([
