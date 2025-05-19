@@ -11,7 +11,7 @@ class StoreTranscriptRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,6 +22,9 @@ class StoreTranscriptRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'video_id' => 'required|string',
+            'title' => 'required|string',
+            'transcript_raw' => 'required|string',
             //
         ];
     }
