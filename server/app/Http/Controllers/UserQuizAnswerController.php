@@ -9,12 +9,9 @@ use App\Http\Requests\StoreUserQuizAnswerRequest;
 
 class UserQuizAnswerController extends Controller
 {
-    public function store(Request $request)
+    public function store(StoreUserQuizAnswerRequest $request)
     {
-        $request->validate([
-            'user_id' => 'required|integer|exists:users,id',
-            'answers' => 'required|array',
-        ]);
+        
 
         foreach ($request->answers as $answer) {
             UserQuizAnswer::create([
