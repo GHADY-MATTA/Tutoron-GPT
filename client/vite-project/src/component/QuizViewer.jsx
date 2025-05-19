@@ -8,6 +8,7 @@ function QuizViewer({ quiz }) {
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [startTime, setStartTime] = useState(Date.now());
   const [userAnswers, setUserAnswers] = useState([]);
+  const [hasSubmitted, setHasSubmitted] = useState(false); // ✅ Prevent double submission
 
   const user = JSON.parse(localStorage.getItem('user'));
   const userId = user?.id;
@@ -24,7 +25,8 @@ function QuizViewer({ quiz }) {
         question: quiz[currentQuestion].question,
         selected: option,
         correct: quiz[currentQuestion].correct,
-        video_id: quiz[currentQuestion].video_id || null
+        isCorrect: option === quiz[currentQuestion].correct,
+        video_id: quiz[currentQuestion].video_id || null,
       };
       return updated;
     });
@@ -36,7 +38,7 @@ function QuizViewer({ quiz }) {
       setSelectedOption(null);
     } else {
       setQuizCompleted(true);
-      await submitAnswers();
+      await submitAnswers(); // ✅ only once
     }
   };
 
@@ -54,17 +56,31 @@ function QuizViewer({ quiz }) {
     setQuizCompleted(false);
     setUserAnswers([]);
     setStartTime(Date.now());
+    setHasSubmitted(false);
   };
 
   const submitAnswers = async () => {
+    if (hasSubmitted) return; // ✅ prevent duplicate posts
+
     try {
+      setHasSubmitted(true);
+      const formattedAnswers = userAnswers.map(a => ({
+        user_id: userId,
+        question: a.question,
+        selected: a.selected,
+        correct: a.isCorrect, // ✅ boolean
+        video_id: a.video_id,
+      }));
+
       await API.post('/user-quiz-answers', {
         user_id: userId,
-        answers: userAnswers
+        answers: formattedAnswers,
       });
+
       console.log('✅ Quiz answers submitted');
     } catch (err) {
       console.error('⛔ Failed to submit answers:', err);
+      setHasSubmitted(false); // allow retry on fail
     }
   };
 
@@ -110,9 +126,12 @@ function QuizViewer({ quiz }) {
           <div className="space-y-4">
             <button
               onClick={submitAnswers}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium"
+              disabled={hasSubmitted}
+              className={`w-full py-3 rounded-lg font-medium ${
+                hasSubmitted ? "bg-gray-300 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700 text-white"
+              }`}
             >
-              Submit Answers
+              {hasSubmitted ? "Submitted" : "Submit Answers"}
             </button>
             <button
               onClick={handleRetakeQuiz}
