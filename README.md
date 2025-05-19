@@ -146,6 +146,8 @@ React Frontend fetches data via Axios
 User sees: Summary Viewer + Quiz Viewer**  
 
 ![Landing](./readme/demo/workflow-ai.png) | ![fsdaf](./readme/demo/Screenshot%20(363).png)  |
+<br><br>
+
 ### Prompt sample
 (You are an expert AI tutor. Your job is to generate a high-quality multiple-choice quiz from the following transcript.
 
@@ -196,3 +198,10 @@ Rules:
 Transcript:
 {{transcript}}
 )
+<br><br>
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+> #AI #OpenAI #Laravel #React #Docker #DevOps #YouTubeTranscripts
