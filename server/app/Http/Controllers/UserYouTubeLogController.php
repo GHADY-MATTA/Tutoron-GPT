@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UserYouTubeLog;
+use App\Http\Requests\StoreUserYouTubeLogRequest;
 
 class UserYouTubeLogController extends Controller
 {
