@@ -80,9 +80,9 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 ### [![Run CI Tests](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml)
 
 
-| Services                            | Validation                       | Quiz                        |
+| Services                            | Validation                       | Testing                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/services.png) | ![fsdaf](./readme/demo/laravel_logs.png) | ![fsdaf](./readme/demo/quiz.gif) |
+| ![Landing](./readme/demo/service.png) | ![fsdaf](./readme/demo/validation.png) | ![fsdaf](./readme/demo/laravel_logs.png) |
 
 
 <br><br>
