@@ -5,14 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
-
+use App\Http\Requests\StoreYouTubeUrlRequest;
 class YouTubeController extends Controller
 {
-    public function store(Request $request)
+    public function store(StoreYouTubeUrlRequest $request)
     {
-        $request->validate([
-            'url' => 'required|url'
-        ]);
+        
 
         $videoUrl = $request->input('url');
         Log::info("🎯 Forwarding YouTube URL to Node via ngrok: {$videoUrl}");
