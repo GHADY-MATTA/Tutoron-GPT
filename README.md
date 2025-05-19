@@ -13,6 +13,7 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 
 
 > 
+![Landing](./readme/demo/tutorn-cover2.png)
 
 <br><br>
 
