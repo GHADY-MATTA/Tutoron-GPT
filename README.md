@@ -106,3 +106,4 @@ Whether you're a student preparing for exams, a professional upskilling, or a cu
 | ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) |
 
 <br><br>
+<img src="./readme/title8.svg"/>
