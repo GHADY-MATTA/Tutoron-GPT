@@ -17,3 +17,4 @@ return (
     {/* Navbar content */}
   </div>
 </header>
+import logoIcon from '../assets/tutoron-gpt-logo.png';
