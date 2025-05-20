@@ -159,3 +159,4 @@ User sees: Summary Viewer + Quiz Viewer**
 Each questio
 - summary
 - keyPointsq
+keyInsights
