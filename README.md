@@ -56,3 +56,6 @@ DOCKER Diagram
 > ✅ This hybrid architecture enables **fast**, **secure**, and **reliable** transcript access even from cloud-restricted environments.
 
 <br><br>
+
+<!-- Project Highlights -->
+<img src="./readme/title4.svg"/>
