@@ -57,3 +57,9 @@ import { FaPlus } from 'react-icons/fa';
     <FaPlus />
   </button>
 </div>
+<div className="flex space-x-2 overflow-x-auto pb-2 mb-4">
+  <button className="px-3 py-1 text-sm bg-[var(--color-accent)] text-[var(--color-primary)] rounded-full">All</button>
+  <button className="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full">Work</button>
+  <button className="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full">Personal</button>
+  <button className="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full">Research</button>
+</div>
