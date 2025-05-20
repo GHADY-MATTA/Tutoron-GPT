@@ -167,3 +167,4 @@ useCases
 globalBestPractices
 stepsToApply 
 concepts
+Generate at least 10 questions maximum(generate more question if the transcript is too big). Each question must:
