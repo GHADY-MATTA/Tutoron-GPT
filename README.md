@@ -1,6 +1,7 @@
 <img src="./readme/title1.svg"/>
 
 <br><br>
+
 <!-- project overview -->
 <img src="./readme/title2.svg"/>
 
@@ -11,6 +12,7 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 
 
 > 
+
 
 <br><br>
 
@@ -23,7 +25,6 @@ Backend Diagram
 
  ![Landing](./readme/demo/backend-diagram.png)
  <br><br>
-
 
  Front-end Diagram  
  ![fsdaf](./readme/demo/betterfront.png)
@@ -44,11 +45,14 @@ DOCKER Diagram
 -- **Why:**  
   Cloud VMs like EC2 are often blocked from accessing YouTube transcripts due to IP-based restrictions.
 
-- **The Challenge:**  Fetching YouTube transcripts directly from a server results in failure or empty responses.
+- **The Challenge:**  
+  Fetching YouTube transcripts directly from a server results in failure or empty responses.
 
-- **The Solution:**  Offload the transcript extraction to your **local machine with a residential IP**.
+- **The Solution:**  
+  Offload the transcript extraction to your **local machine with a residential IP**.
 
-- **How It Works:**   - 🌐 Laravel (on EC2) sends an HTTP POST to a public Ngrok endpoint.  
+- **How It Works:**  
+  - 🌐 Laravel (on EC2) sends an HTTP POST to a public Ngrok endpoint.  
   - 🧩 Ngrok tunnels the request to your **local Node.js + Express** server.  
   - 🐍 Node.js triggers a Python script (`fetch_transcript.py`) to extract the transcript.  
   - 📬 The response is sent back to **Laravel via a secure HTTP route**, completing the flow.
@@ -59,15 +63,18 @@ DOCKER Diagram
 
 <!-- Project Highlights -->
 <img src="./readme/title4.svg"/>
+
 ###  Standout Features That Make Tutoron-GPT Shine
 
 -  **One-link to learning flow**  
  Paste any YouTube URL → auto-grab transcript → AI distills a crystal-clear summary → instant multiple-choice quiz.
 
-  **Auto-Quiz Builder**  
+-  **Auto-Quiz Builder**  
   GPT-4 reads the freshly-pulled transcript, then writes a clean JSON quiz,10+ unique, section-tagged questions with answer keys ready for instant display in the frontend 
-  -  **Smart AI Summarization**  
+  
+-  **Smart AI Summarization**  
   Structured video breakdowns: Objectives, Key Points, Highlights, and Insights - powered by GPT.
+
 ![Landing](./readme/demo/Tutoron-overview.png)
 
 <br><br>
@@ -76,15 +83,21 @@ DOCKER Diagram
 <img src="./readme/title5.svg"/>
 
 ### User Screens (Responsive)
+
 <!-- | Login screen                            | Register screen                       |  Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/login%20(1).gif) | ![fsdaf](./readme/demo/signup%20(1).gif )| ![fsdaf](./readme/demo/homepage%20(1).gif) |
- -->**Login screen**
+ -->
+
+**Login screen**
 ![Landing](./readme/demo/login%20(1).gif) 
+
 **Register screen**
 ![fsdaf](./readme/demo/signup%20(1).gif )
+
 **Homepage screen**
 ![fsdaf](./readme/demo/homepage%20(1).gif)
+
 ### user Screen (Web)
 
 <!-- | upload screen                            | Summary screen                       |
@@ -93,15 +106,21 @@ DOCKER Diagram
 
 **upload screen**
 ![Landing](./readme/demo/upload.gif)
+
 **Summary screen**
 ![fsdaf](./readme/demo/generate.gif)
+
+
 **Quiz**
 ![Landing](./readme/demo/highlights.gif)
+
 <br><br>
  
 <!-- Development & Testing -->
 <img src="./readme/title6.svg"/>
+
 ### [![Run CI Tests](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml)
+
 
 <!-- | Services                            | Validation                       | Testing                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
@@ -122,13 +141,15 @@ DOCKER Diagram
 **Fetch-Transcript**
 ![fsdaf](./readme/demo/fetch-transcript.png)
 
+
 <br><br>
 
 <img src="./readme/title8.svg"/>
 
 ### AI Processing Pipeline (Prism + OpenAI GPT-4 Turbo)
 
-- **User Inputs YouTube URL       ↓
+- **User Inputs YouTube URL
+         ↓
 Laravel Controller receives URL
          ↓
 ▶ shell_exec('python fetch_transcript.py')
@@ -147,7 +168,8 @@ Receives structured JSON:
          ↓
 Stored in Laravel:
  ↓
-React Frontend fetches data via Axios       ↓
+React Frontend fetches data via Axios
+         ↓
 User sees: Summary Viewer + Quiz Viewer**  
 
 ![Landing](./readme/demo/workflow-ai.png) | ![fsdaf](./readme/demo/Screenshot%20(363).png)  |
@@ -156,30 +178,34 @@ User sees: Summary Viewer + Quiz Viewer**
 ### Prompt sample
 (You are an expert AI tutor. Your job is to generate a high-quality multiple-choice quiz from the following transcript.
 
-Each questio
+Each question must be directly tied to one of the following core educational sections extracted from the transcript:
+
 - summary
-- keyPointsq
-keyInsights
-examples
-whyItMatters
-whatIfNotUsed
-useCases
-globalBestPractices
-stepsToApply 
-concepts
+- keyPoints
+- keyInsights
+- examples
+- whyItMatters
+- whatIfNotUsed
+- useCases
+- globalBestPractices
+- stepsToApply
+- concepts
+
 Generate at least 10 questions maximum(generate more question if the transcript is too big). Each question must:
 
 - Be linked to one of the above sections using a "section" field
 - Include a short, clear "question"
-- Provide4 answer choices in an "options" object (keys: a, b, c, d)
+- Provide 4 answer choices in an "options" object (keys: a, b, c, d)
 - Mark the correct answer using the "correct" key (value: "a", "b", "c", or "d")
 
 Format the final response as a strict valid JSON array like this:
 
 [
   {
-    "section": "keyPoints","question": "Which of the following is a key teaching point?",
-    "options": {"a": "...",
+    "section": "keyPoints",
+    "question": "Which of the following is a key teaching point?",
+    "options": {
+      "a": "...",
       "b": "...",
       "c": "...",
       "d": "..."
@@ -187,7 +213,10 @@ Format the final response as a strict valid JSON array like this:
     "correct": "b"
   },
   ...
-] Only output valid JSON — no markdown, no explanation, no text around the output
+]
+
+Rules:
+- Only output valid JSON — no markdown, no explanation, no text around the output
 - Be clear, concise, and accurate
 - Use real material from the transcript — no guesswork
 - Use unique questions — avoid repetition
@@ -202,12 +231,15 @@ Transcript:
 <img src="./readme/title7.svg"/>
 
 ### Cloud Deployment with CI/CD on Ubuntu EC2 + Docker
+
+
 - **Automated CI/CD Pipeline**  
 - **Dockerized Infrastructure**  
 - **Ubuntu EC2 Hosting**  
 - **Production Build with Vite + Laravel Artisan**  
 - **.env Configuration + Secrets**  
 - **Persistent MySQL Volumes**
+
 
 <!-- | Postman API 1                            | Postman API 2                       | Postman API 3                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
@@ -218,11 +250,16 @@ Transcript:
 
 **Postman API 2**
 ![fsdaf](./readme/demo/postmanlogin.png)
+
 **Postman API 3**
 ![fsdaf](./readme/demo/postmanAi.png)
 
 <br><br>
+
+
 ## License
+
+This project is licensed under the [MIT License](./LICENSE).
 
 > #AI #OpenAI #Laravel #React #Docker #DevOps #YouTubeTranscripts
  #GPT4 #ReactJS #Laravel12 #ViteJS #DockerCompose #FullStack #PrismSDK #NodeJS #Python #YouTubeAPI #TailwindCSS #SanctumAuth #Ngrok #CI-CD #MySQL #RESTAPI #EduTech #LearningPlatform #TranscriptSummarizer #QuizGenerator #CodeQuality #CleanCode
