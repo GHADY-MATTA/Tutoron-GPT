@@ -18,16 +18,3 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 <img src="./readme/title3.svg"/>
 
 ### Architecture Diagram
-
-Backend Diagram 
-
- ![Landing](./readme/demo/backend-diagram.png)
- <br><br>
-
-
-
-
-
-
-
-
