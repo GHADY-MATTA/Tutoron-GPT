@@ -84,17 +84,34 @@ DOCKER Diagram
 
 ### User Screens (Responsive)
 
-| Login screen                            | Register screen                       |  Homepage screen                       |
+<!-- | Login screen                            | Register screen                       |  Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/login%20(1).gif) | ![fsdaf](./readme/demo/signup%20(1).gif )| ![fsdaf](./readme/demo/homepage%20(1).gif) |
+ -->
 
+**Login screen**
+![Landing](./readme/demo/login%20(1).gif) 
+
+**Register screen**
+![fsdaf](./readme/demo/signup%20(1).gif )
+
+**Homepage screen**
+![fsdaf](./readme/demo/homepage%20(1).gif)
 
 ### user Screen (Web)
 
-| upload screen                            | Summary screen                       |
+<!-- | upload screen                            | Summary screen                       |
 | --------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/upload.gif) | ![fsdaf](./readme/demo/generate.gif) |
+| ![Landing](./readme/demo/upload.gif) | ![fsdaf](./readme/demo/generate.gif) | -->
 
+**upload screen**
+![Landing](./readme/demo/upload.gif)
+
+**Summary screen**
+![fsdaf](./readme/demo/generate.gif)
+
+
+**Quiz**
 ![Landing](./readme/demo/highlights.gif)
 
 <br><br>
@@ -218,9 +235,18 @@ Transcript:
 - **Persistent MySQL Volumes**
 
 
-| Postman API 1                            | Postman API 2                       | Postman API 3                        |
+<!-- | Postman API 1                            | Postman API 2                       | Postman API 3                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) |
+| ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) | -->
+
+**Postman API 1** 
+![Landing](./readme/demo/postmanSignup.png)
+
+**Postman API 2**
+![fsdaf](./readme/demo/postmanlogin.png)
+
+**Postman API 3**
+![fsdaf](./readme/demo/postmanAi.png)
 
 <br><br>
 
