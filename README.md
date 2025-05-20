@@ -26,7 +26,7 @@ Backend Diagram
  ![Landing](./readme/demo/backend-diagram.png)
  <br><br>
 
- front-end Diagram  
+ Front-end Diagram  
  ![fsdaf](./readme/demo/betterfront.png)
 <br><br>
 
