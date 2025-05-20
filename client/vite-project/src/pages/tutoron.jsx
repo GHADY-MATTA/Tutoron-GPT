@@ -37,3 +37,5 @@ import { FaUser, FaCog } from 'react-icons/fa';
 <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex gap-6">
   {/* Sidebar and main layout */}
 </div>
+<aside className="w-full md:w-1/4 bg-[var(--color-primary)] p-4 rounded-lg shadow">
+</aside>
