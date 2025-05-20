@@ -60,3 +60,7 @@ DOCKER Diagram
 <!-- Project Highlights -->
 <img src="./readme/title4.svg"/>
 ###  Standout Features That Make Tutoron-GPT Shine
+
+-  **One-link to learning flow**  
+ Paste any YouTube URL → auto-grab transcript → AI distills a crystal-clear summary → instant multiple-choice quiz.
+
