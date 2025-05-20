@@ -49,3 +49,11 @@ import { FaUser, FaCog } from 'react-icons/fa';
 import { FaSearch } from 'react-icons/fa';
 
 <FaSearch className="absolute right-3 top-3 text-[var(--color-text-light)]" />
+import { FaPlus } from 'react-icons/fa';
+
+<div className="flex justify-between items-center mb-4">
+  <h2 className="font-semibold text-lg text-[var(--color-secondary)]">My Notes</h2>
+  <button className="text-[var(--color-accent)] hover:text-[var(--color-accent-light)]">
+    <FaPlus />
+  </button>
+</div>
