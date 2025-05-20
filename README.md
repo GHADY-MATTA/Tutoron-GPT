@@ -135,6 +135,10 @@ DOCKER Diagram
  **Testing**
  ![fsdaf](./readme/demo/laravel_logs.png)
 
+**Local-Server**
+![fsdaf](./readme/demo/LocalServer.png)
+
+
 
 <br><br>
 
