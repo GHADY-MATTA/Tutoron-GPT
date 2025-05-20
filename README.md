@@ -147,4 +147,8 @@ Receives structured JSON:
          ↓
 Stored in Laravel:
  ↓
-React Frontend fetches data via Axios
+React Frontend fetches data via Axios       ↓
+User sees: Summary Viewer + Quiz Viewer**  
+
+![Landing](./readme/demo/workflow-ai.png) | ![fsdaf](./readme/demo/Screenshot%20(363).png)  |
+<br><br>
