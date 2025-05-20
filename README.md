@@ -178,4 +178,5 @@ Format the final response as a strict valid JSON array like this:
 
 [
   {
-    "section": "keyPoints",
+    "section": "keyPoints","question": "Which of the following is a key teaching point?",
+    "options": {
