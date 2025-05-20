@@ -163,4 +163,5 @@ keyInsights
 examples
 whyItMatters
 whatIfNotUsed
-useCasesglobalBestPractices
+useCases
+globalBestPractices
