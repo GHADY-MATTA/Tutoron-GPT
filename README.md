@@ -125,3 +125,7 @@ DOCKER Diagram
 <br><br>
 
 <img src="./readme/title8.svg"/>
+
+### AI Processing Pipeline (Prism + OpenAI GPT-4 Turbo)
+
+- **User Inputs YouTube URL
