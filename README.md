@@ -202,3 +202,9 @@ Transcript:
 <img src="./readme/title7.svg"/>
 
 ### Cloud Deployment with CI/CD on Ubuntu EC2 + Docker
+- **Automated CI/CD Pipeline**  
+- **Dockerized Infrastructure**  
+- **Ubuntu EC2 Hosting**  
+- **Production Build with Vite + Laravel Artisan**  
+- **.env Configuration + Secrets**  
+- **Persistent MySQL Volumes**
