@@ -171,4 +171,5 @@ Generate at least 10 questions maximum(generate more question if the transcript 
 
 - Be linked to one of the above sections using a "section" field
 - Include a short, clear "question"
-- Provide
+- Provide4 answer choices in an "options" object (keys: a, b, c, d)
+- Mark the c
