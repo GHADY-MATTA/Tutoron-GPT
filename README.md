@@ -46,4 +46,6 @@ DOCKER Diagram
 
 - **The Challenge:**  Fetching YouTube transcripts directly from a server results in failure or empty responses.
 
-- **The Solution:**  
+- **The Solution:**  Offload the transcript extraction to your **local machine with a residential IP**.
+
+- **How It Works:**  
