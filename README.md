@@ -88,7 +88,15 @@ DOCKER Diagram
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/login%20(1).gif) | ![fsdaf](./readme/demo/signup%20(1).gif )| ![fsdaf](./readme/demo/homepage%20(1).gif) |
  -->
+| Login Screen | Register Screen |
+| ------------ | --------------- |
+| ![Login](./readme/demo/login%20(1).gif) | ![Register](./readme/demo/signup%20(1).gif) |
 
+| Homepage Screen | — |
+| --------------- | - |
+| ![Homepage](./readme/demo/homepage%20(1).gif) |  |
+
+<!-- 
 **Login screen**
 ![Landing](./readme/demo/login%20(1).gif) 
 
@@ -96,15 +104,23 @@ DOCKER Diagram
 ![fsdaf](./readme/demo/signup%20(1).gif )
 
 **Homepage screen**
-![fsdaf](./readme/demo/homepage%20(1).gif)
+![fsdaf](./readme/demo/homepage%20(1).gif) -->
 
 ### user Screen (Web)
 
 <!-- | upload screen                            | Summary screen                       |
 | --------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/upload.gif) | ![fsdaf](./readme/demo/generate.gif) | -->
+| Upload Screen | Summary Screen |
+| ------------- | -------------- |
+| ![Upload](./readme/demo/upload.gif) | ![Summary](./readme/demo/generate.gif) |
 
-**upload screen**
+| Quiz Screen | — |
+| ----------- | -- |
+| ![Quiz](./readme/demo/highlights.gif) |  |
+
+
+<!-- **upload screen**
 ![Landing](./readme/demo/upload.gif)
 
 **Summary screen**
@@ -112,7 +128,7 @@ DOCKER Diagram
 
 
 **Quiz**
-![Landing](./readme/demo/highlights.gif)
+![Landing](./readme/demo/highlights.gif) -->
 
 <br><br>
  
@@ -125,7 +141,19 @@ DOCKER Diagram
 <!-- | Services                            | Validation                       | Testing                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/service.png) | ![fsdaf](./readme/demo/validation.png) | ![fsdaf](./readme/demo/laravel_logs.png) | -->
+| Services | Validation |
+| -------- | ---------- |
+| ![Services](./readme/demo/service.png) | ![Validation](./readme/demo/validation.png) |
 
+| Testing | Cloud-Local-Server |
+| ------- | ------------------ |
+| ![Testing](./readme/demo/laravel_logs.png) | ![Local](./readme/demo/LocalServer.png) |
+
+| Fetch-Transcript | — |
+| ---------------- | - |
+| ![Transcript](./readme/demo/fetch-transcript.png) |  |
+
+<!-- 
 **Services**
 ![Landing](./readme/demo/service.png)
 
@@ -139,7 +167,7 @@ DOCKER Diagram
 ![fsdaf](./readme/demo/LocalServer.png)
 
 **Fetch-Transcript**
-![fsdaf](./readme/demo/fetch-transcript.png)
+![fsdaf](./readme/demo/fetch-transcript.png) -->
 
 
 <br><br>
@@ -245,6 +273,15 @@ Transcript:
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) | -->
 
+| Postman API: Signup | Postman API: Login |
+| ------------------- | ------------------ |
+| ![Signup](./readme/demo/postmanSignup.png) | ![Login](./readme/demo/postmanlogin.png) |
+
+| Postman API: AI Request | Dockerized Overview |
+| ------------------------ | ------------------- |
+| ![AI](./readme/demo/postmanAi.png) | ![Docker](./readme/demo/Dockerized.png) |
+
+<!-- 
 **Postman API 1** 
 ![Landing](./readme/demo/postmanSignup.png)
 
@@ -255,7 +292,7 @@ Transcript:
 ![fsdaf](./readme/demo/postmanAi.png)
 
 **Dockerized**
-![fsdaf](./readme/demo/Dockerized.png)
+![fsdaf](./readme/demo/Dockerized.png) -->
 <br><br>
 
 
