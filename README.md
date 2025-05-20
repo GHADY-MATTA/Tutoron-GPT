@@ -173,3 +173,5 @@ Generate at least 10 questions maximum(generate more question if the transcript 
 - Include a short, clear "question"
 - Provide4 answer choices in an "options" object (keys: a, b, c, d)
 - Mark the correct answer using the "correct" key (value: "a", "b", "c", or "d")
+
+Format the final response as a strict valid JSON array like this:
