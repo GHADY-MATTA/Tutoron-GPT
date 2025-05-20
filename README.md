@@ -90,3 +90,6 @@ DOCKER Diagram
 <!-- | upload screen                            | Summary screen                       |
 | --------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/upload.gif) | ![fsdaf](./readme/demo/generate.gif) | -->
+
+**upload screen**
+![Landing](./readme/demo/upload.gif)
