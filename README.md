@@ -79,4 +79,5 @@ DOCKER Diagram
 <!-- | Login screen                            | Register screen                       |  Homepage screen                       |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/login%20(1).gif) | ![fsdaf](./readme/demo/signup%20(1).gif )| ![fsdaf](./readme/demo/homepage%20(1).gif) |
- -->
+ -->**Login screen**
+![Landing](./readme/demo/login%20(1).gif) 
