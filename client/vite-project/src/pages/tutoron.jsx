@@ -8,7 +8,7 @@ function Tutoron() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] font-inter text-[var(--color-text)]">
       {/* Navbar */}
-      <header className="bg-[var(--color-secondary)] shadow-sm sticky top-0 z-10">
+     
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img src={logoIcon} alt="Tutoron-GPT Logo" className="h-8 w-8" />
