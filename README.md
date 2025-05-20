@@ -164,4 +164,5 @@ examples
 whyItMatters
 whatIfNotUsed
 useCases
-globalBestPracticesstepsToApplyq
+globalBestPractices
+stepsToApply
