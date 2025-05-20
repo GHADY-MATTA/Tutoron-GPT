@@ -29,4 +29,6 @@ Backend Diagram
  ![fsdaf](./readme/demo/betterfront.png)
 <br><br>
 
+DOCKER Diagram 
+![fsdaf](./readme/demo/dockerDiagram.png)
 
