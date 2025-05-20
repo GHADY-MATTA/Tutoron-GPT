@@ -12,7 +12,7 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 
 
 > 
-![Landing](./readme/demo/tutorn-cover2.png)
+
 
 <br><br>
 
@@ -74,6 +74,9 @@ DOCKER Diagram
 
 - 🧠 **Smart AI Summarization**  
   Structured video breakdowns: Objectives, Key Points, Highlights, and Insights - powered by GPT.
+
+![Landing](./readme/demo/tutorn-cover2.png)
+
 <br><br>
 
 <!-- Demo -->
