@@ -197,3 +197,8 @@ Transcript:
 {{transcript}}
 )
 <br><br>
+
+<!-- Deployment -->
+<img src="./readme/title7.svg"/>
+
+### Cloud Deployment with CI/CD on Ubuntu EC2 + Docker
