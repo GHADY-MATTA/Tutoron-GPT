@@ -224,4 +224,5 @@ Transcript:
 <br><br>
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).#AI #OpenAI #Laravel #React #Docker #DevOps #YouTubeTranscripts
+> #AI #OpenAI #Laravel #React #Docker #DevOps #YouTubeTranscripts
+ #GPT4 #ReactJS #Laravel12 #ViteJS #DockerCompose #FullStack #PrismSDK #NodeJS #Python #YouTubeAPI #TailwindCSS #SanctumAuth #Ngrok #CI-CD #MySQL #RESTAPI #EduTech #LearningPlatform #TranscriptSummarizer #QuizGenerator #CodeQuality #CleanCode
