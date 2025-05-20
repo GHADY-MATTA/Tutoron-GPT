@@ -208,3 +208,7 @@ Transcript:
 - **Production Build with Vite + Laravel Artisan**  
 - **.env Configuration + Secrets**  
 - **Persistent MySQL Volumes**
+
+<!-- | Postman API 1                            | Postman API 2                       | Postman API 3                        |
+| --------------------------------------- | ------------------------------------- | ------------------------------------- |
+| ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) | -->
