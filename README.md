@@ -95,3 +95,5 @@ DOCKER Diagram
 ![Landing](./readme/demo/upload.gif)
 **Summary screen**
 ![fsdaf](./readme/demo/generate.gif)
+**Quiz**
+![Landing](./readme/demo/highlights.gif)
