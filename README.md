@@ -135,6 +135,12 @@ DOCKER Diagram
  **Testing**
  ![fsdaf](./readme/demo/laravel_logs.png)
 
+**Cloud-Local-Server**
+![fsdaf](./readme/demo/LocalServer.png)
+
+**Fetch-Transcript**
+![fsdaf](./readme/demo/fetch-transcript.png)
+
 
 <br><br>
 
