@@ -254,6 +254,8 @@ Transcript:
 **Postman API 3**
 ![fsdaf](./readme/demo/postmanAi.png)
 
+**Dockerized**
+![fsdaf](./readme/demo/Dockerized.png)
 <br><br>
 
 
