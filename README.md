@@ -101,3 +101,4 @@ DOCKER Diagram
  
 <!-- Development & Testing -->
 <img src="./readme/title6.svg"/>
+### [![Run CI Tests](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml)
