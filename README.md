@@ -75,7 +75,7 @@ DOCKER Diagram
 -  **Smart AI Summarization**  
   Structured video breakdowns: Objectives, Key Points, Highlights, and Insights - powered by GPT.
 
-![Landing](./readme/demo/overview.png)
+![Landing](./readme/demo/Tutoron-overview.png)
 
 <br><br>
 
