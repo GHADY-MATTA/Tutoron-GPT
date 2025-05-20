@@ -83,3 +83,5 @@ DOCKER Diagram
 ![Landing](./readme/demo/login%20(1).gif) 
 **Register screen**
 ![fsdaf](./readme/demo/signup%20(1).gif )
+**Homepage screen**
+![fsdaf](./readme/demo/homepage%20(1).gif)
