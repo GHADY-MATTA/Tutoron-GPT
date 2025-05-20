@@ -89,7 +89,7 @@ function Tutoron() {
                 <h3 className="font-medium text-[var(--color-secondary)]">Shopping List</h3>
                 <span className="text-xs text-[var(--color-text-light)]">1 week ago</span>
               </div>
-              
+              <p className="text-sm text-[var(--color-text-light)] truncate">Groceries for the week and household items</p>
               <div className="flex mt-2 gap-1 flex-wrap">
                 <span className="text-xs tag px-2 py-1 rounded-full">personal</span>
               </div>
