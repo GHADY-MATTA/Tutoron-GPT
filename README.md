@@ -170,4 +170,5 @@ concepts
 Generate at least 10 questions maximum(generate more question if the transcript is too big). Each question must:
 
 - Be linked to one of the above sections using a "section" field
-- Includ
+- Include a short, clear "question"
+- Provide
