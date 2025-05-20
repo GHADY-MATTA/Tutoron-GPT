@@ -105,9 +105,18 @@ DOCKER Diagram
 ### [![Run CI Tests](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/GHADY-MATTA/Tutoron-GPT/actions/workflows/ci.yml)
 
 
-| Services                            | Validation                       | Testing                        |
+<!-- | Services                            | Validation                       | Testing                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/service.png) | ![fsdaf](./readme/demo/validation.png) | ![fsdaf](./readme/demo/laravel_logs.png) |
+| ![Landing](./readme/demo/service.png) | ![fsdaf](./readme/demo/validation.png) | ![fsdaf](./readme/demo/laravel_logs.png) | -->
+
+**Services**
+![Landing](./readme/demo/service.png)
+
+**Validation**
+ ![fsdaf](./readme/demo/validation.png)
+
+ **Testing**
+ ![fsdaf](./readme/demo/laravel_logs.png)
 
 
 <br><br>
