@@ -158,4 +158,4 @@ User sees: Summary Viewer + Quiz Viewer**
 
 Each questio
 - summary
-- keyPoints
+- keyPointsq
