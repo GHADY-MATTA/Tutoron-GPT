@@ -40,3 +40,8 @@ DOCKER Diagram
 
 ![Landing](./readme/demo/erdiagram.png)
 ### 🧠 Hybrid Cloud-to-Local Transcript Fetching Architecture
+
+-- **Why:**  
+  Cloud VMs like EC2 are often blocked from accessing YouTube transcripts due to IP-based restrictions.
+
+- **The Challenge:**  
