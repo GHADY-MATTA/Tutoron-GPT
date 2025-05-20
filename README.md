@@ -218,3 +218,7 @@ Transcript:
 
 **Postman API 2**
 ![fsdaf](./readme/demo/postmanlogin.png)
+**Postman API 3**
+![fsdaf](./readme/demo/postmanAi.png)
+
+<br><br>
