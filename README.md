@@ -152,3 +152,10 @@ User sees: Summary Viewer + Quiz Viewer**
 
 ![Landing](./readme/demo/workflow-ai.png) | ![fsdaf](./readme/demo/Screenshot%20(363).png)  |
 <br><br>
+
+### Prompt sample
+(You are an expert AI tutor. Your job is to generate a high-quality multiple-choice quiz from the following transcript.
+
+Each questio
+- summary
+- keyPoints
