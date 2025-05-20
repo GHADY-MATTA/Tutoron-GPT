@@ -85,3 +85,8 @@ DOCKER Diagram
 ![fsdaf](./readme/demo/signup%20(1).gif )
 **Homepage screen**
 ![fsdaf](./readme/demo/homepage%20(1).gif)
+### user Screen (Web)
+
+<!-- | upload screen                            | Summary screen                       |
+| --------------------------------------- | ------------------------------------- |
+| ![Landing](./readme/demo/upload.gif) | ![fsdaf](./readme/demo/generate.gif) | -->
