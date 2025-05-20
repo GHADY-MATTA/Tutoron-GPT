@@ -44,4 +44,6 @@ DOCKER Diagram
 -- **Why:**  
   Cloud VMs like EC2 are often blocked from accessing YouTube transcripts due to IP-based restrictions.
 
-- **The Challenge:**  
+- **The Challenge:**  Fetching YouTube transcripts directly from a server results in failure or empty responses.
+
+- **The Solution:**  
