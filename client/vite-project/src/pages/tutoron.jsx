@@ -110,7 +110,7 @@ function Tutoron() {
         </aside>
 
        
-        
+        </main>
       </div>
     </div>
   );
