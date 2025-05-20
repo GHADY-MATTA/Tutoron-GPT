@@ -48,4 +48,7 @@ DOCKER Diagram
 
 - **The Solution:**  Offload the transcript extraction to your **local machine with a residential IP**.
 
-- **How It Works:**  
+- **How It Works:**   - 🌐 Laravel (on EC2) sends an HTTP POST to a public Ngrok endpoint.  
+  - 🧩 Ngrok tunnels the request to your **local Node.js + Express** server.  
+  - 🐍 Node.js triggers a Python script (`fetch_transcript.py`) to extract the transcript.  
+  - 📬 The response is sent back to **Laravel via a secure HTTP route**, completing the flow.
