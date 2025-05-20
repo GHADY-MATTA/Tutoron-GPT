@@ -66,4 +66,5 @@ DOCKER Diagram
 
   **Auto-Quiz Builder**  
   GPT-4 reads the freshly-pulled transcript, then writes a clean JSON quiz,10+ unique, section-tagged questions with answer keys ready for instant display in the frontend 
-  
+  -  **Smart AI Summarization**  
+  Structured video breakdowns: Objectives, Key Points, Highlights, and Insights - powered by GPT.
