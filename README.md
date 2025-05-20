@@ -112,25 +112,6 @@ DOCKER Diagram
 
 <br><br>
 
-<!-- Deployment -->
-<img src="./readme/title7.svg"/>
-
-### Cloud Deployment with CI/CD on Ubuntu EC2 + Docker
-
-
-- **Automated CI/CD Pipeline**  
-- **Dockerized Infrastructure**  
-- **Ubuntu EC2 Hosting**  
-- **Production Build with Vite + Laravel Artisan**  
-- **.env Configuration + Secrets**  
-- **Persistent MySQL Volumes**
-
-
-| Postman API 1                            | Postman API 2                       | Postman API 3                        |
-| --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) |
-
-<br><br>
 <img src="./readme/title8.svg"/>
 
 ### AI Processing Pipeline (Prism + OpenAI GPT-4 Turbo)
@@ -213,6 +194,27 @@ Transcript:
 {{transcript}}
 )
 <br><br>
+
+<!-- Deployment -->
+<img src="./readme/title7.svg"/>
+
+### Cloud Deployment with CI/CD on Ubuntu EC2 + Docker
+
+
+- **Automated CI/CD Pipeline**  
+- **Dockerized Infrastructure**  
+- **Ubuntu EC2 Hosting**  
+- **Production Build with Vite + Laravel Artisan**  
+- **.env Configuration + Secrets**  
+- **Persistent MySQL Volumes**
+
+
+| Postman API 1                            | Postman API 2                       | Postman API 3                        |
+| --------------------------------------- | ------------------------------------- | ------------------------------------- |
+| ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) |
+
+<br><br>
+
 
 ## License
 
