@@ -63,3 +63,12 @@ import { FaPlus } from 'react-icons/fa';
   <button className="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full">Personal</button>
   <button className="px-3 py-1 text-sm bg-[var(--color-border)] text-[var(--color-secondary)] rounded-full">Research</button>
 </div>
+<ul className="space-y-2 max-h-[calc(100vh-250px)] overflow-y-auto">
+  <li className="note-item active p-3 rounded cursor-pointer transition">
+    <div className="flex justify-between items-start">
+      <h3 className="font-medium text-[var(--color-secondary)]">Meeting Notes</h3>
+      <span className="text-xs text-[var(--color-text-light)]">Today</span>
+    </div>
+    <p className="text-sm text-[var(--color-text-light)] truncate">Project timeline discussion with design team</p>
+  </li>
+</ul>
