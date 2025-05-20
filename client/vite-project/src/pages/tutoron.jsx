@@ -72,3 +72,8 @@ import { FaPlus } from 'react-icons/fa';
     <p className="text-sm text-[var(--color-text-light)] truncate">Project timeline discussion with design team</p>
   </li>
 </ul>
+<div className="flex mt-2 gap-1 flex-wrap">
+  <span className="text-xs tag px-2 py-1 rounded-full">work</span>
+  <span className="text-xs tag px-2 py-1 rounded-full">meeting</span>
+  <span className="text-xs tag px-2 py-1 rounded-full">urgent</span>
+</div>
