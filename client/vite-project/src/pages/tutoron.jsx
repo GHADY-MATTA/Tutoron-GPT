@@ -109,7 +109,9 @@ function Tutoron() {
           </ul>
         </aside>
 
-       
+        {/* Main Content */}
+        <main className="w-full md:w-3/4 bg-transparent">
+          {/* Empty for now */}
         </main>
       </div>
     </div>
