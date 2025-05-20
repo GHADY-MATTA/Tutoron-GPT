@@ -11,3 +11,5 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 
 
 > 
+
+<br><br>
