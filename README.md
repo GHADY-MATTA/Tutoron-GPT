@@ -112,3 +112,6 @@ DOCKER Diagram
 
 **Validation**
  ![fsdaf](./readme/demo/validation.png)
+
+ **Testing**
+ ![fsdaf](./readme/demo/laravel_logs.png)
