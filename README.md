@@ -97,3 +97,7 @@ DOCKER Diagram
 ![fsdaf](./readme/demo/generate.gif)
 **Quiz**
 ![Landing](./readme/demo/highlights.gif)
+<br><br>
+ 
+<!-- Development & Testing -->
+<img src="./readme/title6.svg"/>
