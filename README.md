@@ -21,9 +21,19 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 
 ### Architecture Diagram
 
-| Backend Diagram                           | front-end Diagram                       |  DOCKER Diagram                       |
-| --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/backend-diagram.png) | ![fsdaf](./readme/demo/front-end-diagram.png )| ![fsdaf](./readme/demo/dockerDiagram.png) |
+Backend Diagram 
+
+ ![Landing](./readme/demo/backend-diagram.png)
+ <br><br>
+
+ front-end Diagram  
+ ![fsdaf](./readme/demo/front-end-diagram.png )
+<br><br>
+
+DOCKER Diagram 
+![fsdaf](./readme/demo/dockerDiagram.png)
+
+
 
 <br><br>
 
@@ -59,8 +69,6 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 - 📺 **YouTube Transcript Intelligence**  
   Upload any YouTube URL - get clean transcripts, summaries, key insights, and study material.
 
-![Landing](./readme/demo/highlights.gif)
-
 - 🌐 **Cloud-to-Local Microservice Bridge**  
   Bypasses YouTube transcript blocking with a hybrid Node.js + Python pipeline using Ngrok.
 
@@ -84,6 +92,7 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 | --------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/upload.gif) | ![fsdaf](./readme/demo/generate.gif) |
 
+![Landing](./readme/demo/highlights.gif)
 
 <br><br>
  
