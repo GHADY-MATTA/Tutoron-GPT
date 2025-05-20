@@ -103,7 +103,7 @@ function Tutoron() {
               <p className="text-sm text-[var(--color-text-light)] truncate">List of books to read this summer</p>
               <div className="flex mt-2 gap-1 flex-wrap">
                 <span className="text-xs tag px-2 py-1 rounded-full">personal</span>
-                <span className="text-xs tag px-2 py-1 rounded-full">reading</span>
+              
               </div>
             </li>
           </ul>
