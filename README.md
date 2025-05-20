@@ -32,3 +32,11 @@ Backend Diagram
 DOCKER Diagram 
 ![fsdaf](./readme/demo/dockerDiagram.png)
 
+
+
+<br><br>
+
+### Database Diagram
+
+![Landing](./readme/demo/erdiagram.png)
+### 🧠 Hybrid Cloud-to-Local Transcript Fetching Architecture
