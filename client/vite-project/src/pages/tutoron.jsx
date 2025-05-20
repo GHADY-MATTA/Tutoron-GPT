@@ -7,3 +7,8 @@ function Tutoron() {
 }
 
 export default Tutoron;
+return (
+  <div className="min-h-screen bg-[var(--color-bg)] font-inter text-[var(--color-text)]">
+    {/* Layout wrapper */}
+  </div>
+);
