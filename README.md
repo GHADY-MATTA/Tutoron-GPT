@@ -175,3 +175,7 @@ Generate at least 10 questions maximum(generate more question if the transcript 
 - Mark the correct answer using the "correct" key (value: "a", "b", "c", or "d")
 
 Format the final response as a strict valid JSON array like this:
+
+[
+  {
+    "section": "keyPoints",
