@@ -212,3 +212,6 @@ Transcript:
 <!-- | Postman API 1                            | Postman API 2                       | Postman API 3                        |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/postmanSignup.png) | ![fsdaf](./readme/demo/postmanlogin.png) | ![fsdaf](./readme/demo/postmanAi.png) | -->
+
+**Postman API 1** 
+![Landing](./readme/demo/postmanSignup.png)
