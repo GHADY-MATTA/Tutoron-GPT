@@ -52,3 +52,7 @@ DOCKER Diagram
   - 🧩 Ngrok tunnels the request to your **local Node.js + Express** server.  
   - 🐍 Node.js triggers a Python script (`fetch_transcript.py`) to extract the transcript.  
   - 📬 The response is sent back to **Laravel via a secure HTTP route**, completing the flow.
+
+> ✅ This hybrid architecture enables **fast**, **secure**, and **reliable** transcript access even from cloud-restricted environments.
+
+<br><br>
