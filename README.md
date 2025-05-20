@@ -128,4 +128,23 @@ DOCKER Diagram
 
 ### AI Processing Pipeline (Prism + OpenAI GPT-4 Turbo)
 
-- **User Inputs YouTube URL
+- **User Inputs YouTube URL       ↓
+Laravel Controller receives URL
+         ↓
+▶ shell_exec('python fetch_transcript.py')
+         ↓
+Python script fetches transcript using YouTubeTranscriptAPI
+         ↓
+Transcript returned to Laravel
+         ↓
+Prism AI Service handles prompt building
+         ↓
+→ Sends to OpenAI GPT-4 Turbo (via Prism)
+         ↓
+Receives structured JSON:
+    ├── 🧠 Summary
+    └── ✅ Quiz
+         ↓
+Stored in Laravel:
+ ↓
+React Frontend fetches data via Axios
