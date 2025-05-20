@@ -88,6 +88,3 @@ import { FaPlus } from 'react-icons/fa';
     <span className="text-xs tag px-2 py-1 rounded-full">AI</span>
   </div>
 </li>
-<main className="w-full md:w-3/4 bg-transparent">
-  {/* Empty for now */}
-</main>
