@@ -64,15 +64,15 @@ DOCKER Diagram
 <!-- Project Highlights -->
 <img src="./readme/title4.svg"/>
 
-### 🔥 Standout Features That Make Tutoron-GPT Shine
+###  Standout Features That Make Tutoron-GPT Shine
 
-- 📺 **YouTube Transcript Intelligence**  
-  Upload any YouTube URL - get clean transcripts, summaries, key insights, and study material.
+-  **One-link to learning flow**  
+ Paste any YouTube URL → auto-grab transcript → AI distills a crystal-clear summary → instant multiple-choice quiz.
 
-- 🌐 **Cloud-to-Local Microservice Bridge**  
-  Bypasses YouTube transcript blocking with a hybrid Node.js + Python pipeline using Ngrok.
-
-- 🧠 **Smart AI Summarization**  
+-  **Auto-Quiz Builder**  
+  GPT-4 reads the freshly-pulled transcript, then writes a clean JSON quiz,10+ unique, section-tagged questions with answer keys ready for instant display in the frontend 
+  
+-  **Smart AI Summarization**  
   Structured video breakdowns: Objectives, Key Points, Highlights, and Insights - powered by GPT.
 
 ![Landing](./readme/demo/tutorn-cover2.png)
