@@ -84,7 +84,7 @@ function Tutoron() {
               </div>
             </li>
 
-            <li className="note-item p-3 rounded cursor-pointer transition">
+            
               <div className="flex justify-between items-start">
                 <h3 className="font-medium text-[var(--color-secondary)]">Shopping List</h3>
                 <span className="text-xs text-[var(--color-text-light)]">1 week ago</span>
