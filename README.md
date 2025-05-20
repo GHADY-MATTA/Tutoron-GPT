@@ -13,3 +13,8 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 > 
 
 <br><br>
+
+<!-- System Design -->
+<img src="./readme/title3.svg"/>
+
+### Architecture Diagram
