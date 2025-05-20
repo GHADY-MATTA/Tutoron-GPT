@@ -192,3 +192,8 @@ Format the final response as a strict valid JSON array like this:
 - Use real material from the transcript — no guesswork
 - Use unique questions — avoid repetition
 - Avoid trick questions; be constructive and educational
+
+Transcript:
+{{transcript}}
+)
+<br><br>
