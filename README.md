@@ -12,13 +12,20 @@
 ![AI](https://img.shields.io/badge/AI-GPT--4%20%7C%20Prism-purple)
 
 
->
->Tutoron-GPT: Your Personal AI Learning Assistant
-Paste a YouTube link and Tutoron-GPT instantly pulls the transcript, distills it into a clear summary, and builds a custom quiz to lock in the concepts.
-Powered by adaptive AI, it tailors every explanation to your learning style so you grasp ideas quickly and remember them longer.
+---
 
+##  Tutoron-GPT: Turn Any YouTube Video Into a Smart Tutor
 
-> 
+Learning from YouTube is powerful but messy. **Tutoron-GPT** transforms any video into a clear, structured, and interactive experience.
+
+Paste a YouTube link — and instantly get:
+-  A full transcript
+-  A structured summary
+-  A custom AI-generated quiz
+
+Powered by GPT-4 + Prism SDK and tailored to your learning style.
+
+---
 
 
 <br><br>
