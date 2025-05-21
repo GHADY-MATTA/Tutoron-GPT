@@ -18,7 +18,7 @@
 
 Learning from YouTube is powerful but messy. **Tutoron-GPT** transforms any video into a clear, structured, and interactive experience.
 
-Paste a YouTube link — and instantly get:
+Paste a YouTube link - and instantly get:
 -  A full transcript
 -  A structured summary
 -  A custom AI-generated quiz
