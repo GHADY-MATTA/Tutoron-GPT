@@ -5,13 +5,27 @@
 <!-- project overview -->
 <img src="./readme/title2.svg"/>
 
->
->Tutoron-GPT: Your Personal AI Learning Assistant
-Paste a YouTube link and Tutoron-GPT instantly pulls the transcript, distills it into a clear summary, and builds a custom quiz to lock in the concepts.
-Powered by adaptive AI, it tailors every explanation to your learning style so you grasp ideas quickly and remember them longer.
+![Tech Stack](https://img.shields.io/badge/stack-Laravel%20%7C%20React%20%7C%20Docker-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/deployment-EC2-orange)
+![CI](https://img.shields.io/github/actions/workflow/status/GHADY-MATTA/Tutoron-GPT/ci.yml?label=CI%20Status&logo=github)
+![AI](https://img.shields.io/badge/AI-GPT--4%20%7C%20Prism-purple)
 
 
-> 
+---
+
+##  Tutoron-GPT: Turn Any YouTube Video Into a Smart Tutor
+
+Learning from YouTube is powerful but messy. **Tutoron-GPT** transforms any video into a clear, structured, and interactive experience.
+
+Paste a YouTube link - and instantly get:
+-  A full transcript
+-  A structured summary
+-  A custom AI-generated quiz
+
+Powered by GPT-4 + Prism SDK and tailored to your learning style.
+
+---
 
 
 <br><br>
@@ -21,16 +35,16 @@ Powered by adaptive AI, it tailors every explanation to your learning style so y
 
 ### Architecture Diagram
 
-Backend Diagram 
+**Backend Diagram** 
 
  ![Landing](./readme/demo/backend-diagram.png)
  <br><br>
 
- Front-end Diagram  
+ **Front-end Diagram**  
  ![fsdaf](./readme/demo/betterfront.png)
 <br><br>
 
-DOCKER Diagram 
+**DOCKER Diagram** 
 ![fsdaf](./readme/demo/dockerDiagram.png)
 
 
